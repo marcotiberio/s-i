@@ -43,7 +43,7 @@ function registerArtistPostType()
         'label'                 => __('Artist', 'flynt'),
         'description'           => __('Artist Description', 'flynt'),
         'labels'                => $labels,
-        'supports'              => ['title', 'revisions'],
+        'supports'              => ['title', 'thumbnail'],
         'taxonomies'            => ['category', 'post_tag'],
         'hierarchical'          => false,
         'public'                => true,

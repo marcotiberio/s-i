@@ -109,7 +109,7 @@ function getACFFields()
             'multiple' => 0,
             'return_format' => 'id',
             'ui' => 1,
-            'required' => 1,
+            'required' => 0,
             'instructions' => __('If there is no form available, please first create a suitable one in the <a href="' . admin_url('admin.php?page=wpcf7') . '" target="_blank">Contact Form 7 admin page</a>.', 'flynt'),
         ],
         [

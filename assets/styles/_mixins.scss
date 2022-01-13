@@ -78,12 +78,12 @@
     (#{$columns - 1} / #{$columns} * #{$gutter-horizontal}));
 
     &:nth-child(n) {
-      margin-right: $gutter-horizontal;
+      margin-right: 0;
       margin-top: 0;
     }
 
     &:nth-child(1n + #{$columns + 1}) {
-      margin-top: $gutter-vertical;
+      margin-top: 0;
     }
 
     &:nth-child(#{$columns}n) {

@@ -14,6 +14,7 @@ html {
   box-sizing: border-box;
   color: $color-text;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-size: 15px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
@@ -33,6 +34,24 @@ html {
 body {
   height: 100%;
   overflow-x: hidden;
+  padding: $spacing-small;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $black;
+  opacity: 1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $black;
+  opacity: 1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $black;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $black;
+  opacity: 1;
 }
 
 /**
@@ -42,7 +61,7 @@ body {
 */
 
 #{$heading-selectors} {
-  color: $color-headline;
+  color: $color-text;
   font-weight: 700;
   line-height: 1.45;
   margin-bottom: 0.9rem;
@@ -51,20 +70,20 @@ body {
   a,
   a:hover,
   a:focus {
-    color: $color-headline;
+    color: $color-text;
     text-decoration: none;
   }
 }
 
 h1,
 .h1 {
-  font-size: 2.25rem;
-  line-height: 1.175;
-  margin-bottom: 1.5rem;
-  padding-top: 2rem;
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: $spacing-small;
+  padding-top: $spacing-small;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 2.75rem;
+    font-size: 6rem;
   }
 }
 
@@ -113,12 +132,14 @@ h6,
 }
 
 a {
-  color: $color-accent;
+  color: $color-text;
   transition: color 0.2s ease-out;
 
   &:hover,
   &:focus {
-    color: darken($color-accent, 10%);
+    color: $color-text;
+    text-decoration: none;
+    transition: color 0.2s ease-out;
   }
 }
 
@@ -455,6 +476,10 @@ select,
 textarea {
   margin: 0 0 1rem;
   padding: 10px 20px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 textarea {

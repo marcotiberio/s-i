@@ -2,22 +2,8 @@
   @include reset-list;
   @include grid(2);
 
-  &--col1 {
-    @include reset-grid;
-  }
-
   @media (min-width: $breakpoint-tablet) {
-    padding-right: 5%;
-  }
-
-  @media (min-width: $breakpoint-tablet-horizontal) {
-    &--col3 {
-      @include grid(3);
-    }
-
-    &--col4 {
-      @include grid(4);
-    }
+    padding-right: 0;
   }
 
   &-item {
@@ -38,7 +24,8 @@
 
     &:hover,
     &:focus {
-      color: $color-accent;
+      color: $color-text;
+      text-decoration: underline;
     }
   }
 
@@ -48,7 +35,7 @@
     &-item {
       line-height: 1.625;
       margin: 0;
-      padding: 0 0 0.5rem;
+      padding: 0;
 
       &:last-child {
         padding-bottom: 0;
