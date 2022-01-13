@@ -1,11 +1,11 @@
 [is='flynt-navigation-footer-columns'] {
 
   @import 'Partials/menu';
+  border-top: 1px solid $black;
   padding-bottom: 0;
   padding-top: $spacing-small;
 
   + [is='flynt-navigation-footer'] .container {
-    border-top: 1px solid $black;
     padding-top: 0;
   }
 
