@@ -35,7 +35,7 @@
     display: block;
     font-size: 1rem;
     font-weight: 700;
-    padding: 12px $container-padding-mobile;
+    padding: 12px $spacing-small;
     text-align: center;
     text-decoration: none;
     transition: color 0.2s ease-out;
@@ -45,8 +45,8 @@
     }
 
     @media (min-width: $breakpoint-tablet) {
-      padding-left: $container-padding-tablet;
-      padding-right: $container-padding-tablet;
+      padding-left: $spacing-large;
+      padding-right: $spacing-large;
     }
   }
 }

@@ -7,14 +7,14 @@
   z-index: 999;
 
   .container {
-    padding-bottom: $container-padding-mobile;
-    padding-top: $container-padding-mobile;
+    padding-bottom: $spacing-small;
+    padding-top: $spacing-small;
   }
 
   .content {
     @include reset-content-margins;
     font-size: 0.8rem;
-    padding-bottom: $container-padding-mobile;
+    padding-bottom: $spacing-small;
   }
 
   &.cookieNotice--isVisible {
@@ -40,10 +40,10 @@
 
   &.layoutFloating {
     @media (min-width: $breakpoint-mobile-horizontal) {
-      bottom: $container-padding-mobile;
-      left: $container-padding-mobile;
+      bottom: $spacing-small;
+      left: $spacing-small;
       max-width: 380px;
-      width: calc(100% - (#{$container-padding-mobile} * 2));
+      width: calc(100% - (#{$spacing-small} * 2));
 
       .container {
         padding: 30px;

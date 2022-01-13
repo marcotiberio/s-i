@@ -589,11 +589,11 @@ select {
   @include center;
 
   @media (min-width: $breakpoint-tablet) {
-    @include center($padding: $container-padding-tablet);
+    @include center($padding: $spacing-large);
   }
 
   @media (min-width: $breakpoint-desktop) {
-    @include center($padding: $container-padding-desktop);
+    @include center($padding: $spacing-large);
   }
 }
 
@@ -609,11 +609,11 @@ select {
   text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: $container-padding-tablet;
+    margin-bottom: $spacing-large;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-bottom: $container-padding-desktop;
+    margin-bottom: $spacing-large;
   }
 }
 
@@ -624,11 +624,11 @@ select {
   text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-top: $container-padding-tablet;
+    margin-top: $spacing-large;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-top: $container-padding-desktop;
+    margin-top: $spacing-large;
   }
 }
 

@@ -1,48 +1,69 @@
 {% if items|length > 0 %}
-  <div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-grid-posts-latest">
-    <div class="container centerMaxWidthContainer">
-      {% if preContentHtml %}
-        <div class="preContent">
-          {{ preContentHtml|e('wp_kses_post') }}
-        </div>
-      {% endif %}
-      <ul class="grid grid--columns{{ options.columns }}">
+  <div class="flyntComponent" is="flynt-grid-posts-latest">
+    <div class="container">
+      <div class="grid-header">
+        <div>#</div>
+        <div>Title</div>
+        <div>Project</div>
+        <div>Credit</div>
+        <div>Year</div>
+      </div>
+      <ul class="grid">
         {% for item in items %}
           <li class="grid-item">
-            <div class="content boxShadow themeReset">
-              <a href="{{ item.link }}" class="content-link" title="{{ item.title }}">
-                <img class="content-image lazyload"
-                  src="{{ item.thumbnail.src|resizeDynamic(424, 283) }}"
-                  srcset="{{ placeholderImage(3, 2) }}"
-                  data-srcset="
-                    {{ item.thumbnail.src|resizeDynamic(1920, 1280) }} 1920w,
-                    {{ item.thumbnail.src|resizeDynamic(1320, 880) }} 1320w,
-                    {{ item.thumbnail.src|resizeDynamic(1280, 853) }} 1280w,
-                    {{ item.thumbnail.src|resizeDynamic(1050, 700) }} 1050w,
-                    {{ item.thumbnail.src|resizeDynamic(750, 500) }} 750w,
-                    {{ item.thumbnail.src|resizeDynamic(600, 400) }} 600w,
-                    {{ item.thumbnail.src|resizeDynamic(424, 283) }} 424w,
-                    {{ item.thumbnail.src|resizeDynamic(312, 208) }} 312w"
-                  data-sizes="auto"
-                  alt="{{ item.thumbnail.alt|e }}">
-                <div class="content-inner boxPadding">
-                  <h3 class="content-title">{{ item.title }}</h3>
-                  <p class="content-excerpt">{{ item.preview.read_more(false).length(18) }}</p>
+            <div class="content">
+              {# <img class="content-image lazyload"
+                src="{{ item.thumbnail.src|resizeDynamic(424, 283) }}"
+                srcset="{{ placeholderImage(3, 2) }}"
+                data-srcset="
+                  {{ item.thumbnail.src|resizeDynamic(1920, 1280) }} 1920w,
+                  {{ item.thumbnail.src|resizeDynamic(1320, 880) }} 1320w,
+                  {{ item.thumbnail.src|resizeDynamic(1280, 853) }} 1280w,
+                  {{ item.thumbnail.src|resizeDynamic(1050, 700) }} 1050w,
+                  {{ item.thumbnail.src|resizeDynamic(750, 500) }} 750w,
+                  {{ item.thumbnail.src|resizeDynamic(600, 400) }} 600w,
+                  {{ item.thumbnail.src|resizeDynamic(424, 283) }} 424w,
+                  {{ item.thumbnail.src|resizeDynamic(312, 208) }} 312w"
+                data-sizes="auto"
+                alt="{{ item.thumbnail.alt|e }}"> #}
+              <div class="content-inner">
+                <div class="content-inner-row" type="button" aria-expanded="false" aria-controls="content-{{ loop.index }}">
+                  <div class="id">#{{ item.title }}</div>
+                  <div class="title">{{ item.titletitle }}</div>
+                  <div class="project">{{ item.project }}</div>
+                  <div class="credit">{{ item.credit }}</div>
+                  <div class="year">{{ item.year }}</div>
                 </div>
-              </a>
-              <footer class="content-footer">
-                <span class="content-readingTime">
-                  <i data-feather="clock"></i> {{ item.content | readingtime }} {{ labels.readingTime }}
-                </span>
-                <a href="{{ item.link }}" class="button button--link content-readMore" aria-hidden="true" tabindex="-1">{{ labels.readMore }}</a>
-              </footer>
+                <div class="content-inner-panel" aria-hidden="true" id="content-{{ loop.index }}">
+                  <div class="content-inner-panel-hidden">
+                    <div></div>
+                    <div>{{ item.contentInfo|e('wp_kses_post') }}</div>
+                    <div>{{ item.contentDescription|e('wp_kses_post') }}</div>
+                    <div class="gallery">
+                      {% for image in item.contentGallery %}
+                        <figure class="figure">
+                          <img class="figure-image lazyload"
+                            src="{{ image.src|resizeDynamic(0, 1024) }}"
+                            srcset="{{ placeholderImage(image.aspect * 1024, 1024) }}"
+                            data-srcset="
+                              {{ image.src|resizeDynamic(0, 1024) }} {{ (image.aspect * 1024)|round }}w,
+                              {{ image.src|resizeDynamic(0, 250) }} {{ (image.aspect * 250)|round }}w"
+                            data-sizes="auto"
+                            alt="{{ image.alt|e }}">
+                          {% if image.caption %}
+                            <figcaption class="figure-caption">{{ image.caption|e }}</figcaption>
+                          {% endif %}
+                        </figure>
+                      {% endfor %}
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </li>
         {% endfor %}
       </ul>
-      <div class="allPostsLink">
-        <a href="{{ postTypeArchiveLink }}" class="button button--link">{{ labels.allPosts }}</a>
-      </div>
     </div>
   </div>
 {% endif %}

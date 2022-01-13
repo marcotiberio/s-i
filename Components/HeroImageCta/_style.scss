@@ -16,17 +16,17 @@
     }
 
     .content-picture {
-      left: $container-padding-mobile;
-      right: $container-padding-mobile;
+      left: $spacing-small;
+      right: $spacing-small;
 
       @media (min-width: $breakpoint-tablet) {
-        left: $container-padding-tablet;
-        right: $container-padding-tablet;
+        left: $spacing-large;
+        right: $spacing-large;
       }
 
       @media (min-width: $breakpoint-desktop) {
-        left: $container-padding-desktop;
-        right: $container-padding-desktop;
+        left: $spacing-large;
+        right: $spacing-large;
       }
     }
   }
@@ -50,7 +50,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: $component-spacing-mobile $container-padding-mobile;
+    padding: $component-spacing-mobile $spacing-small;
     position: relative;
     width: 100%;
 

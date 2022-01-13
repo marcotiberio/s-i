@@ -4,7 +4,7 @@
     max-width: 800px;
     text-align: left;
 
-    @media (min-width: $content-max-width + 2 * $container-padding-mobile) {
+    @media (min-width: $content-max-width + 2 * $spacing-small) {
       column-count: 2;
       column-gap: 2rem;
     }

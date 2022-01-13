@@ -24,7 +24,7 @@
 
 @mixin center(
   $max-width: $container-max-width,
-  $padding: $container-padding-mobile
+  $padding: $spacing-small
 ) {
   display: block;
   margin-left: auto;
@@ -65,8 +65,8 @@
 @mixin grid(
   $columns,
   $alignment: flex-start,
-  $gutter-horizontal: $gutter-width,
-  $gutter-vertical: $gutter-width
+  $gutter-horizontal: $gap,
+  $gutter-vertical: $gap
 ) {
   display: flex;
   flex-wrap: wrap;

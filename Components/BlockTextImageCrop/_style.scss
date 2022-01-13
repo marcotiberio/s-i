@@ -24,19 +24,19 @@
       }
 
       &--content {
-        padding: $gutter-width $container-padding-mobile;
+        padding: $gap $spacing-small;
 
         @media (min-width: $breakpoint-tablet) {
-          padding: $container-padding-tablet;
+          padding: $spacing-large;
           width: 55%;
         }
 
         @media (min-width: $breakpoint-tablet-horizontal) {
-          padding: $container-padding-tablet ($container-padding-tablet * 2);
+          padding: $spacing-large ($spacing-large * 2);
         }
 
         @media (min-width: $breakpoint-desktop) {
-          padding: $container-padding-desktop ($container-padding-desktop * 2);
+          padding: $spacing-large ($spacing-large * 2);
         }
       }
     }
@@ -81,7 +81,7 @@
     }
 
     &-caption {
-      padding: 0 $container-padding-mobile;
+      padding: 0 $spacing-small;
     }
   }
 }
