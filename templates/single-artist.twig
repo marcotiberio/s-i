@@ -7,8 +7,10 @@
       {# {{ renderComponent('BlockArtistHeader', { post: post }) }} #}
     </header>
     <section class="post-main">
-      <div class="artist-meta">
-        {# <div class="artist-meta_slider">{{ post.slider }}</div> #}
+      {% for component in post.meta('artistComponents') %}
+        {{ renderComponent(component) }}
+      {% endfor %}
+      {# <div class="artist-meta">
         {% if post.thumbnail %}
           <div class="featuredImage">
             {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeLarge' }, noComponentSpacing: true }) }}
@@ -27,10 +29,7 @@
           </ul>
         </div>
         <div class="artist-meta_bio">{{ post.bio|e('wp_kses_post') }}</div>
-      </div>
-      {% for component in post.meta('artistComponents') %}
-        {{ renderComponent(component) }}
-      {% endfor %}
+      </div> #}
     </section>
     <section class="post-related">
       {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h2>' ~ __('Related Posts') ~ '</h2>','taxonomies': post.categories(), 'options': {'theme': 'themeLight', 'columns': 3}}) }}

@@ -67,7 +67,19 @@
         text-decoration: underline;
       }
     }
+
+    .open-submenu {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-submenu {
+      display: none;
+    }
   }
+
+  
 
   @import 'Partials/search';
 }
