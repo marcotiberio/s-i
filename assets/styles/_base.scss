@@ -276,17 +276,17 @@ button {
 
 .button {
   appearance: none;
-  background-color: $color-accent;
-  border: 1px solid $color-accent;
-  border-radius: 4px;
-  color: $color-background;
+  background-color: transparent;
+  border: 1px solid $black;
+  border-radius: 1rem;
+  color: $color-text;
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: inherit;
-  padding: 1rem 1.5rem;
+  padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;

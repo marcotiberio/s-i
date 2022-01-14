@@ -1,0 +1,39 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  <article class="post">
+    <header class="post-header">
+      <p class="date">{{ post.dateEvent|date("d.m.Y")|escape('wp_kses_post') }}</p>
+      <p class="title">{{ post.title }}</p>
+      {# {{ renderComponent('BlockArtistHeader', { post: post }) }} #}
+    </header>
+    <section class="post-main">
+      {% for component in post.meta('eventComponents') %}
+        {{ renderComponent(component) }}
+      {% endfor %}
+      {# <div class="artist-meta">
+        {% if post.thumbnail %}
+          <div class="featuredImage">
+            {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeLarge' }, noComponentSpacing: true }) }}
+          </div>
+        {% endif %}
+        <div>
+          <div class="artist-meta_socials">{{ post.socials|e('wp_kses_post') }}</div>
+          <ul class="socialList">
+            {% for panel in post.socialz %}
+              <li>
+                <a class="socialList-link" href="{{ post.socialz.url }}" target="_blank" rel="noopener noreferrer">
+                  {{ post.socialz.url }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="artist-meta_bio">{{ post.bio|e('wp_kses_post') }}</div>
+      </div> #}
+    </section>
+    <section class="post-related">
+      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h2>' ~ __('Related Posts') ~ '</h2>','taxonomies': post.categories(), 'options': {'theme': 'themeLight', 'columns': 3}}) }}
+    </section>
+  </article>
+{% endblock %}

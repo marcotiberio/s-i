@@ -1,0 +1,118 @@
+/* Custom styling for exhibition posts */
+
+.single-event {
+  .post {
+    &-header {
+      border-bottom: 1px solid $black;
+      column-gap: $spacing-small;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: $spacing-small 0;
+
+      p {
+        line-height: 1;
+        margin: 0;
+        text-transform: uppercase;
+      }
+    }
+
+    &-main {
+      display: flex;
+      flex-flow: column wrap;
+
+      .flyntComponent {
+        border-top: 1px solid $black;
+        margin-left: calc(50% + 7.5px);
+        padding: $spacing-small 0;
+        width: calc(50% - 7.5px);
+
+        &:first-child {
+          border-top: 0;
+          margin-left: 0;
+          padding: 0;
+          width: 100%;
+        }
+      }
+      
+      
+      
+      .artist-meta {
+        align-items: flex-start;
+        column-gap: $spacing-small;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        padding: $spacing-small 0;
+        width: 100%;
+
+        &_slider {
+          grid-column-end: 2;
+          grid-column-start: 1;
+        }
+
+        &_socials {
+          display: flex;
+          flex-flow: column wrap;
+          grid-column-end: 3;
+          grid-column-start: 2;
+          text-transform: uppercase;
+
+          a {
+            text-decoration: none;
+            text-transform: uppercase;
+            width: fit-content;
+
+            &:hover,
+            &:focus {
+              text-decoration: underline;
+            }
+
+            &::before {
+              content: '>';
+              margin-right: $spacing-small / 2;
+            }
+          }
+        }
+
+        &_bio {
+          grid-column-end: 3;
+          grid-column-start: 5;
+        }
+      }
+    
+      .componentSpacing {
+        margin: $component-spacing-mobile/2 0;
+        padding: 0 $spacing-small;
+  
+        @media (min-width: $breakpoint-tablet) {
+          margin: $component-spacing-desktop/2 0;
+          padding: 0 $spacing-small;
+        }
+  
+        @media (min-width: $breakpoint-desktop) {
+          margin: $component-spacing-desktop/2 0;
+          padding: 0 $spacing-large;
+        }
+  
+        &[class*='theme'] {
+          margin: 0;
+          padding: $component-spacing-mobile/2 0;
+  
+          @media (min-width: $breakpoint-tablet) {
+            padding: $component-spacing-desktop/2 0;
+          }
+  
+          @media (min-width: $breakpoint-desktop) {
+            padding: $component-spacing-desktop/2 0;
+          }
+        }
+      }
+  
+      > .componentSpacing {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

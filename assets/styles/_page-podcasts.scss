@@ -1,0 +1,20 @@
+/* Custom styling for page podcast */
+
+.page-podcasts {
+  .mainContent {
+    padding: $spacing-small 0;
+
+    .list-podcasts {
+      @include reset-list;
+      column-gap: $spacing-small;
+      display: grid;
+      grid-auto-rows: auto;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: $spacing-small;
+
+      .title {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,52 +1,54 @@
 [is='flynt-slider-images'] {
   .slider {
-    max-width: 800px;
+    grid-column-end: 2;
+    grid-column-start: 1;
     position: relative;
+    width: 100%;
 
     &-item {
       height: 0;
       overflow: hidden;
-      padding-bottom: (2/3) * 100%;
+      padding-bottom: (1/1) * 100%;
       position: relative;
+    }
+
+    &-button-container {
+      align-items: center;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      margin-top: $spacing-large;
     }
 
     &-button {
       align-items: center;
-      background-color: rgba($color-background-dark, 0.5);
       border-radius: 50%;
       cursor: pointer;
       display: flex;
-      height: 40px;
+      flex-flow: row-reverse wrap;
+      height: $spacing-large;
       justify-content: center;
-      position: absolute;
+      position: relative;
       top: 50%;
       transform: translateY(-50%);
       transition: opacity 0.2s ease-out;
-      width: 40px;
+      width: $spacing-large;
       z-index: 10;
 
       @media (min-width: $breakpoint-tablet-horizontal) {
         &:hover,
         &:focus {
-          background-color: $color-accent;
+          background-color: transparent;
+          border: 1px solid $black;
         }
       }
 
       &.swiper-button-disabled {
-        opacity: 0.5;
         pointer-events: none;
       }
 
-      &--prev {
-        left: 15px;
-      }
-
-      &--next {
-        right: 15px;
-      }
-
       .feather {
-        color: $color-background;
+        color: $color-text;
         height: auto;
         top: 0;
         width: 80%;

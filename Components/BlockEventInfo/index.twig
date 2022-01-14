@@ -1,7 +1,7 @@
-<div class="flyntComponent" is="flynt-slider-images">
+<div class="flyntComponent" is="flynt-block-podcast-info">
   <script type="application/json">{{ jsonData|json_encode }}</script>
-  <div class="centerMaxWidthContainer">
-    <div data-slider class="slider swiper-container">
+  <div class="container">
+    <div data-slider class="slider swiper-container themeLight">
       <div class="swiper-wrapper">
         {% for image in images %}
           <div class="slider-item swiper-slide">
@@ -32,6 +32,21 @@
           <i data-feather="arrow-right"></i>
         </button>
       </div>
+    </div>
+    <div class="socials">
+      <ul class="list">
+        {% for panel in repeaterPanels %}
+          <li class="panel">
+            <a class="" href="{{ panel.panelLink|e }}" type="button">
+              {{ panel.panelTitle|e }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="bio">
+      {{ bioHtml|e('wp_kses_post') }}
+      {{ soundcloudOembedText }}
     </div>
   </div>
 </div>

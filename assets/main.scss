@@ -4,7 +4,10 @@
   'styles/variables',
   'styles/mixins',
   'styles/base',
-  'styles/artist-single';
+  'styles/artist-single',
+  'styles/podcast-single',
+  'styles/event-single',
+  'styles/page-podcasts';
 
 // stylelint-disable-next-line scss/at-import-no-partial-leading-underscore, scss/at-import-partial-extension-blacklist
 @import '../Components/**/_style.scss';
