@@ -1,0 +1,43 @@
+/* Custom styling for exhibition posts */
+
+.single-article {
+  .post {
+    &-header {
+      text-transform: uppercase;
+
+      .title {
+        border-bottom: 1px solid $black;
+      }
+
+      .credits {
+        column-gap: $spacing-small;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &-main {
+      display: flex;
+      flex-flow: column wrap;
+
+      .flyntComponent {
+        border-top: 1px solid $black;
+        padding: $spacing-small 0;
+
+        &:first-child {
+          border-top: 0;
+        }
+
+        &--wysiwyg {
+          border-top: 0;
+          margin-left: calc(50% + 7.5px);
+          width: calc(50% - 7.5px);
+        }
+
+        &--videoOembed {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

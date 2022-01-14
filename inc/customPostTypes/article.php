@@ -43,7 +43,7 @@ function registerArticlePostType()
         'label'                 => __('Article', 'flynt'),
         'description'           => __('Article Description', 'flynt'),
         'labels'                => $labels,
-        'supports'              => ['title', 'revisions'],
+        'supports'              => ['title', 'thumbnail'],
         'taxonomies'            => ['category', 'post_tag'],
         'hierarchical'          => false,
         'public'                => true,

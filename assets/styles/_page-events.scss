@@ -1,0 +1,39 @@
+/* Custom styling for page events */
+
+.page-events {
+  .mainContent {
+    // padding-top: $spacing-small;
+
+    .section-title {
+      border-bottom: 1px solid $black;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .list-events {
+      @include reset-list;
+      width: 100%;
+
+      &-item {
+        border-bottom: 1px solid $black;
+        column-gap: $spacing-small;
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(2, 1fr);
+        padding: $spacing-small 0;
+        row-gap: $spacing-small;
+
+        .title {
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+
+      &--future {
+        .list-events-item:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}

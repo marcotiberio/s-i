@@ -7,52 +7,40 @@ use Flynt\FieldVariables;
 function getACFLayout()
 {
     return [
-        'name' => 'blockWysiwygTwoCol',
-        'label' => 'Block: Wysiwyg Two Col',
+        'name' => 'BlockWysiwygTwoCol',
+        'label' => 'Block: Wysiwyg Two Columns',
         'sub_fields' => [
             [
-                'label' => __('General', 'flynt'),
-                'name' => 'generalTab',
+                'label' => __('Content Left', 'flynt'),
+                'name' => 'contentLeftTab',
                 'type' => 'tab',
                 'placement' => 'top',
-                'endpoint' => 0
+                'endpoint' => 0,
             ],
             [
-                'label' => __('General', 'flynt'),
-                'name' => 'generalTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => __('Title', 'flynt'),
-                'name' => 'preContentHtml',
+                'label' => __('Content Left', 'flynt'),
+                'name' => 'contentHtmlLeft',
                 'type' => 'wysiwyg',
-                'media_upload' => 0,
-                'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
+                'tabs' => 'visual',
+                'delay' => 1,
+                'media_upload' => 1,
+                'required' => 0,
             ],
             [
-                'label' => __('Content', 'flynt'),
-                'name' => 'contentHtml',
-                'type' => 'wysiwyg',
-                'media_upload' => 0,
-                'required' => 1,
-            ],
-            [
-                'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
+                'label' => __('Content Right', 'flynt'),
+                'name' => 'contentRightTab',
                 'type' => 'tab',
                 'placement' => 'top',
-                'endpoint' => 0
+                'endpoint' => 0,
             ],
             [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'layout' => 'row',
-                'sub_fields' => [
-                    FieldVariables\getTheme()
-                ]
+                'label' => __('Content Right', 'flynt'),
+                'name' => 'contentHtmlRight',
+                'type' => 'wysiwyg',
+                'tabs' => 'visual',
+                'delay' => 1,
+                'media_upload' => 1,
+                'required' => 0,
             ]
         ]
     ];
