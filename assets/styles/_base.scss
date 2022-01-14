@@ -4,21 +4,18 @@
 * Top level styles every element should inherit.
 */
 
-@include font-face('Montserrat', 'montserrat-v14-latin-regular', '400', 'normal');
-@include font-face('Montserrat', 'montserrat-v14-latin-italic', '400', 'italic');
-@include font-face('Montserrat', 'montserrat-v14-latin-700', '700', 'normal');
-@include font-face('Montserrat', 'montserrat-v14-latin-700italic', '700', 'italic');
+@include font-face('Theinhardt', 'Theinhardt-Regular', '400', 'normal');
 
 html {
   background-color: $color-background;
   box-sizing: border-box;
   color: $color-text;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Theinhardt', Helvetica, Arial, sans-serif;
   font-size: 15px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
-  line-height: 1.625;
+  line-height: 1.2;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-wrap: break-word;
   word-wrap: break-word;
