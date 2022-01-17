@@ -1,0 +1,204 @@
+/* Custom styling for page home */
+
+.page-home {
+  .mainContent {
+    .section-title {
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .list {
+      border-bottom: 1px solid $black;
+      border-top: 1px solid $black;
+      display: flex;
+      flex-flow: row wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &-item {
+        border-top: 1px solid $black;
+        display: flex;
+        flex-flow: row wrap;
+        padding: $spacing-small 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .list-events {
+    .list-item {
+      border-top: 1px solid $black;
+
+      .featured {
+        &Info {
+          column-gap: $spacing-small;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 100%;
+
+          .title {
+            margin: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+        }
+
+        &Image {
+          display: none;
+          width: 100%;
+        }
+      }
+
+      &:first-child {
+        border-top: 0;
+
+        .featuredInfo {
+          margin-bottom: $spacing-small;
+        }
+        
+        .featuredImage {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .list-podcasts {
+    border-top: 1px solid $black;
+
+    .list-item {
+      .featured {
+        &Info {
+          column-gap: $spacing-small;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 100%;
+
+          .title {
+            margin: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+        }
+
+        &Image {
+          display: none;
+          width: 100%;
+        }
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        border-top: 0;
+        margin-right: 15px;
+        width: calc(25% - 15px);
+
+        .featuredInfo {
+          display: flex;
+          flex-flow: row wrap;
+          margin-bottom: $spacing-small;
+        }
+
+        .featuredImage {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .list-articles {
+    border-top: 1px solid $black;
+
+    .list-item {
+      .featured {
+        &Info {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 100%;
+
+          .title {
+            margin: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+        }
+
+        &Image {
+          display: none;
+          width: 100%;
+        }
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        border-top: 0;
+        margin-right: 15px;
+        width: calc(25% - 15px);
+
+        .featuredInfo {
+          display: flex;
+          flex-flow: row wrap;
+          margin-bottom: $spacing-small;
+        }
+
+        .featuredImage {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .list-artists {
+    border-top: 1px solid $black;
+
+    .list-item {
+      .featured {
+        &Info {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 100%;
+
+          .title {
+            margin: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+        }
+
+        &Image {
+          display: none;
+          width: 100%;
+        }
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        border-top: 0;
+        margin-right: 15px;
+        width: calc(25% - 15px);
+
+        .featuredInfo {
+          display: flex;
+          flex-flow: row wrap;
+          margin-bottom: $spacing-small;
+        }
+
+        .featuredImage {
+          display: block;
+        }
+      }
+    }
+  }
+}

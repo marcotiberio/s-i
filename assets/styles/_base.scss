@@ -66,6 +66,7 @@ h1,
   line-height: 1;
   margin-bottom: $spacing-small;
   padding-top: $spacing-small;
+  text-transform: uppercase;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
     font-size: 6rem;
