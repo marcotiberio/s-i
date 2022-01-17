@@ -1,6 +1,7 @@
 [is='flynt-navigation-footer-columns'] {
 
   @import 'Partials/menu';
+  @import 'Partials/backtotop';
   border-top: 1px solid $black;
   padding-bottom: 0;
   padding-top: $spacing-small;

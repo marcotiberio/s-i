@@ -3,8 +3,15 @@
 .page-home {
   .mainContent {
     .section-title {
-      margin: 0;
-      text-transform: uppercase;
+      align-items: center;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      h1 {
+        margin: 0;
+        text-transform: uppercase;
+      }
     }
 
     .list {
@@ -37,7 +44,7 @@
 
       .featured {
         &Info {
-          column-gap: $spacing-small;
+          column-gap: 0;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           width: 100%;
@@ -61,7 +68,7 @@
         .featuredInfo {
           margin-bottom: $spacing-small;
         }
-        
+
         .featuredImage {
           display: block;
         }
@@ -75,7 +82,7 @@
     .list-item {
       .featured {
         &Info {
-          column-gap: $spacing-small;
+          column-gap: 0;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           width: 100%;

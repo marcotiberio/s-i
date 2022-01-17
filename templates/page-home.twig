@@ -2,7 +2,17 @@
 
 {% block content %}
   
-  <h1 class="section-title">Events</h1>
+
+  <div class="section-title">
+    <h1>Events</h1>
+    <a href="/events">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="61.9922" width="1" height="50" fill="black"/>
+        <rect x="61.9922" width="1" height="50" transform="rotate(90 61.9922 0)" fill="black"/>
+        <rect x="62.3477" width="1" height="88.1723" transform="rotate(45 62.3477 0)" fill="black"/>
+      </svg>
+    </a>
+  </div>
   <ul class="list list-events">
     {% for post in latestEvents %}
     <li class="list-item" onclick="javascript:location.href='{{ post.link }}'">
@@ -19,7 +29,16 @@
     {% endfor %}
   </ul>
   
-  <h1 class="section-title">Podcasts</h1>
+  <div class="section-title">
+    <h1>Podcasts</h1>
+    <a href="/podcasts">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="61.9922" width="1" height="50" fill="black"/>
+        <rect x="61.9922" width="1" height="50" transform="rotate(90 61.9922 0)" fill="black"/>
+        <rect x="62.3477" width="1" height="88.1723" transform="rotate(45 62.3477 0)" fill="black"/>
+      </svg>
+    </a>
+  </div>
   <ul class="list list-podcasts">
     {% for post in latestPodcasts %}
     <li class="list-item" onclick="javascript:location.href='{{ post.link }}'">
@@ -36,7 +55,16 @@
     {% endfor %}
   </ul>
 
-  <h1 class="section-title">Articles</h1>
+  <div class="section-title">
+    <h1>Articles</h1>
+    <a href="/articles">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="61.9922" width="1" height="50" fill="black"/>
+        <rect x="61.9922" width="1" height="50" transform="rotate(90 61.9922 0)" fill="black"/>
+        <rect x="62.3477" width="1" height="88.1723" transform="rotate(45 62.3477 0)" fill="black"/>
+      </svg>
+    </a>
+  </div>
   <ul class="list list-articles">
     {% for post in latestArticles %}
     <li class="list-item" onclick="javascript:location.href='{{ post.link }}'">
@@ -53,7 +81,16 @@
     </li>
   </ul>
 
-  <h1 class="section-title">Artists</h1>
+  <div class="section-title">
+    <h1>Artists</h1>
+    <a href="/artists">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="61.9922" width="1" height="50" fill="black"/>
+        <rect x="61.9922" width="1" height="50" transform="rotate(90 61.9922 0)" fill="black"/>
+        <rect x="62.3477" width="1" height="88.1723" transform="rotate(45 62.3477 0)" fill="black"/>
+      </svg>
+    </a>
+  </div>
   <ul class="list list-artists">
     {% for post in latestArtists %}
     <li class="list-item" onclick="javascript:location.href='{{ post.link }}'">
