@@ -18,13 +18,13 @@ $today = date('Ymd');
 
 $context['pastEvents'] = Timber::get_posts([
     'post_type' => 'event',
-    'posts_per_page' => 1,
+    'posts_per_page' => -1,
     'order' => 'ASC',
     'meta_query' => array(
         array(
             'key' => 'dateEvent',
             'value' => $today,
-            'compare' => '<=',
+            'compare' => '<',
             'type' => 'DATE'
         )
     )

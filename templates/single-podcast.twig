@@ -32,8 +32,6 @@
         <div class="artist-meta_bio">{{ post.bio|e('wp_kses_post') }}</div>
       </div> #}
     </section>
-    <section class="post-related">
-      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h2>' ~ __('Related Posts') ~ '</h2>','taxonomies': post.categories(), 'options': {'theme': 'themeLight', 'columns': 3}}) }}
-    </section>
+    {#  #}
   </article>
 {% endblock %}

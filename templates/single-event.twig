@@ -19,8 +19,8 @@
         {% endfor %}
       </div>
     </section>
-    <section class="post-related">
+    {# <section class="post-related">
       {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h2>' ~ __('Related Posts') ~ '</h2>','taxonomies': post.categories(), 'options': {'theme': 'themeLight', 'columns': 3}}) }}
-    </section>
+    </section> #}
   </article>
 {% endblock %}
