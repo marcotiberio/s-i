@@ -1,11 +1,4 @@
-[is='flynt-grid-posts-latest'] {
-  &:last-child {
-    .grid-item:last-child {
-      border-bottom: 0;
-    }
-
-  }
-  
+[is='flynt-grid-articles-latest'] {
   .grid {
     @include reset-list;
     display: flex;
@@ -13,8 +6,12 @@
   }
 
   .grid-item {
-    border-bottom: 1px solid $black;
+    border-top: 1px solid $black;
     width: 100%;
+
+    &:first-child {
+      border-top: 0;
+    }
   }
 
   .preContent {

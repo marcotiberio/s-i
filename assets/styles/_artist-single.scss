@@ -13,10 +13,6 @@
     &-main {
       display: flex;
       flex-flow: column wrap;
-
-      .flyntComponent--sliderBanner {
-        order: -1;
-      }
       
       .artist-meta {
         align-items: flex-start;

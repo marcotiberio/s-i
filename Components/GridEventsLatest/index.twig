@@ -1,5 +1,5 @@
 {% if items|length > 0 %}
-  <div class="flyntComponent" is="flynt-grid-posts-latest">
+  <div class="flyntComponent" is="flynt-grid-events-latest">
     <div class="container">
       {% if title %}
         <div class="preContent">
@@ -26,7 +26,7 @@
                   data-sizes="auto"
                   alt="{{ item.thumbnail.alt|e }}"> #}
                 <div class="content-inner">
-                  <p class="date">{{ item.datePodcast|date("d.m.Y")|escape('wp_kses_post') }}</p>
+                  <p class="date">{{ item.dateEvent|date("d.m.Y")|escape('wp_kses_post') }}</p>
                   <p class="title">{{ item.title }}</p>
                 </div>
               </a>

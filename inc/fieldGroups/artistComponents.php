@@ -84,6 +84,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     // Components\BlockSpacer\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\BlockWysiwygSidebar\getACFLayout(),
+                    // Components\GridPodcastsLatest\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
                 ],
             ],

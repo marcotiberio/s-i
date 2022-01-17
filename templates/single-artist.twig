@@ -32,7 +32,9 @@
       </div> #}
     </section>
     <section class="post-related">
-      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h2>' ~ __('Related Posts') ~ '</h2>','taxonomies': post.categories(), 'options': {'theme': 'themeLight', 'columns': 3}}) }}
+      {{ renderComponent('GridEventsLatest', {'title': ('Events'),'taxonomies': post.categories() }) }}
+      {{ renderComponent('GridPodcastsLatest', {'title': ('Podcasts'),'taxonomies': post.categories() }) }}
+      {{ renderComponent('GridArticlesLatest', {'title': ('Article'),'taxonomies': post.categories() }) }}
     </section>
   </article>
 {% endblock %}

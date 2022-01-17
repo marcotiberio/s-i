@@ -1,14 +1,14 @@
 <?php
 
-namespace Flynt\Components\GridPostsLatestCustom;
+namespace Flynt\Components\GridPodcastsLatest;
 
 use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 use Timber\Timber;
 
-const POST_TYPE = 'post';
+const POST_TYPE = 'podcast';
 
-add_filter('Flynt/addComponentData?name=GridPostsLatestCustom', function ($data) {
+add_filter('Flynt/addComponentData?name=GridPodcastsLatest', function ($data) {
     $postType = POST_TYPE;
 
     $data['taxonomies'] = $data['taxonomies'] ?: [];
@@ -19,8 +19,7 @@ add_filter('Flynt/addComponentData?name=GridPostsLatestCustom', function ($data)
         'category' => join(',', array_map(function ($taxonomy) {
             return $taxonomy->term_id;
         }, $data['taxonomies'])),
-        'posts_per_page' => -1,
-        'order' => 'DESC',
+        'posts_per_page' => $data['options']['columns'],
         'ignore_sticky_posts' => 1,
         'post__not_in' => array(get_the_ID())
     ]);
@@ -33,8 +32,8 @@ add_filter('Flynt/addComponentData?name=GridPostsLatestCustom', function ($data)
 function getACFLayout()
 {
     return [
-        'name' => 'GridPostsLatestCustom',
-        'label' => 'Grid: Posts Latest Custom',
+        'name' => 'GridPodcastsLatest',
+        'label' => 'Grid: Podcasts Latest',
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),
@@ -42,6 +41,11 @@ function getACFLayout()
                 'type' => 'tab',
                 'placement' => 'top',
                 'endpoint' => 0
+            ],
+            [
+                'label' => __('Title', 'flynt'),
+                'name' => 'title',
+                'type' => 'text',
             ],
             [
                 'label' => __('Categories', 'flynt'),
@@ -56,37 +60,12 @@ function getACFLayout()
                 'save_terms' => 0,
                 'load_terms' => 0,
                 'return_format' => 'object'
-            ],
-            [
-                'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'layout' => 'row',
-                'sub_fields' => [
-                    FieldVariables\getTheme(),
-                    [
-                        'label' => __('Columns', 'flynt'),
-                        'name' => 'columns',
-                        'type' => 'number',
-                        'default_value' => 3,
-                        'min' => 1,
-                        'max' => 4,
-                        'step' => 1
-                    ]
-                ]
-            ],
+            ]
         ]
     ];
 }
 
-Options::addTranslatable('GridPostsLatest', [
+Options::addTranslatable('GridPodcastsLatest', [
     [
         'label' => __('Labels', 'flynt'),
         'name' => 'labelsTab',

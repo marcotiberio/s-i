@@ -6,7 +6,7 @@
       <h1 class="title">{{ post.title }}</h1>
       <p class="intro">{{ post.introArticle }}</p>
       <div class="credits">
-        <p class="date">{{ post.dateEvent|date("d.m.Y")|escape('wp_kses_post') }}</p>
+        <p class="date">{{ post.dateArticle|date("d.m.Y")|escape('wp_kses_post') }}</p>
         <p class="author">by {{ post.authorArticle }}</p>
       </div>
     </header>
