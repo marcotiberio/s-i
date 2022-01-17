@@ -1,6 +1,7 @@
 .list {
   @include reset-list;
   @include grid(2);
+  justify-content: space-between;
 
   @media (min-width: $breakpoint-tablet) {
     padding-right: 0;
@@ -10,7 +11,11 @@
     @include reset-content-margins;
 
     @media (min-width: $breakpoint-tablet-horizontal) {
-      max-width: 240px;
+      width: 50%;
+    }
+
+    &:last-child {
+      margin-left: 50%;
     }
   }
 

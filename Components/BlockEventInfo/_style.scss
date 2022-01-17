@@ -1,16 +1,11 @@
-[is='flynt-block-podcast-info'] {
+[is='flynt-block-event-info'] {
   .container {
     align-items: flex-start;
-    column-gap: $spacing-small;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: space-between;
-    padding: $spacing-small 0;
+    grid-template-columns: 1fr;
     width: 100%;
 
     .slider {
-      grid-column-end: 2;
-      grid-column-start: 1;
       position: relative;
       width: 100%;
 
@@ -26,7 +21,6 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        margin-top: $spacing-large;
       }
 
       &-button {
@@ -39,7 +33,6 @@
         justify-content: center;
         position: relative;
         top: 50%;
-        transform: translateY(-50%);
         transition: opacity 0.2s ease-out;
         width: $spacing-large;
         z-index: 10;

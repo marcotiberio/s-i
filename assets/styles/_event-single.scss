@@ -17,22 +17,24 @@
     }
 
     &-main {
-      display: flex;
-      flex-flow: column wrap;
+      column-gap: $spacing-small;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: $spacing-small 0;
 
-      .flyntComponent {
-        border-top: 1px solid $black;
-        margin-left: calc(50% + 7.5px);
-        padding: $spacing-small 0;
-        width: calc(50% - 7.5px);
+      // .flyntComponent {
+      //   border-top: 1px solid $black;
+      //   margin-left: calc(50% + 7.5px);
+      //   padding: $spacing-small 0;
+      //   width: calc(50% - 7.5px);
 
-        &:first-child {
-          border-top: 0;
-          margin-left: 0;
-          padding: 0;
-          width: 100%;
-        }
-      }
+      //   &:first-child {
+      //     border-top: 0;
+      //     margin-left: 0;
+      //     padding: 0;
+      //     width: 100%;
+      //   }
+      // }
       
       
       

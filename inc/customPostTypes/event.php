@@ -43,7 +43,7 @@ function registerEventPostType()
         'label'                 => __('Event', 'flynt'),
         'description'           => __('Event Description', 'flynt'),
         'labels'                => $labels,
-        'supports'              => ['title', 'revisions'],
+        'supports'              => ['title', 'thumbnail'],
         'taxonomies'            => ['category', 'post_tag'],
         'hierarchical'          => false,
         'public'                => true,
