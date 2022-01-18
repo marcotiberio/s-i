@@ -122,31 +122,6 @@ function getACFFields()
             'required' => 0,
         ],
         [
-            'label' => __('Options', 'flynt'),
-            'name' => 'optionsTab',
-            'type' => 'tab',
-            'placement' => 'top',
-            'endpoint' => 0
-        ],
-        [
-            'label' => '',
-            'name' => 'options',
-            'type' => 'group',
-            'layout' => 'row',
-            'sub_fields' => [
-                array_merge(FieldVariables\getTheme(), [
-                    'default_value' => 'themeDark'
-                ]),
-                [
-                    'label' => __('Show as Card', 'flynt'),
-                    'name' => 'card',
-                    'type' => 'true_false',
-                    'default_value' => 1,
-                    'ui' => 1
-                ]
-            ]
-        ],
-        [
             'label' => 'Form Examples',
             'name' => 'templateTab',
             'type' => 'tab',
