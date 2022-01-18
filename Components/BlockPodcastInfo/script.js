@@ -28,17 +28,25 @@ class BlockPodcastInfo extends window.HTMLDivElement {
 
   resolveElements () {
     this.$slider = $('[data-slider]', this)
+    this.$sliderItems = $('.slider-item', this)
     this.$buttonNext = $('[data-slider-button="next"]', this)
     this.$buttonPrev = $('[data-slider-button="prev"]', this)
+    this.$pagination = $('[data-slider-pagination]', this)
   }
 
   connectedCallback () {
-    this.initSlider()
+    if (this.$sliderItems.length > 1) {
+      this.initSlider()
+    }
   }
 
   initSlider () {
     const { options } = this.props
     const config = {
+      pagination: {
+        el: this.$pagination.get(0),
+        type: 'fraction'
+      },
       navigation: {
         nextEl: this.$buttonNext.get(0),
         prevEl: this.$buttonPrev.get(0)

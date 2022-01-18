@@ -1,24 +1,15 @@
 <div class="flyntComponent" is="flynt-block-artist-info">
   <script type="application/json">{{ jsonData|json_encode }}</script>
   <div class="container">
-    <div data-slider class="slider swiper-container themeLight">
+    <div data-slider class="slider slider{{ sliderTrueFalse|e }} swiper-container themeLight">
       <div class="swiper-wrapper">
-        {% for image in images %}
+        {% for panel in repeaterSlider %}
           <div class="slider-item swiper-slide">
             <figure class="figure">
               <img class="figure-image lazyload"
-                src="{{ image.src|resizeDynamic(0, 540) }}"
-                srcset="{{ placeholderImage(image.aspect * 540, 540) }}"
-                data-srcset="
-                  {{ image.src|resizeDynamic(0, 1080) }} {{ (image.aspect * 1080)|round }}w,
-                  {{ image.src|resizeDynamic(0, 800) }} {{ (image.aspect * 800)|round }}w,
-                  {{ image.src|resizeDynamic(0, 540) }} {{ (image.aspect * 540)|round }}w,
-                  {{ image.src|resizeDynamic(0, 385) }} {{ (image.aspect * 385)|round }}w,
-                  {{ image.src|resizeDynamic(0, 250) }} {{ (image.aspect * 250)|round }}w"
-                data-sizes="auto"
-                alt="{{ image.alt|e }}">
-              {% if image.caption %}
-                <figcaption class="figure-caption">{{ image.caption|e }}</figcaption>
+                src="{{ panel.panelImage.src|resizeDynamic(0, 540) }}"
+              {% if panelImage.caption %} >
+                <figcaption class="figure-caption">{{ panelImage.caption|e }}</figcaption>
               {% endif %}
             </figure>
           </div>
@@ -28,6 +19,7 @@
         <button type="button" data-slider-button="prev" class="slider-button slider-button--prev">
           <i data-feather="arrow-left"></i>
         </button>
+        {# <div data-slider-pagination class="slider-pagination swiper-pagination-fraction"></div> #}
         <button type="button" data-slider-button="next" class="slider-button slider-button--next">
           <i data-feather="arrow-right"></i>
         </button>

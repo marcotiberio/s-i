@@ -27,15 +27,35 @@ function getACFLayout()
                 'endpoint' => 0
             ],
             [
-                'label' => __('Images', 'flynt'),
-                'name' => 'images',
-                'type' => 'gallery',
-                'min' => 2,
-                'preview_size' => 'medium',
-                'mime_types' => 'jpg,jpeg,png',
-                'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
-                'required' => 1
+                'label' => __('Slider', 'flynt'),
+                'name' => 'repeaterSlider',
+                'type' => 'repeater',
+                'layout' => 'table',
+                'button_label' => __('Add Image', 'flynt'),
+                'sub_fields' => [
+                    [
+                        'label' => __('Image', 'flynt'),
+                        'name' => 'panelImage',
+                        'type' => 'image',
+                        'return_format' => 'array',
+                        'preview_size' => 'medium',
+                        'library' => 'all',
+                        'wrapper' => [
+                            'width' => '50',
+                        ],
+                    ],
+                ],
             ],
+            // [
+            //     'label' => __('Images', 'flynt'),
+            //     'name' => 'images',
+            //     'type' => 'gallery',
+            //     'min' => 2,
+            //     'preview_size' => 'medium',
+            //     'mime_types' => 'jpg,jpeg,png',
+            //     'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
+            //     'required' => 1
+            // ],
             [
                 'label' => __('Socials', 'flynt'),
                 'name' => 'socialTab',

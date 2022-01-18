@@ -1,7 +1,7 @@
 [is='flynt-block-artist-info'] {
   .container {
     align-items: flex-start;
-    column-gap: $spacing-small;
+    column-gap: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
@@ -68,6 +68,7 @@
     .socials {
       grid-column-end: 3;
       grid-column-start: 2;
+      padding: 0 $spacing-small;
 
       .list {
         @include reset-list;

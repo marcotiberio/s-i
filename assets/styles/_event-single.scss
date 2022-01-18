@@ -4,7 +4,7 @@
   .post {
     &-header {
       border-bottom: 1px solid $black;
-      column-gap: $spacing-small;
+      column-gap: 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       padding: $spacing-small 0;
@@ -17,7 +17,7 @@
     }
 
     &-main {
-      column-gap: $spacing-small;
+      column-gap: 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       padding: $spacing-small 0;
@@ -44,7 +44,7 @@
       
       .artist-meta {
         align-items: flex-start;
-        column-gap: $spacing-small;
+        column-gap: 0;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-content: space-between;

@@ -3,6 +3,7 @@
     align-items: flex-start;
     display: grid;
     grid-template-columns: 1fr;
+    padding-right: $spacing-small;
     width: 100%;
 
     .slider {

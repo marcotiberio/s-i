@@ -20,22 +20,50 @@ function getACFLayout()
         'label' => 'Block: Podcast Info',
         'sub_fields' => [
             [
-                'label' => __('Slider', 'flynt'),
-                'name' => 'sliderTab',
+                'label' => __('Poster', 'flynt'),
+                'name' => 'posterTab',
                 'type' => 'tab',
                 'placement' => 'top',
                 'endpoint' => 0
             ],
             [
-                'label' => __('Images', 'flynt'),
-                'name' => 'images',
-                'type' => 'gallery',
-                'min' => 2,
-                'preview_size' => 'medium',
-                'mime_types' => 'jpg,jpeg,png',
-                'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
-                'required' => 1
+                'label' => 'Hide Slider?',
+                'name' => 'sliderTrueFalse',
+                'type' => 'true_false',
+                'default_value' => 0,
+                'ui' => 1,
+                'instructions' => __('Remember to add a Featured Image if you want to hide the Slider', 'flynt')
             ],
+            [
+                'label' => __('Slider', 'flynt'),
+                'name' => 'repeaterSlider',
+                'type' => 'repeater',
+                'layout' => 'table',
+                'button_label' => __('Add Image', 'flynt'),
+                'sub_fields' => [
+                    [
+                        'label' => __('Image', 'flynt'),
+                        'name' => 'panelImage',
+                        'type' => 'image',
+                        'return_format' => 'array',
+                        'preview_size' => 'medium',
+                        'library' => 'all',
+                        'wrapper' => [
+                            'width' => '50',
+                        ],
+                    ],
+                ],
+            ],
+            // [
+            //     'label' => __('Images', 'flynt'),
+            //     'name' => 'images',
+            //     'type' => 'gallery',
+            //     'min' => 2,
+            //     'preview_size' => 'medium',
+            //     'mime_types' => 'jpg,jpeg,png',
+            //     'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
+            //     'required' => 1
+            // ],
             [
                 'label' => __('Socials', 'flynt'),
                 'name' => 'socialTab',

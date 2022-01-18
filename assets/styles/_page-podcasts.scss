@@ -6,7 +6,7 @@
 
     .list-podcasts {
       @include reset-list;
-      column-gap: $spacing-small;
+      column-gap: 0;
       display: grid;
       grid-auto-rows: auto;
       grid-template-columns: repeat(4, 1fr);

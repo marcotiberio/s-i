@@ -11,21 +11,21 @@
     .box {
       align-items: center;
       display: flex;
-      margin: 0 $spacing-small * -1;
+      margin: 0;
 
       &-inner {
         @include reset-content-margins('both');
-        padding-left: $spacing-small/2;
-        padding-right: $spacing-small;
         width: 50%;
       }
 
-      &--imageRight {
-        flex-direction: row;
-      }
-
-      &--imageLeft {
-        flex-direction: row-reverse;
+      &--image {
+        &Right {
+          flex-direction: row;
+        }
+  
+        &Left {
+          flex-direction: row-reverse;
+        }
       }
     }
 

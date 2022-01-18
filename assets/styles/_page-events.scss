@@ -16,7 +16,7 @@
 
       &-item {
         border-bottom: 1px solid $black;
-        column-gap: $spacing-small;
+        column-gap: 0;
         display: grid;
         grid-auto-rows: auto;
         grid-template-columns: repeat(2, 1fr);

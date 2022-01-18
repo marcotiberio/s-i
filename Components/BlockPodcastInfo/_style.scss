@@ -1,7 +1,7 @@
 [is='flynt-block-podcast-info'] {
   .container {
     align-items: flex-start;
-    column-gap: $spacing-small;
+    column-gap: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
@@ -65,6 +65,30 @@
       }
     }
 
+    .slider1 {
+      display: none;
+    }
+
+    .slider-pagination {
+      display: block;
+      margin-top: 0;
+      text-align: center;
+      z-index: 1;
+
+      @media (min-width: $breakpoint-tablet-horizontal) {
+        display: block;
+      }
+    }
+
+    .swiper-pagination-fraction {
+      // bottom: 0;
+      // height: 10px;
+      // left: 0;
+      // top: auto;
+      width: auto;
+      // z-index: 1100;
+    }
+
     .socials {
       grid-column-end: 3;
       grid-column-start: 2;
@@ -126,7 +150,22 @@
         right: 0;
       }
     }
+  }
 
+  .featuredImage {
+    grid-column-end: 2;
+    grid-column-start: 1;
+    position: relative;
+    width: 100%;
+    
+    .container {
+      grid-template-columns: 1fr;
+      padding: 0;
+
+      .figure {
+        position: relative;
+      }
+    }
   }
 
 }

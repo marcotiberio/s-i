@@ -43,7 +43,7 @@
     align-items: flex-start;
     display: flex;
     flex-flow: column wrap;
-    padding: 0 $spacing-small / 2;
+    padding: 0;
     width: 50%;
 
     &-item--current {
@@ -76,6 +76,7 @@
 
     &-submenu {
       display: none;
+      padding-left: $spacing-small;
     }
   }
 

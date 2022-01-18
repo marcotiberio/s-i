@@ -43,7 +43,7 @@
 
     &-inner {
       @include reset-content-margins;
-      column-gap: $spacing-small;
+      column-gap: 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       padding: $spacing-small 0;
