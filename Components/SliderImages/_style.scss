@@ -1,4 +1,12 @@
 [is='flynt-slider-images'] {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+
   .slider {
     grid-column-end: 2;
     grid-column-start: 1;
@@ -17,7 +25,7 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-      margin-top: $spacing-large;
+      margin-top: -7.5px;
     }
 
     &-button {
@@ -67,7 +75,8 @@
     &-image {
       height: 100%;
       margin: 0 auto;
-      width: auto;
+      object-fit: cover;
+      width: 100%;
     }
 
     &-caption {

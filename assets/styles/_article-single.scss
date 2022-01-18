@@ -28,6 +28,12 @@
           border-top: 0;
         }
 
+        &:last-child {
+          .container {
+            padding: 0;
+          }
+        }
+
         &--wysiwyg {
           border-top: 0;
           margin-left: calc(50% + 7.5px);

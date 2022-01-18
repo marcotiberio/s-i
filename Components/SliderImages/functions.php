@@ -19,30 +19,50 @@ function getACFLayout()
         'name' => 'sliderImages',
         'label' => 'Slider: Images',
         'sub_fields' => [
+            // [
+            //     'label' => __('Title', 'flynt'),
+            //     'name' => 'preContentHtml',
+            //     'type' => 'wysiwyg',
+            //     'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
+            //     'media_upload' => 0,
+            // ],
             [
-                'label' => __('General', 'flynt'),
-                'name' => 'generalTab',
+                'label' => __('Slider', 'flynt'),
+                'name' => 'sliderTab',
                 'type' => 'tab',
                 'placement' => 'top',
                 'endpoint' => 0
             ],
             [
-                'label' => __('Title', 'flynt'),
-                'name' => 'preContentHtml',
-                'type' => 'wysiwyg',
-                'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
-                'media_upload' => 0,
+                'label' => __('Slider', 'flynt'),
+                'name' => 'repeaterSlider',
+                'type' => 'repeater',
+                'layout' => 'table',
+                'button_label' => __('Add Image', 'flynt'),
+                'sub_fields' => [
+                    [
+                        'label' => __('Image', 'flynt'),
+                        'name' => 'panelImage',
+                        'type' => 'image',
+                        'return_format' => 'array',
+                        'preview_size' => 'medium',
+                        'library' => 'all',
+                        'wrapper' => [
+                            'width' => '50',
+                        ],
+                    ],
+                ],
             ],
-            [
-                'label' => __('Images', 'flynt'),
-                'name' => 'images',
-                'type' => 'gallery',
-                'min' => 2,
-                'preview_size' => 'medium',
-                'mime_types' => 'jpg,jpeg,png',
-                'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
-                'required' => 1
-            ],
+            // [
+            //     'label' => __('Images', 'flynt'),
+            //     'name' => 'images',
+            //     'type' => 'gallery',
+            //     'min' => 2,
+            //     'preview_size' => 'medium',
+            //     'mime_types' => 'jpg,jpeg,png',
+            //     'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
+            //     'required' => 1
+            // ],
             [
                 'label' => __('Options', 'flynt'),
                 'name' => 'optionsTab',

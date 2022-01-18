@@ -6,7 +6,7 @@
   {% endfor %} #}
   <ul class="list-podcasts">
     {% for post in podcastlist %}
-      <li class="list-episodes-item" onclick="javascript:location.href='{{ post.link }}'">
+      <li class="list-podcasts-item" onclick="javascript:location.href='{{ post.link }}'">
         <div class="content">
           <a class="title" href="{{ post.link }}">{{ post.title|e }}</a>
           {# <p>{{ post.dateEpisode|date("d.m.Y")|escape('wp_kses_post') }}</p> #}
