@@ -7,9 +7,9 @@
           <div class="slider-item swiper-slide">
             <figure class="figure">
               <img class="figure-image lazyload"
-                src="{{ panel.panelImage.src|resizeDynamic(0, 540) }}"
-              {% if panelImage.caption %} >
-                <figcaption class="figure-caption">{{ panelImage.caption|e }}</figcaption>
+                src="{{ panel.panelImage.src|resizeDynamic(0, 540) }}">
+              {% if panel.panelImage.caption %}
+                <figcaption class="figure-caption">{{ panel.panelImage.caption|e }}</figcaption>
               {% endif %}
             </figure>
           </div>
@@ -34,8 +34,8 @@
       <ul class="list">
         {% for panel in repeaterPanels %}
           <li class="panel">
-            <a class="" href="{{ panel.panelLink|e }}" type="button">
-              {{ panel.panelTitle|e }}
+            <a href="{{ panel.panelLink.url }}" target="_blank" rel="noreferrer noopener" type="button">
+              {{ panel.panelLink.title|e }}
             </a>
           </li>
         {% endfor %}

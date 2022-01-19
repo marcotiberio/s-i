@@ -4,8 +4,13 @@ import 'normalize.css/normalize.css'
 import './main.scss'
 import $ from 'jquery'
 import feather from 'feather-icons'
+import 'core-js/es/number'
+import Swiper, { Navigation, A11y, Autoplay } from 'swiper/swiper.esm'
+import 'swiper/swiper-bundle.css'
 
 import installCE from 'document-register-element/pony'
+
+Swiper.use([Navigation, A11y, Autoplay])
 
 window.jQuery = $
 

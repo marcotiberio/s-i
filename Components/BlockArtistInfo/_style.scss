@@ -23,10 +23,11 @@
 
       &-button-container {
         align-items: center;
+        background-color: $white;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        margin-top: $spacing-large;
+        margin-top: -25px;
       }
 
       &-button {
@@ -35,13 +36,13 @@
         cursor: pointer;
         display: flex;
         flex-flow: row-reverse wrap;
-        height: $spacing-large;
+        height: 25px;
         justify-content: center;
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+        // top: 50%;
+        // transform: translateY(-50%);
         transition: opacity 0.2s ease-out;
-        width: $spacing-large;
+        width: 25px;
         z-index: 10;
 
         @media (min-width: $breakpoint-tablet-horizontal) {
@@ -53,7 +54,7 @@
         }
 
         &.swiper-button-disabled {
-          opacity: 0.5;
+          opacity: 0;
           pointer-events: none;
         }
 
@@ -62,6 +63,36 @@
           height: auto;
           top: 0;
           width: 80%;
+        }
+      }
+
+      .figure {
+        bottom: 0;
+        left: 0;
+        margin-bottom: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+  
+        &-image {
+          height: 100%;
+          margin: 0;
+          object-fit: cover;
+          width: 100%;
+        }
+  
+        &-caption {
+          background-color: $white;
+          bottom: 0;
+          color: $black;
+          display: inline-block;
+          font-size: 12px;
+          height: 15px;
+          left: 0;
+          padding: 5px 2.5px;
+          position: absolute;
+          text-align: center;
+          width: calc(100% - 5px);
         }
       }
     }
@@ -99,34 +130,6 @@
     .bio {
       grid-column-end: 3;
       grid-column-start: 5;
-    }
-
-    .figure {
-      bottom: 0;
-      left: 0;
-      margin-bottom: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-
-      &-image {
-        height: 100%;
-        margin: 0;
-        object-fit: cover;
-        width: 100%;
-      }
-
-      &-caption {
-        background: rgba($color-background-dark, 0.5);
-        bottom: 0;
-        color: $color-background-light;
-        display: inline-block;
-        font-size: 0.8rem;
-        max-width: 450px;
-        padding: 0.25rem 0.5rem;
-        position: absolute;
-        right: 0;
-      }
     }
 
   }

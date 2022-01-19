@@ -16,20 +16,6 @@ $today = date('Ymd');
 // $nextepisode = date('H:i:s', strtotime('+1 hours'));
 // $nextepisodez = date('H:i:s', strtotime('+2 hours'));
 
-$context['pastEvents'] = Timber::get_posts([
-    'post_type' => 'event',
-    'posts_per_page' => -1,
-    'order' => 'ASC',
-    'meta_query' => array(
-        array(
-            'key' => 'dateEvent',
-            'value' => $today,
-            'compare' => '<',
-            'type' => 'DATE'
-        )
-    )
-]);
-
 $context['futureEvents'] = Timber::get_posts([
     'post_type' => 'event',
     'posts_per_page' => -1,
@@ -39,6 +25,20 @@ $context['futureEvents'] = Timber::get_posts([
             'key' => 'dateEvent',
             'value' => $today,
             'compare' => '>=',
+            'type' => 'DATE'
+        )
+    )
+]);
+
+$context['pastEvents'] = Timber::get_posts([
+    'post_type' => 'event',
+    'posts_per_page' => -1,
+    'order' => 'ASC',
+    'meta_query' => array(
+        array(
+            'key' => 'dateEvent',
+            'value' => $today,
+            'compare' => '<',
             'type' => 'DATE'
         )
     )

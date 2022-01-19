@@ -45,3 +45,16 @@ add_action('admin_enqueue_scripts', function () {
         'type' => 'style'
     ]);
 });
+
+// add_action('wp_enqueue_scripts', function () {
+//     Asset::enqueue([
+//         'name' => 'Flynt/assets',
+//         'path' => 'assets/global.js',
+//         'type' => 'script',
+//         'inFooter' => false,
+//     ]);
+//     wp_script_add_data('Flynt/assets', 'defer', true);
+//     $data = [
+//         'templateDirectoryUri' => get_template_directory_uri(),
+//     ];
+// });

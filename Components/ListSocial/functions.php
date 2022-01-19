@@ -19,26 +19,19 @@ function getACFLayout()
             ],
             [
                 'label' => __('Socials', 'flynt'),
-                'name' => 'repeaterLinks',
+                'name' => 'repeaterPanels',
                 'type' => 'repeater',
-                'layout' => 'table',
+                'layout' => 'row',
                 'min' => 1,
                 'button_label' => __('Add Social Link', 'flynt'),
                 'sub_fields' => [
                     [
-                        'label' => __('Panel Title', 'flynt'),
-                        'name' => 'panelTitle',
-                        'type' => 'text',
-                        'wrapper' => [
-                            'width' => '50',
-                        ],
-                    ],
-                    [
                         'label' => __('Panel Link', 'flynt'),
                         'name' => 'panelLink',
-                        'type' => 'url',
+                        'type' => 'link',
+                        'return_format' => 'array',
                         'wrapper' => [
-                            'width' => '50',
+                            'width' => '100',
                         ],
                     ],
                 ],

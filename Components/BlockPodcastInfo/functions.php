@@ -54,16 +54,6 @@ function getACFLayout()
                     ],
                 ],
             ],
-            // [
-            //     'label' => __('Images', 'flynt'),
-            //     'name' => 'images',
-            //     'type' => 'gallery',
-            //     'min' => 2,
-            //     'preview_size' => 'medium',
-            //     'mime_types' => 'jpg,jpeg,png',
-            //     'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
-            //     'required' => 1
-            // ],
             [
                 'label' => __('Socials', 'flynt'),
                 'name' => 'socialTab',
@@ -75,24 +65,17 @@ function getACFLayout()
                 'label' => __('Socials', 'flynt'),
                 'name' => 'repeaterPanels',
                 'type' => 'repeater',
-                'layout' => 'table',
+                'layout' => 'row',
                 'min' => 1,
                 'button_label' => __('Add Social Link', 'flynt'),
                 'sub_fields' => [
                     [
-                        'label' => __('Panel Title', 'flynt'),
-                        'name' => 'panelTitle',
-                        'type' => 'text',
-                        'wrapper' => [
-                            'width' => '50',
-                        ],
-                    ],
-                    [
                         'label' => __('Panel Link', 'flynt'),
                         'name' => 'panelLink',
-                        'type' => 'url',
+                        'type' => 'link',
+                        'return_format' => 'array',
                         'wrapper' => [
-                            'width' => '50',
+                            'width' => '100',
                         ],
                     ],
                 ],

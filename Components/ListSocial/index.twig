@@ -4,8 +4,8 @@
       <ul class="list">
         {% for panel in repeaterLinks %}
           <li class="panel">
-            <a class="" href="{{ panel.panelLink|e }}" type="button">
-              {{ panel.panelTitle|e }}
+            <a href="{{ panel.panelLink.url }}" target="_blank" rel="noreferrer noopener" type="button">
+              {{ panel.panelLink.title|e }}
             </a>
           </li>
         {% endfor %}
