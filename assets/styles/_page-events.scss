@@ -16,15 +16,24 @@
 
       &-item {
         border-bottom: 1px solid $black;
-        column-gap: 0;
-        display: grid;
-        grid-auto-rows: auto;
-        grid-template-columns: repeat(2, 1fr);
         padding: $spacing-small 0;
         row-gap: $spacing-small;
 
-        .title {
+        &-link {
+          column-gap: 0;
+          display: grid;
+          grid-auto-rows: auto;
+          grid-template-columns: repeat(2, 1fr);
           text-decoration: none;
+          width: 100%;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .title {
+          margin-bottom: 0;
           text-transform: uppercase;
         }
       }

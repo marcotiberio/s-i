@@ -14,9 +14,20 @@
 
       &-item {
         padding-right: $spacing-small;
+
+        &:hover {
+          img {
+            filter: invert(1);
+          }
+        }
+
+        a {
+          text-decoration: none;
+        }
         
         .title {
-          text-decoration: none;
+          margin-bottom: 0;
+
           text-transform: uppercase;
         }
       }

@@ -23,6 +23,15 @@
         padding: $spacing-small 0;
         width: 100%;
 
+        &-link {
+          text-decoration: none;
+          width: 100%;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
         .featured {
           &Info {
             display: grid;

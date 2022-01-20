@@ -8,9 +8,11 @@
   <h1 class="section-title">Upcoming Events</h1>
   <ul class="list-events list-events--future">
     {% for post in futureEvents %}
-    <li class="list-events-item" onclick="javascript:location.href='{{ post.link }}'">
-      <div>{{ post.dateEvent|date("d.m.Y")|escape('wp_kses_post') }}</div>
-      <a class="title" href="{{ post.link }}">{{ post.title|e }}</a>
+    <li class="list-events-item">
+      <a href="{{ post.link }}" class="list-events-item-link">
+        <div>{{ post.dateEvent|date("d.m.Y")|escape('wp_kses_post') }}</div>
+        <p class="title" >{{ post.title|e }}</p>
+      </a>
     </li>
     {% endfor %}
   </ul>
@@ -18,9 +20,11 @@
   <h1 class="section-title">Past Events</h1>
   <ul class="list-events list-events--past">
     {% for post in pastEvents %}
-    <li class="list-events-item" onclick="javascript:location.href='{{ post.link }}'">
-      <div>{{ post.dateEvent|date("d.m.Y")|escape('wp_kses_post') }}</div>
-      <a class="title" href="{{ post.link }}">{{ post.title|e }}</a>
+    <li class="list-events-item">
+      <a href="{{ post.link }}" class="list-events-item-link">
+        <div>{{ post.dateEvent|date("d.m.Y")|escape('wp_kses_post') }}</div>
+        <p class="title" href="{{ post.link }}">{{ post.title|e }}</p>
+      </a>
     </li>
     {% endfor %}
   </ul>
