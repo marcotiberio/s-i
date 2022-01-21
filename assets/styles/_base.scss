@@ -623,15 +623,17 @@ select {
 
 .preContent {
   @include reset-content-margins;
-  margin: 0 auto 32px;
-  text-align: center;
+  margin: 0;
+  text-align: left;
 
   @media (min-width: $breakpoint-tablet) {
     margin-bottom: $spacing-small;
+    text-align: center;
   }
 
   @media (min-width: $breakpoint-desktop) {
     margin-bottom: $spacing-small;
+    text-align: center;
   }
 }
 

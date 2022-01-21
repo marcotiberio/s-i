@@ -19,6 +19,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\BlockWysiwygTwoCol\getACFLayout(),
+                    Components\GridPostsArtistSelector\getACFLayout(),
                 ]
             ]
         ],

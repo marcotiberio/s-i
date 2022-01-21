@@ -4,7 +4,7 @@
       border-bottom: 0;
     }
   }
-  
+
   .preContent {
     margin-bottom: 0;
 
@@ -110,6 +110,13 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
 
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          display: grid;
+          grid-auto-columns: auto;
+          grid-template-columns: 1fr;
+          row-gap: $spacing-small;
+        }
+
         &--title {
           display: flex;
           grid-column-end: 3;
@@ -117,6 +124,11 @@
           justify-content: flex-start;
           padding: $spacing-small 0;
           text-transform: uppercase;
+
+          @media (max-width: $breakpoint-mobile-horizontal) {
+            grid-column-end: 2;
+            grid-column-start: 1;
+          }
         }
       }
     }
