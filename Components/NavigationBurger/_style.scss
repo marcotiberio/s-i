@@ -8,7 +8,7 @@
 
 [is='flynt-navigation-burger'] {
   $navigation-height: 75px;
-
+  border-bottom: 1px solid $black;
   height: $navigation-height;
 
   @media (min-width: $breakpoint-tablet-horizontal) {
@@ -18,13 +18,12 @@
   .container {
     align-items: center;
     background-color: $color-background;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
     display: flex;
     height: $navigation-height;
     justify-content: space-between;
     left: 0;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding-bottom: 0;
+    padding-top: $spacing-small;
     position: fixed;
     right: 0;
     top: 0;

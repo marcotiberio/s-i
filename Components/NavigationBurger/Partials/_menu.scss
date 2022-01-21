@@ -26,22 +26,24 @@
 
   &-item--current {
     .menu-link {
-      color: $color-accent;
+      color: $color-text;
+      text-decoration: underline;
     }
   }
 
   &-link {
     color: $color-text;
     display: block;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 2.35rem;
+    font-weight: 400;
     padding: 12px $spacing-small;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
     transition: color 0.2s ease-out;
 
     &:focus {
-      color: $color-accent;
+      color: $color-text;
     }
 
     @media (min-width: $breakpoint-tablet) {

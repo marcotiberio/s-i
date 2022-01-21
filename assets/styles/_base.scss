@@ -62,8 +62,8 @@ body {
 
 h1,
 .h1 {
-  font-size: 4rem;
-  line-height: 1;
+  font-size: 2.35rem;
+  line-height: 1.2;
   margin-bottom: $spacing-small;
   padding-top: $spacing-small;
   text-transform: uppercase;
@@ -573,6 +573,10 @@ select {
 .flyntComponent {
   padding-bottom: $spacing-small;
   position: relative;
+
+  &:first-child {
+    padding-bottom: 0;
+  }
 }
 
 .componentSpacing {

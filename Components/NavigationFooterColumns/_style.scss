@@ -11,7 +11,7 @@
   }
 
   .columns {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-flow: row wrap;
 
@@ -51,6 +51,11 @@
 
       @media (min-width: $breakpoint-tablet) {
         margin: 0 auto 0 0;
+      }
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        margin: 0;
+        max-height: 100px;
       }
     }
   }

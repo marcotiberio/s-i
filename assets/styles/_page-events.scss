@@ -30,6 +30,12 @@
           &:hover {
             text-decoration: underline;
           }
+
+          @media (max-width: $breakpoint-mobile-horizontal) {
+            display: grid;
+            grid-auto-rows: auto;
+            grid-template-columns: 1fr;
+          }
         }
 
         .title {
