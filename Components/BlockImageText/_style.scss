@@ -3,19 +3,19 @@
     @include reset-content-margins('top');
   }
 
-  @media (max-width: $breakpoint-tablet-horizontal - 1) {
-    margin: $component-spacing-tablet 0;
-  }
-
   @media (min-width: $breakpoint-tablet-horizontal) {
     .box {
-      align-items: center;
+      align-items: flex-start;
       display: flex;
       margin: 0;
 
       &-inner {
         @include reset-content-margins('both');
         width: 50%;
+
+        &--content {
+          padding: 0 $spacing-small;
+        }
       }
 
       &--image {

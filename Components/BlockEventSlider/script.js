@@ -5,7 +5,7 @@ import 'swiper/swiper-bundle.css'
 
 Swiper.use([Navigation, A11y, Autoplay])
 
-class BlockEventInfo extends window.HTMLDivElement {
+class BlockEventSlider extends window.HTMLDivElement {
   constructor (...args) {
     const self = super(...args)
     self.init()
@@ -54,4 +54,4 @@ class BlockEventInfo extends window.HTMLDivElement {
   }
 }
 
-window.customElements.define('flynt-block-event-info', BlockEventInfo, { extends: 'div' })
+window.customElements.define('flynt-block-event-slider', BlockEventSlider, { extends: 'div' })
