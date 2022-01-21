@@ -1,12 +1,12 @@
 <?php
 
-namespace Flynt\Components\SliderImages;
+namespace Flynt\Components\BlockEventSlider;
 
 use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 
-add_filter('Flynt/addComponentData?name=SliderImages', function ($data) {
-    $translatableOptions = Options::getTranslatable('SliderOptions');
+add_filter('Flynt/addComponentData?name=BlockEventSlider', function ($data) {
+    $translatableOptions = Options::getTranslatable('BlockEventSlider');
     $data['jsonData'] = [
         'options' => array_merge($translatableOptions, $data['options']),
     ];
@@ -16,16 +16,9 @@ add_filter('Flynt/addComponentData?name=SliderImages', function ($data) {
 function getACFLayout()
 {
     return [
-        'name' => 'sliderImages',
-        'label' => 'Slider: Images',
+        'name' => 'BlockEventSlider',
+        'label' => 'Block: Event Slider',
         'sub_fields' => [
-            // [
-            //     'label' => __('Title', 'flynt'),
-            //     'name' => 'preContentHtml',
-            //     'type' => 'wysiwyg',
-            //     'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
-            //     'media_upload' => 0,
-            // ],
             [
                 'label' => __('Slider', 'flynt'),
                 'name' => 'sliderTab',
@@ -55,7 +48,7 @@ function getACFLayout()
             ],
             [
                 'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
+                'name' => 'optionTab',
                 'type' => 'tab',
                 'placement' => 'top',
                 'endpoint' => 0
@@ -91,7 +84,6 @@ function getACFLayout()
                             ]
                         ],
                     ],
-                    FieldVariables\getTheme()
                 ]
             ]
         ]
