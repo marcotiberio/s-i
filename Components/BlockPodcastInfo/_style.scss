@@ -8,11 +8,23 @@
     padding: $spacing-small 0;
     width: 100%;
 
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      display: grid;
+      grid-auto-rows: auto;
+      grid-template-columns: 1fr;
+      row-gap: $spacing-small;
+    }
+
     .slider {
       grid-column-end: 2;
       grid-column-start: 1;
       position: relative;
       width: 100%;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        grid-column-end: 2;
+        grid-column-start: 1;
+      }
 
       &-item {
         height: 0;
@@ -93,6 +105,11 @@
       grid-column-end: 3;
       grid-column-start: 2;
 
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        grid-column-end: 2;
+        grid-column-start: 1;
+      }
+
       .list {
         @include reset-list;
 
@@ -121,6 +138,11 @@
     .bio {
       grid-column-end: 3;
       grid-column-start: 5;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        grid-column-end: 2;
+        grid-column-start: 1;
+      }
     }
 
     .figure {

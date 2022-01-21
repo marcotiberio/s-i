@@ -30,6 +30,8 @@
           &:hover {
             text-decoration: underline;
           }
+
+          
         }
 
         .featured {
@@ -37,6 +39,12 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             width: 100%;
+
+            @media (max-width: $breakpoint-mobile-horizontal) {
+              display: grid;
+              grid-auto-rows: auto;
+              grid-template-columns: 1fr;
+            }
   
             .title {
               margin: 0;
