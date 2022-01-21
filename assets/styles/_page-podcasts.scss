@@ -15,12 +15,16 @@
       @media (max-width: $breakpoint-mobile-horizontal) {
         display: grid;
         grid-auto-rows: auto;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         row-gap: $spacing-small;
       }
 
       &-item {
         padding-right: $spacing-small;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          padding-right: 0;
+        }
 
         &:hover {
           img {

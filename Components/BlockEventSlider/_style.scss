@@ -6,6 +6,10 @@
     padding-right: $spacing-small;
     width: 100%;
 
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      padding-right: 0;
+    }
+
     .slider {
       position: relative;
       width: 100%;
