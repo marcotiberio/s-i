@@ -126,31 +126,31 @@ function getConfig()
                         'classes' => 'button',
                         'selector' => 'a,button'
                     ],
-                    [
-                        'title' => 'Button Ghost',
-                        'classes' => 'button--ghost',
-                        'selector' => '.button'
-                    ],
-                    [
-                        'title' => 'Button Small',
-                        'classes' => 'button--small',
-                        'selector' => '.button'
-                    ],
-                    [
-                        'title' => 'Button Link',
-                        'classes' => 'button--link',
-                        'selector' => '.button'
-                    ]
+                    // [
+                    //     'title' => 'Button Ghost',
+                    //     'classes' => 'button--ghost',
+                    //     'selector' => '.button'
+                    // ],
+                    // [
+                    //     'title' => 'Button Small',
+                    //     'classes' => 'button--small',
+                    //     'selector' => '.button'
+                    // ],
+                    // [
+                    //     'title' => 'Button Link',
+                    //     'classes' => 'button--link',
+                    //     'selector' => '.button'
+                    // ]
                 ]
             ],
             [
-                'title' => 'Icon Lists',
+                'title' => 'Highlight',
                 'icon' => '',
                 'items' => [
                     [
-                        'title' => 'Check Circle',
-                        'classes' => 'iconList iconList--checkCircle',
-                        'selector' => 'ul,ol'
+                        'title' => 'Pill Circle',
+                        'classes' => 'pillCircle',
+                        'selector' => '*'
                     ]
                 ]
             ]

@@ -23,5 +23,15 @@
     p:last-child {
       margin: 0;
     }
+
+    .pillCircle {
+      border: 1px solid #000;
+      border-radius: 1rem;
+      display: inline-block;
+      padding-bottom: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+    }
   }
 }
