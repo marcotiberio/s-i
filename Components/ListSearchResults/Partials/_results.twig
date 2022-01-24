@@ -1,12 +1,13 @@
 {% if posts|length > 0 %}
-  <ul class="searchList boxShadow themeReset">
+  <ul class="searchList">
     {% for post in posts  %}
-      <li class="searchList-item boxPadding">
+      <li class="searchList-item">
         <article class="post">
-          <h2 class="h3"><a href="{{ post.link }}">{{ post.title }}</a></h2>
-          <p>{{ post.preview.length(40).read_more(false) }}</p>
+          <header class="post-title" class="h3">
+            <a href="{{ post.link }}">{{ post.title }}</a>
+          </header>
           <footer class="post-footer">
-            <a href="{{ post.link }}" class="button button--link" aria-hidden="true" tabindex="-1">{{ labels.readMore }}</a>
+            <a href="{{ post.link }}" class="button" aria-hidden="true" tabindex="-1">{{ labels.readMore }}</a>
           </footer>
         </article>
       </li>

@@ -3,7 +3,7 @@
 {% block content %}
   
 
-  <div class="section-title">
+  {# <div class="section-title">
     <h1 id="test">Events</h1>
     <a href="/events">
       <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12,9 +12,9 @@
         <rect x="62.3477" width="1" height="88.1723" transform="rotate(45 62.3477 0)" fill="black"/>
       </svg>
     </a>
-  </div>
+  </div> #}
   <ul class="list list-events">
-    {% for post in latestEvents %}
+    {% for post in latestPosts %}
     <li class="list-item" onclick="javascript:location.href='{{ post.link }}'">
       {% if post.thumbnail %}
       <div class="featuredInfo">
@@ -29,7 +29,7 @@
     {% endfor %}
   </ul>
   
-  <div class="section-title">
+  {# <div class="section-title">
     <h1>Podcasts</h1>
     <a href="/podcasts">
       <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +105,7 @@
       {% endif %}
     </li>
     {% endfor %}
-  </ul>
+  </ul> #}
 
   {% for component in post.meta('pageComponents') %}
     {{ renderComponent(component) }}

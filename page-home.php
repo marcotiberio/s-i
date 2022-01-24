@@ -11,15 +11,16 @@ $context = Timber::get_context();
 $context['post'] = new Post();
 $context['posts'] = new PostQuery();
 
-$context['latestEvents'] = Timber::get_posts([
-    'post_type' => 'event',
+$context['latestPosts'] = Timber::get_posts([
+    'post_type' => array('event', 'podcast', 'article', 'artist'),
+    'orderby' => 'date',
     'order' => 'DESC',
-    'posts_per_page' => 10,
-    'meta_query' => array(
-        array(
-            'key' => 'dateEvent'
-        ),
-    )
+    'posts_per_page' => -1,
+    // 'meta_query' => array(
+    //     array(
+    //         'key' => 'dateEvent'
+    //     ),
+    // )
 ]);
 
 $context['latestPodcasts'] = Timber::get_posts([

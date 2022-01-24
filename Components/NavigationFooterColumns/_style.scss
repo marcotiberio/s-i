@@ -10,6 +10,10 @@
     padding-top: 0;
   }
 
+  .container {
+    padding-top: $spacing-small;;
+  }
+
   .columns {
     align-items: flex-start;
     display: flex;

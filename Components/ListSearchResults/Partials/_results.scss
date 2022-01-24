@@ -1,7 +1,6 @@
 .searchList {
   @include reset-list;
   border-radius: 4px;
-  margin-top: 20px;
 
   &-item {
     border-bottom: 1px solid #ececec;
@@ -15,9 +14,28 @@
 
 .post {
   @include reset-content-margins;
+  align-items: center;
+  border-bottom: 1px solid $black;
+  border-top: 1px solid $black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: $spacing-small 0;
+
+  &-title {
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
 
   &-footer {
-    text-align: right;
+    @media (max-width: $breakpoint-desktop) {
+      text-align: right;
+    }
+
+    a {
+      text-decoration: none;
+    }
   }
 }
 

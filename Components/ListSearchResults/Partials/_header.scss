@@ -1,16 +1,15 @@
 $search-form-spacing: 6px;
 
 .preContent {
-  text-align: center;
+  margin-bottom: 0;
+  margin-top: $spacing-large;
+  text-align: left;
 }
 
 .searchForm {
   &-field {
-    border: 1px solid $color-background;
-    border-radius: 4px;
     display: flex;
     flex-direction: column;
-    padding: $search-form-spacing;
 
     @media (min-width: $breakpoint-mobile-horizontal) {
       flex-direction: row;
@@ -19,14 +18,17 @@ $search-form-spacing: 6px;
 
   &-box {
     flex-grow: 1;
+    margin-bottom: $spacing-small;
 
     @media (min-width: $breakpoint-mobile-horizontal) {
+      margin-bottom: 0;
       margin-right: $search-form-spacing;
     }
   }
 
   &-input {
-    border: 0;
+    border: 1px solid $black;
+    border-radius: 1rem;
     height: 100%;
     line-height: 1.85;
     margin: 0;
