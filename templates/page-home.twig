@@ -15,16 +15,18 @@
   </div> #}
   <ul class="list list-events">
     {% for post in latestPosts %}
-    <li class="list-item" onclick="javascript:location.href='{{ post.link }}'">
-      {% if post.thumbnail %}
-      <div class="featuredInfo">
-        <div>{{ post.dateEvent|date("d.m.Y")|escape('wp_kses_post') }}</div>
-        <p class="title">{{ post.title }}</p>
-      </div>
-      {% endif %}
-      <div class="featuredImage">
-        {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeFull' }, noComponentSpacing: true }) }}
-      </div>
+    <li class="list-item">
+      <a class="list-item-link" href="{{ post.link }}">
+        {% if post.thumbnail %}
+        <div class="featuredInfo">
+          <div>{{ post.dateEvent|date("d.m.Y")|escape('wp_kses_post') }}</div>
+          <p class="title">{{ post.title }}</p>
+        </div>
+        {% endif %}
+        <div class="featuredImage">
+          {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeFull' }, noComponentSpacing: true }) }}
+        </div>
+      </a>
     </li>
     {% endfor %}
   </ul>

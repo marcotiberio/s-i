@@ -44,7 +44,7 @@ function registerArtistPostType()
         'description'           => __('Artist Description', 'flynt'),
         'labels'                => $labels,
         'supports'              => ['title', 'thumbnail'],
-        'taxonomies'            => ['origin', 'post_tag'],
+        'taxonomies'            => ['category', 'origin', 'post_tag'],
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
