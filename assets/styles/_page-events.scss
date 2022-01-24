@@ -2,12 +2,15 @@
 
 .page-events {
   .mainContent {
-    // padding-top: $spacing-small;
-
     .section-title {
       border-bottom: 1px solid $black;
       margin: 0;
+      padding: $spacing-small 0;
       text-transform: uppercase;
+
+      &:first-child {
+        padding-top: 0;
+      }
     }
 
     .list-events {
@@ -20,7 +23,7 @@
         row-gap: $spacing-small;
 
         &-link {
-          column-gap: 0;
+          column-gap: $spacing-small;
           display: grid;
           grid-auto-rows: auto;
           grid-template-columns: repeat(2, 1fr);

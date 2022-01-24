@@ -1,11 +1,10 @@
 [is='flynt-block-wysiwyg-two-col'] {
   .container {
-    column-gap: 0;
+    column-gap: $spacing-small;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: auto;
     justify-content: space-between;
-    padding-bottom: $spacing-small;
 
     @media (max-width: $breakpoint-mobile-horizontal) {
       display: block;
@@ -28,10 +27,7 @@
       border: 1px solid #000;
       border-radius: 1rem;
       display: inline-block;
-      padding-bottom: 0;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 5px;
+      padding: 5px 10px;
     }
   }
 }

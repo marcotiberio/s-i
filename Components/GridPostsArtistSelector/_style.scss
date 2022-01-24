@@ -106,7 +106,7 @@
       }
 
       &-inner {
-        column-gap: 0;
+        column-gap: $spacing-small;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
 

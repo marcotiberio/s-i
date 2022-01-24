@@ -286,7 +286,7 @@ button {
   font-size: 1rem;
   font-weight: 400;
   line-height: inherit;
-  padding: 5px 10px 0;
+  padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -581,6 +581,17 @@ select {
 
   &:last-child {
     padding-bottom: $spacing-small;
+  }
+}
+
+.post-related {
+  .flyntComponent {
+    padding-top: 0;
+    position: relative;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 }
 

@@ -12,19 +12,17 @@
       &-inner {
         @include reset-content-margins('both');
         width: 50%;
-
-        &--content {
-          padding: 0 $spacing-small;
-        }
       }
 
       &--image {
         &Right {
           flex-direction: row;
+          padding-left: $spacing-small/2;
         }
   
         &Left {
           flex-direction: row-reverse;
+          padding-right: $spacing-small/2;
         }
       }
     }

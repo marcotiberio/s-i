@@ -1,11 +1,11 @@
 [is='flynt-block-artist-info'] {
   .container {
     align-items: flex-start;
-    column-gap: 0;
+    column-gap: $spacing-small;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    padding: $spacing-small 0;
+    padding-top: $spacing-small;
     width: 100%;
 
     @media (max-width: $breakpoint-mobile-horizontal) {

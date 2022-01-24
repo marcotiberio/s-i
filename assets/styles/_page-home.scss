@@ -26,6 +26,7 @@
     .list {
       // border-bottom: 1px solid $black;
       // border-top: 1px solid $black;
+      column-gap: $spacing-small;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       list-style: none;

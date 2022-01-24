@@ -2,10 +2,10 @@
   &-field {
     background-color: transparent;
     display: flex;
-    flex-flow: row-reverse wrap;
+    flex-flow: row wrap;
 
     @media (max-width: $breakpoint-mobile-horizontal) {
-      flex-direction: row-reverse wrap;
+      flex-direction: row wrap;
     }
   }
 

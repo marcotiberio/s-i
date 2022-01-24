@@ -6,7 +6,7 @@
 
     .list-podcasts {
       @include reset-list;
-      column-gap: 0;
+      column-gap: $spacing-small;
       display: grid;
       grid-auto-rows: auto;
       grid-template-columns: repeat(4, 1fr);
@@ -20,12 +20,6 @@
       }
 
       &-item {
-        padding-right: $spacing-small;
-
-        @media (max-width: $breakpoint-mobile-horizontal) {
-          padding-right: 0;
-        }
-
         &:hover {
           img {
             filter: invert(1);

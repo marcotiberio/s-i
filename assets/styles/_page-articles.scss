@@ -23,6 +23,10 @@
         padding: $spacing-small 0;
         width: 100%;
 
+        &:first-child {
+          padding-top: 0;
+        }
+
         &-link {
           text-decoration: none;
           width: 100%;
@@ -36,6 +40,7 @@
 
         .featured {
           &Info {
+            column-gap: $spacing-small;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             width: 100%;

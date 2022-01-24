@@ -4,10 +4,10 @@
   .post {
     &-header {
       border-bottom: 1px solid $black;
-      column-gap: 0;
+      column-gap: $spacing-small;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      padding: $spacing-small 0;
+      padding-bottom: $spacing-small;
 
       @media (max-width: $breakpoint-mobile-horizontal) {
         grid-auto-rows: auto;
@@ -23,7 +23,7 @@
     }
 
     &-main {
-      column-gap: 0;
+      column-gap: $spacing-small;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       padding: $spacing-small 0;

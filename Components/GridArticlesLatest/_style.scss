@@ -12,17 +12,21 @@
     &:first-child {
       border-top: 0;
     }
+
+    .title {
+      text-transform: uppercase;
+    }
   }
 
   .preContent {
     border-bottom: 1px solid $black;
     border-top: 1px solid $black;
     margin: 0;
+    padding: $spacing-small 0;
     text-align: left;
     width: 100%;
 
     h1 {
-      padding-top: $spacing-small;
       text-transform: uppercase;
     }
   }
@@ -40,10 +44,17 @@
 
     &-inner {
       @include reset-content-margins;
-      column-gap: 0;
+      column-gap: $spacing-small;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       padding: $spacing-small 0;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: 1fr;
+        row-gap: $spacing-small/2;
+      }
 
       p {
         margin: 0;

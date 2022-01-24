@@ -1,6 +1,8 @@
 .list {
   @include reset-list;
-  @include grid(2);
+  column-gap: $spacing-small;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
 
   @media (min-width: $breakpoint-tablet) {
@@ -8,7 +10,7 @@
   }
 
   @media (max-width: $breakpoint-mobile-horizontal) {
-    flex-direction: column;
+    display: block;
   }
 
   &-item {
@@ -20,10 +22,12 @@
     }
 
     &:last-child {
-      margin-left: 50%;
+      grid-column-end: 3;
+      grid-column-start: 2;
 
       @media (max-width: $breakpoint-mobile-horizontal) {
-        margin-left: 0;
+        grid-column-end: 1;
+        grid-column-start: 2;
       }
     }
   }
