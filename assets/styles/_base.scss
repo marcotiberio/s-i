@@ -39,6 +39,11 @@ body {
   opacity: 1;
 }
 
+::selection {
+  background: $black;
+  color: $white;
+}
+
 /**
 * 1.0 Typography
 *
