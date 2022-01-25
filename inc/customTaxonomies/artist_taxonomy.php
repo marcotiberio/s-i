@@ -11,9 +11,9 @@ namespace Flynt\CustomTaxonomies;
 // function registerArtistnameTaxonomy()
 // {
 //     $labels = [
-//         'name'                       => _x('Artists Taxonomy', 'Taxonomy General Name', 'flynt'),
-//         'singular_name'              => _x('Artist Taxonomy', 'Taxonomy Singular Name', 'flynt'),
-//         'menu_name'                  => __('Artists Taxonomy', 'flynt'),
+//         'name'                       => _x('Artists Name', 'Taxonomy General Name', 'flynt'),
+//         'singular_name'              => _x('Artist Name', 'Taxonomy Singular Name', 'flynt'),
+//         'menu_name'                  => __('Artists Name', 'flynt'),
 //         'all_items'                  => __('All Items', 'flynt'),
 //         'parent_item'                => __('Parent Item', 'flynt'),
 //         'parent_item_colon'          => __('Parent Item:', 'flynt'),

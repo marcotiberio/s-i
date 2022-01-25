@@ -8,11 +8,14 @@
   "Components/ListSocial/Assets/xing.svg": "Components/ListSocial/Assets/xing-d0faa4294a.svg",
   "Components/ListSocial/Assets/youtube.svg": "Components/ListSocial/Assets/youtube-5ed41aaa24.svg",
   "Components/NavigationBurger/Assets/logo.svg": "Components/NavigationBurger/Assets/logo-4627cdfa7d.svg",
+  "Components/NavigationFooterColumns/Assets/bandcamp.svg": "Components/NavigationFooterColumns/Assets/bandcamp-3bed8611a1.svg",
   "Components/NavigationFooterColumns/Assets/facebook.svg": "Components/NavigationFooterColumns/Assets/facebook-3bed8611a1.svg",
   "Components/NavigationFooterColumns/Assets/instagram.svg": "Components/NavigationFooterColumns/Assets/instagram-22204c7483.svg",
   "Components/NavigationFooterColumns/Assets/linkedin.svg": "Components/NavigationFooterColumns/Assets/linkedin-0b2ad64f3d.svg",
   "Components/NavigationFooterColumns/Assets/logo.svg": "Components/NavigationFooterColumns/Assets/logo-4627cdfa7d.svg",
   "Components/NavigationFooterColumns/Assets/mail.svg": "Components/NavigationFooterColumns/Assets/mail-a79a1fa115.svg",
+  "Components/NavigationFooterColumns/Assets/soundcloud.svg": "Components/NavigationFooterColumns/Assets/soundcloud-3bed8611a1.svg",
+  "Components/NavigationFooterColumns/Assets/spotify.svg": "Components/NavigationFooterColumns/Assets/spotify-3bed8611a1.svg",
   "Components/NavigationFooterColumns/Assets/twitter.svg": "Components/NavigationFooterColumns/Assets/twitter-b860fd200d.svg",
   "Components/NavigationFooterColumns/Assets/xing.svg": "Components/NavigationFooterColumns/Assets/xing-b8ecedbab7.svg",
   "Components/NavigationFooterColumns/Assets/youtube.svg": "Components/NavigationFooterColumns/Assets/youtube-3b8f2b7f41.svg",
@@ -31,7 +34,7 @@
   "assets/fonts/montserrat-v14-latin-regular.woff2": "assets/fonts/montserrat-v14-latin-regular-bc3aa95dca.woff2",
   "assets/icons/check-circle.svg": "assets/icons/check-circle-98401bcdb9.svg",
   "assets/icons/spinner.svg": "assets/icons/spinner-2e5c842fc5.svg",
-  "assets/main.css": "assets/main-a6aa0377aa.css",
+  "assets/main.css": "assets/main-aeed952bdb.css",
   "assets/main.js": "assets/main-a681c3b0c5.js",
   "assets/main.js.LICENSE.txt": "assets/main-957f80e714.js.LICENSE.txt"
 }

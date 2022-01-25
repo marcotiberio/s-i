@@ -1,5 +1,4 @@
 [is='flynt-navigation-footer-columns'] {
-
   @import 'Partials/menu';
   @import 'Partials/backtotop';
   border-top: 1px solid $black;
@@ -33,16 +32,33 @@
     }
 
     &-menu {
-      align-items: flex-start;
+      align-items: stretch;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
+      flex-flow: row wrap;
+      justify-content: space-between;
       padding: 0;
       text-transform: uppercase;
       width: 100%;
 
       .menu {
-        width: 100%;
+        width: 50%;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          width: 100%;
+        }
+      }
+
+      .credits {
+        align-items: flex-end;
+        display: flex;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          margin-top: $spacing-large;
+        }
+        
+        p {
+          margin: 0;
+        }
       }
     }
   }
@@ -67,14 +83,20 @@
 
   .social {
     @include reset-content-margins;
-    margin-top: auto;
-    padding-top: 1.1rem;
+    padding-left: $spacing-small/2;
+    width: 50%;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      padding-left: 0;
+      width: 100%;
+    }
   }
 
   .socialList {
     @include reset-list;
     display: flex;
-    justify-content: center;
+    flex-flow: column wrap;
+    justify-content: flex-start;
 
     @media (min-width: $breakpoint-tablet) {
       justify-content: flex-end;
@@ -87,13 +109,12 @@
     &-link {
       box-sizing: content-box;
       display: block;
-      height: 16px;
-      padding: 6px;
+      text-decoration: none;
 
       &:hover,
       &:focus {
         svg {
-          color: $color-accent;
+          color: $color-text;
         }
       }
     }

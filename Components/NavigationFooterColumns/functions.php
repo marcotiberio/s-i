@@ -53,10 +53,11 @@ function getACFLayout()
 
 Options::addTranslatable('NavigationFooterColumns', [
     [
-        'label' => __('Social Content', 'flynt'),
+        'label' => __('Credits', 'flynt'),
         'name' => 'socialContentHtml',
         'type' => 'wysiwyg',
         'toolbar' => 'basic',
+        'tabs' => 'visual',
         'media_upload' => 0,
     ],
     [
@@ -76,12 +77,14 @@ Options::addTranslatable('NavigationFooterColumns', [
                 'ajax' => 0,
                 'return_format' => 'array',
                 'choices' => [
+                    'soundcloud' => 'Soundcloud',
                     'facebook' => 'Facebook',
                     'instagram' => 'Instagram',
                     'twitter' => 'Twitter',
                     'youtube' => 'Youtube',
                     'linkedin' => 'LinkedIn',
-                    'xing' => 'Xing'
+                    'bandcamp' => 'Bandcamp',
+                    'spotify' => 'Spotify',
                 ]
             ],
             [

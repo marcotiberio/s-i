@@ -9,18 +9,20 @@
       <div class="columns-menu">
         {% include "Partials/_menu.twig" with { items: menu.items } %}
         <div class="social">
-          {{ socialContentHtml|e('wp_kses_post') }}
           {% if social %}
             <ul class="socialList">
               {% for socials in social %}
                 <li class="socialList-item">
                   <a class="socialList-link" href="{{ socials.url }}" aria-label="{{ socials.platform.label }}">
-                    {{- socials.icon -}}
+                    {{ socials.platform.label }}
                   </a>
                 </li>
               {% endfor %}
             </ul>
           {% endif %}
+        </div>
+        <div class="credits">
+          {{ socialContentHtml|e('wp_kses_post') }}
         </div>
       </div>
     </div>

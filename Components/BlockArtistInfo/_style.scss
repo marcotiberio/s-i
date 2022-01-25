@@ -113,7 +113,7 @@
       grid-column-end: 3;
       grid-column-start: 2;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-mobile-horizontal) {
         grid-column-end: 2;
         grid-column-start: 1;
       }
@@ -147,7 +147,7 @@
       grid-column-end: 3;
       grid-column-start: 5;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-mobile-horizontal) {
         grid-column-end: 2;
         grid-column-start: 1;
       }

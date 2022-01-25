@@ -1,9 +1,9 @@
 .list {
   @include reset-list;
   column-gap: $spacing-small;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: space-between;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
 
   @media (min-width: $breakpoint-tablet) {
     padding-right: 0;
