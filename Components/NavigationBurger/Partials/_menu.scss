@@ -51,6 +51,11 @@
       padding-right: $spacing-large;
     }
   }
+
+  &-submenu {
+    @include reset-list;
+    display: none;
+  }
 }
 
 &.flyntComponent-menuIsOpen .menu {

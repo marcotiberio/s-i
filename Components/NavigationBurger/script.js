@@ -10,22 +10,26 @@ class NavigationBurger extends window.HTMLElement {
 
   init () {
     this.$ = $(this)
+    this.resolveElements()
     this.bindFunctions()
     this.bindEvents()
-    this.resolveElements()
-  }
-
-  bindFunctions () {
-    this.triggerMenu = this.triggerMenu.bind(this)
-  }
-
-  bindEvents () {
-    this.$.on('click', '[data-toggle-menu]', this.triggerMenu)
   }
 
   resolveElements () {
     this.$menu = $('.menu', this)
     this.$menuButton = $('.hamburger', this)
+    this.$openSubmenu = $('.open-submenu', this)
+    this.$submenu = $('.menu-submenu', this)
+  }
+
+  bindFunctions () {
+    this.triggerMenu = this.triggerMenu.bind(this)
+    this.toggleSubmenu = this.toggleSubmenu.bind(this)
+  }
+
+  bindEvents () {
+    this.$.on('click', '[data-toggle-menu]', this.triggerMenu)
+    this.$openSubmenu.on('click', this.toggleSubmenu)
   }
 
   connectedCallback () {}
@@ -38,6 +42,10 @@ class NavigationBurger extends window.HTMLElement {
     } else {
       enableBodyScroll(this.$menu.get(0))
     }
+  }
+
+  toggleSubmenu (e) {
+    this.$submenu.slideToggle()
   }
 }
 

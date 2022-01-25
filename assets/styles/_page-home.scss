@@ -34,6 +34,14 @@
       padding: 0;
       width: 100%;
 
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       &:last-child {
         border-bottom: 0;
       }
