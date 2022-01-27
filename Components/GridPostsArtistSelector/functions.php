@@ -58,10 +58,9 @@ function getACFLayout()
                 'post_type' => [
                     'artist',
                 ],
-                'filters' => array(
-                    0 => 'search',
-                    1 => 'post_type',
-                    2 => 'taxonomy',
+                'taxonomy' => array(
+                    0 => 'origin:international',
+                    1 => 'origin:local',
                 ),
                 'allow_null' => 1,
                 'multiple' => 1,
