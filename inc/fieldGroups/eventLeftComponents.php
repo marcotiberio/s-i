@@ -13,7 +13,7 @@ add_action('Flynt/afterRegisterComponents', function () {
         'fields' => [
             [
                 'label' => __('Date', 'flynt'),
-                'name' => 'dateEvent',
+                'name' => 'datePost',
                 'type' => 'date_picker',
                 'first_day' => 1,
                 'wrapper' => [

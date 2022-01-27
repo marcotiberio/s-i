@@ -21,7 +21,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 ],
             [
                 'label' => __('Date', 'flynt'),
-                'name' => 'dateArticle',
+                'name' => 'datePost',
                 'type' => 'date_picker',
                 'first_day' => 1,
                 'wrapper' => [

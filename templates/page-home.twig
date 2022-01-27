@@ -15,7 +15,7 @@
         {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeFull' }, noComponentSpacing: true }) }}
       </div>
       <div class="featuredInfo">
-        <div class="date">{{ post.dateEvent|date("d.m.Y")|escape('wp_kses_post') }}</div>
+        <div class="date">{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
         <div class="post-type">{{ post.type.labels.singular_name }}</div>
       </div>
     </a>

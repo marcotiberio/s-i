@@ -8,7 +8,7 @@
     <li class="list-item">
       <a class="list-item-link" href="{{ post.link }}">
         <div class="featuredInfo">
-          <div>{{ post.dateArticle|date("d.m.Y")|escape('wp_kses_post') }}</div>
+          <div>{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
           <p class="title" href="{{ post.link }}">{{ post.title }}</p>
         </div>
         {% if post.thumbnail %}
