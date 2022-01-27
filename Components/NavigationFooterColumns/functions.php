@@ -53,6 +53,14 @@ function getACFLayout()
 
 Options::addTranslatable('NavigationFooterColumns', [
     [
+        'label' => __('Logotype', 'flynt'),
+        'name' => 'logotype',
+        'type' => 'image',
+        'return_format' => 'array',
+        'preview_size' => 'medium',
+        'library' => 'all',
+    ],
+    [
         'label' => __('Credits', 'flynt'),
         'name' => 'socialContentHtml',
         'type' => 'wysiwyg',

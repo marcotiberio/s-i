@@ -48,9 +48,15 @@
         }
       }
 
+      .logotype {
+        height: fit-content;
+        width: 100%;
+      }
+
       .credits {
         align-items: flex-end;
         display: flex;
+        width: 100%;
 
         @media (max-width: $breakpoint-mobile-horizontal) {
           margin-top: $spacing-large;

@@ -21,6 +21,13 @@
             </ul>
           {% endif %}
         </div>
+        {% if logotype %}
+        <div class="logotype">
+          <figure class="figure">
+            <img class="figure-image lazyload" src="{{ logotype.src|resizeDynamic(0, 540) }}">
+          </figure>
+        </div>
+        {% endif %}
         <div class="credits">
           {{ socialContentHtml|e('wp_kses_post') }}
         </div>

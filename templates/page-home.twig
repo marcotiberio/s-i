@@ -2,115 +2,29 @@
 
 {% block content %}
   
-
-  {# <div class="section-title">
-    <h1 id="test">Events</h1>
-    <a href="/events">
-      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="61.9922" width="1" height="50" fill="black"/>
-        <rect x="61.9922" width="1" height="50" transform="rotate(90 61.9922 0)" fill="black"/>
-        <rect x="62.3477" width="1" height="88.1723" transform="rotate(45 62.3477 0)" fill="black"/>
-      </svg>
-    </a>
-  </div> #}
-  <ul class="list list-events">
-    {% for post in latestPosts %}
-    <li class="list-item">
-      <a class="list-item-link" href="{{ post.link }}">
-        {% if post.thumbnail %}
-        <div class="featuredInfo">
-          <div>{{ post.dateEvent|date("d.m.Y")|escape('wp_kses_post') }}</div>
-          <p class="title">{{ post.title }}</p>
-        </div>
-        {% endif %}
-        <div class="featuredImage">
-          {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeFull' }, noComponentSpacing: true }) }}
-        </div>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-  
-  {# <div class="section-title">
-    <h1>Podcasts</h1>
-    <a href="/podcasts">
-      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="61.9922" width="1" height="50" fill="black"/>
-        <rect x="61.9922" width="1" height="50" transform="rotate(90 61.9922 0)" fill="black"/>
-        <rect x="62.3477" width="1" height="88.1723" transform="rotate(45 62.3477 0)" fill="black"/>
-      </svg>
-    </a>
-  </div>
-  <ul class="list list-podcasts">
-    {% for post in latestPodcasts %}
-    <li class="list-item" onclick="javascript:location.href='{{ post.link }}'">
-      <div class="featuredInfo">
-        <div>{{ post.dateEpisode|date("d.m.Y")|escape('wp_kses_post') }}</div>
-        <p class="title" href="{{ post.link }}">{{ post.title }}</p>
-      </div>
+<ul class="grid grid-home">
+  {% for post in latestPosts %}
+  <li class="grid-item grid-item--{{ post.type.labels.singular_name }}">
+    <a class="grid-item-link" href="{{ post.link }}">
       {% if post.thumbnail %}
+      <div class="featuredInfo">
+        <p class="title">{{ post.title }}</p>
+      </div>
+      {% endif %}
       <div class="featuredImage">
         {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeFull' }, noComponentSpacing: true }) }}
       </div>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-
-  <div class="section-title">
-    <h1>Articles</h1>
-    <a href="/articles">
-      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="61.9922" width="1" height="50" fill="black"/>
-        <rect x="61.9922" width="1" height="50" transform="rotate(90 61.9922 0)" fill="black"/>
-        <rect x="62.3477" width="1" height="88.1723" transform="rotate(45 62.3477 0)" fill="black"/>
-      </svg>
-    </a>
-  </div>
-  <ul class="list list-articles">
-    {% for post in latestArticles %}
-    <li class="list-item" onclick="javascript:location.href='{{ post.link }}'">
       <div class="featuredInfo">
-        <div>{{ post.dateArticle|date("d.m.Y")|escape('wp_kses_post') }}</div>
-        <p class="title" href="{{ post.link }}">{{ post.title }}</p>
+        <div class="date">{{ post.dateEvent|date("d.m.Y")|escape('wp_kses_post') }}</div>
+        <div class="post-type">{{ post.type.labels.singular_name }}</div>
       </div>
-      {% if post.thumbnail %}
-      <div class="featuredImage">
-        {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeFull' }, noComponentSpacing: true }) }}
-      </div>
-      {% endif %}
-    {% endfor %}
-    </li>
-  </ul>
-
-  <div class="section-title">
-    <h1>Artists</h1>
-    <a href="/artists">
-      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="61.9922" width="1" height="50" fill="black"/>
-        <rect x="61.9922" width="1" height="50" transform="rotate(90 61.9922 0)" fill="black"/>
-        <rect x="62.3477" width="1" height="88.1723" transform="rotate(45 62.3477 0)" fill="black"/>
-      </svg>
     </a>
-  </div>
-  <ul class="list list-artists">
-    {% for post in latestArtists %}
-    <li class="list-item" onclick="javascript:location.href='{{ post.link }}'">
-      <div class="featuredInfo">
-        <div></div>
-        <p class="title" href="{{ post.link }}">{{ post.title }}</p>
-      </div>
-      {% if post.thumbnail %}
-      <div class="featuredImage">
-        {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeFull' }, noComponentSpacing: true }) }}
-      </div>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul> #}
-
-  {% for component in post.meta('pageComponents') %}
-    {{ renderComponent(component) }}
+  </li>
   {% endfor %}
+</ul>
+
+{% for component in post.meta('pageComponents') %}
+  {{ renderComponent(component) }}
+{% endfor %}
   
 {% endblock %}
