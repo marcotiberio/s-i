@@ -12,7 +12,7 @@
       </div>
       {% endif %}
       <div class="featuredImage">
-        {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeFull' }, noComponentSpacing: true }) }}
+        <img src="{{ post.thumbnail.src }}" />
       </div>
       <div class="featuredInfo">
         <div class="date">{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>

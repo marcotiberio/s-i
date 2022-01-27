@@ -61,7 +61,6 @@
             justify-content: flex-start;
 
             .title {
-              margin-bottom: $spacing-small;
               text-transform: uppercase;
             }
 
@@ -83,6 +82,8 @@
           }
 
           .featuredImage {
+            margin-bottom: $spacing-small;
+            
             figcaption {
               display: none;
             }
