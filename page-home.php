@@ -23,32 +23,4 @@ $context['latestPosts'] = Timber::get_posts([
     // )
 ]);
 
-$context['latestPodcasts'] = Timber::get_posts([
-    'post_type' => 'podcast',
-    'order' => 'DESC',
-    'posts_per_page' => 6,
-    'meta_query' => array(
-        array(
-            'key' => 'dateEpisode'
-        ),
-    )
-]);
-
-$context['latestArticles'] = Timber::get_posts([
-    'post_type' => 'article',
-    'order' => 'DESC',
-    'posts_per_page' => 6,
-    'meta_query' => array(
-        array(
-            'key' => 'dateArticle'
-        ),
-    )
-]);
-
-$context['latestArtists'] = Timber::get_posts([
-    'post_type' => 'artist',
-    'order' => 'DESC',
-    'posts_per_page' => 6,
-]);
-
 Timber::render('templates/page-home.twig', $context);

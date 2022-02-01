@@ -23,8 +23,15 @@
       margin: 0;
     }
 
+    &-right {
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        margin-top: $spacing-small;
+        padding-left: $spacing-large;
+      }
+    }
+
     .pillCircle {
-      border: 1px solid #000;
+      border: 1px solid $black;
       border-radius: 1rem;
       display: inline-block;
       padding: 5px 10px;

@@ -9,6 +9,20 @@
       {% for component in post.meta('artistComponents') %}
         {{ renderComponent(component) }}
       {% endfor %}
+      {# <div class="socials">
+        <ul class="list">
+          {% for panel in post.meta('repeaterPanels') %}
+            <li class="panel">
+              <a href="{{ panel.panelLink.url }}" target="_blank" rel="noreferrer noopener" type="button">
+                {{ panel.panelLink.title|e }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="bio">
+        {{ post.bioHtml|e('wp_kses_post') }}
+      </div> #}
     </section>
     <section class="post-related">
       {{ renderComponent('GridEventsLatest', {'title': ('Events'),'taxonomies': post.categories() }) }}

@@ -1,0 +1,38 @@
+{% if items|length > 0 %}
+<div class="flyntComponent" is="flynt-block-artist-object">
+  <div class="container">
+    {% for item in items %}
+    <figure>
+    <img class="figure-image lazyload"
+      src="{{ item.thumbnail.src|resizeDynamic(500) }}"
+      srcset="{{ placeholderImage(500, 500 / item.thumbnail.aspect) }}"
+      data-srcset="
+        {{ item.thumbnail.src|resizeDynamic(1920) }} 1920w,
+        {{ item.thumbnail.src|resizeDynamic(1320) }} 1320w,
+        {{ item.thumbnail.src|resizeDynamic(1280) }} 1280w,
+        {{ item.thumbnail.src|resizeDynamic(1035) }} 1035w,
+        {{ item.thumbnail.src|resizeDynamic(860) }} 860w,
+        {{ item.thumbnail.src|resizeDynamic(750) }} 750w,
+        {{ item.thumbnail.src|resizeDynamic(500) }} 500w,
+        {{ item.thumbnail.src|resizeDynamic(375) }} 375w"
+      data-sizes="auto"
+      alt="{{ item.thumbnail.alt|e }}">
+      <figcaption class="figure-caption">{{ item.thumbnail.caption|e }}</figcaption>
+    </figure>
+    <div class="socials">
+      <ul class="list">
+          <li class="panel">
+            <a class="" href="{{ item.link }}" type="button">Read More</a>
+          </li>
+      </ul>
+    </div>
+    <div class="bio">
+      <p class="title pillCircle">{{ item.title }}</p>
+      <p class="">{{ item.bio|e('wp_kses_post') }}</p>
+      {# <p class="">{{ item.post_content|e('wp_kses_post') }}</p> #}
+      {# {{ renderComponent('BlockArtistInfo', { post_content: item.bioHtml, options: { size: 'sizeLarge' } }) }} #}
+    </div>
+  </div>
+    {% endfor %}
+</div>
+{% endif %}

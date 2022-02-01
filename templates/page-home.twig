@@ -2,7 +2,7 @@
 
 {% block content %}
   
-<ul class="grid grid-home">
+{# <ul class="grid grid-home">
   {% for post in latestPosts %}
   <li class="grid-item grid-item--{{ post.type.labels.singular_name }}">
     <a class="grid-item-link" href="{{ post.link }}">
@@ -21,9 +21,9 @@
     </a>
   </li>
   {% endfor %}
-</ul>
+</ul> #}
 
-{% for component in post.meta('pageComponents') %}
+{% for component in post.meta('pagehomeComponents') %}
   {{ renderComponent(component) }}
 {% endfor %}
   

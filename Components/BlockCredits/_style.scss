@@ -13,6 +13,7 @@
 
       .panel {
         border-bottom: 1px solid $black;
+        column-gap: $spacing-small;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         padding-top: $spacing-small;

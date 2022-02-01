@@ -3,38 +3,30 @@
 
   ::placeholder {
     color: $black;
-    font-size: 4rem;
-    line-height: 4rem;
-    padding: $spacing-small 0;
     text-transform: uppercase;
-
-    @media (min-width: $breakpoint-tablet-horizontal) {
-      font-size: 6rem;
-      line-height: 6rem;
-    }
   }
 
   .emailField {
     color: $black;
-    font-size: 4rem;
-    line-height: 4rem;
     outline: 0;
-    padding: $spacing-small 0;
     text-transform: uppercase;
+  }
 
-    @media (min-width: $breakpoint-tablet-horizontal) {
-      font-size: 6rem;
-      height: 6rem;
-      line-height: 6rem;
-    }
+  h1 {
+    margin-bottom: 0;
   }
 
   .group-submit {
     align-items: baseline;
-    display: flex;
-    flex-flow: row wrap;
+    column-gap: $spacing-small;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: flex-start;
     width: 100%;
+
+    br {
+      display: none;
+    }
 
     .acceptance {
       width: 50%;
@@ -44,20 +36,23 @@
       }
     }
 
+    .emailField {
+      padding: 0;
+      text-transform: uppercase;
+    }
+
     .wpcf7-submit {
       background-color: transparent;
       border: 0;
       color: $black;
       font-size: 15px;
       line-height: 1;
-      padding-left: $spacing-small/2;
+      padding: 0;
       text-align: left;
       transition: all 0.2s ease-in-out;
       width: 50%;
 
       @media (max-width: $breakpoint-mobile-horizontal) {
-        font-size: 17px;
-        padding-left: 0;
         text-align: right;
         width: 50%;
       }

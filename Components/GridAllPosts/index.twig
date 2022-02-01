@@ -1,0 +1,35 @@
+{% if items|length > 0 %}
+  <div class="flyntComponent" is="flynt-grid-all-posts">
+    <div class="container">
+      <div class="grid-filter">
+        <a class="filter filter-artists"><p class="pillCircle">ARTISTS</p></a>
+        <a class="filter filter-podcasts"><p class="pillCircle">PODCASTS</p></a>
+        <a class="filter filter-events"><p class="pillCircle">EVENTS</p></a>
+        <a class="filter filter-articles"><p class="pillCircle">ARTICLES</p></a>
+      </div>
+      <ul class="grid grid-home">
+        {% for item in items %}
+          <li class="grid-item grid-item--{{ item.type.labels.singular_name }}">
+            <a class="grid-item-link" href="{{ item.link }}">
+              {% if item.thumbnail %}
+              <div class="featuredInfo">
+                <p class="title">{{ item.title }}</p>
+              </div>
+              {% endif %}
+              <div class="featuredImage">
+                <img src="{{ item.thumbnail.src }}" />
+              </div>
+              <div class="featuredInfo">
+                <div class="date">{{ item.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
+                <div class="post-type">{{ item.type.labels.singular_name }}</div>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      {# <div class="allPostsLink">
+        <a href="{{ postTypeArchiveLink }}" class="button button--link">{{ labels.allPosts }}</a>
+      </div> #}
+    </div>
+  </div>
+{% endif %}

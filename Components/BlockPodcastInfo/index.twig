@@ -8,10 +8,8 @@
             <figure class="figure">
               <img class="figure-image lazyload"
                 src="{{ panel.panelImage.src|resizeDynamic(0, 540) }}">
-              {% if panel.panelImage.caption %}
-                <figcaption class="figure-caption">{{ panel.panelImage.caption|e }}</figcaption>
-              {% endif %}
             </figure>
+            <figcaption class="figure-caption">{{ panel.panelImage.caption|e }}</figcaption>
           </div>
         {% endfor %}
       </div>
