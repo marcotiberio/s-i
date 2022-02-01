@@ -31,30 +31,10 @@ function getACFLayout()
         'label' => 'Grid: All Posts',
         'sub_fields' => [
             [
-                'label' => __('General', 'flynt'),
-                'name' => 'generalTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => __('Title', 'flynt'),
-                'name' => 'title',
-                'type' => 'text',
-            ],
-            [
-                'label' => __('Categories', 'flynt'),
-                'name' => 'taxonomies',
-                'type' => 'taxonomy',
-                'instructions' => __('Select 1 or more categories or leave empty to show from all posts.', 'flynt'),
-                'taxonomy' => 'category',
-                'field_type' => 'multi_select',
-                'allow_null' => 1,
-                'multiple' => 1,
-                'add_term' => 0,
-                'save_terms' => 0,
-                'load_terms' => 0,
-                'return_format' => 'object'
+                'label' => '',
+                'name' => 'message',
+                'type' => 'message',
+                'message' => "This is a default component to show all posts.",
             ]
         ]
     ];

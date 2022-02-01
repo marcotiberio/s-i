@@ -15,7 +15,6 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
-                    Components\BlockFilter\getACFLayout(),
                     Components\GridAllPosts\getACFLayout(),
                     Components\FormContactForm7\getACFLayout(),
                 ]
