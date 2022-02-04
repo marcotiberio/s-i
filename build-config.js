@@ -1,4 +1,4 @@
-const host = 'http://si.local/'
+const host = 'http://localhost:10083/'
 const dest = './dist'
 
 function getCopyConfig (source) {

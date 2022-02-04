@@ -35,14 +35,21 @@ function getACFLayout()
                 'type' => 'image',
                 'preview_size' => 'medium',
                 'mime_types' => 'jpg,jpeg,png',
-                'instructions' => __('Recommended Size: Min-Width 1920px; Min-Height: 1080px; Image-Format: JPG, PNG. Aspect Ratio 16/9.', 'flynt'),
-                'required' => 1
+                'instructions' => __('Recommended Size: Min-Width 1920px; Min-Height: 1080px; Image-Format: JPG, PNG. Important: Aspect ratio needs to match the embedded video aspect ratio.', 'flynt'),
+                'required' => 1,
+                'wrapper' => [
+                    'width' => '50',
+                ],
             ],
             [
                 'label' => __('Video', 'flynt'),
-                'name' => 'oembed',
-                'type' => 'oembed',
-                'required' => 1
+                'name' => 'videoEmbedLink',
+                // 'type' => 'oembed',
+                'type' => 'textarea',
+                'required' => 1,
+                'wrapper' => [
+                    'width' => '50',
+                ],
             ],
         ]
     ];

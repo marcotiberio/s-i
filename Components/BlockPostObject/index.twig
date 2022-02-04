@@ -6,7 +6,14 @@
       <div class="box-inner box-inner--content">
         <div class="box-copy">
           <h1>{{ item.title }}</h1>
-          <p class="content-excerpt">{{ item.preview.read_more(false).length(18) }}</p>
+          {# {% for post in post %}
+            {% for content_block in artistComponents %}
+                {% if content_block.acf_fc_layout == 'BlockArtistInfo' %}
+                    {{ content_block.bioHtml|e('wp_kses_post') }}
+                {% endif %}
+            {% endfor %}
+          {% endfor %} #}
+          {# <p class="content-excerpt">{{ item.preview.read_more(false).length(18) }}</p> #}
           <a href="{{ item.link }}" class="button button--link content-readMore" aria-hidden="true" tabindex="-1">{{ readMoreText }}</a>
         </div>
       </div>

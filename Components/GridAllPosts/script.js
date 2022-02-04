@@ -41,18 +41,22 @@ class GridAllPosts extends window.HTMLElement {
 
   toggleArtists (e) {
     this.$postArtist.fadeToggle()
+    this.$filterArtists.toggleClass('filter--active')
   }
 
   togglePodcasts (e) {
     this.$postPodcasts.fadeToggle()
+    this.$filterPodcasts.toggleClass('filter--active')
   }
 
   toggleEvents (e) {
     this.$postEvents.fadeToggle()
+    this.$filterEvents.toggleClass('filter--active')
   }
 
   toggleArticles (e) {
     this.$postArticles.fadeToggle()
+    this.$filterArticles.toggleClass('filter--active')
   }
 }
 

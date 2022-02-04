@@ -1,5 +1,15 @@
 <div class="flyntComponent flyntComponent--videoOembed" is="flynt-block-video-oembed">
-  <div class="container">
-    {% include 'Partials/_video.twig' ignore missing with {video: video, image: posterImage} only %}
+  <div class="video">
+    <figure class="figure">
+      <img class="figure-image lazyload"
+        src="{{ posterImage.src|resizeDynamic(1280, 720) }}"
+        srcset="{{ placeholderImage(1280, 720) }}"
+        data-srcset="{{ function('wp_get_attachment_image_srcset', posterImage.id) }}"
+        data-sizes="auto"
+        alt="{{ posterImage.alt|e }}">
+    </figure>
+    <div class="video-player">
+      {{ videoEmbedLink }}
+    </div>
   </div>
 </div>

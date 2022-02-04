@@ -73,12 +73,19 @@
         }
       }
     }
+
+    &-item--Artist {
+      .date {
+        display: none;
+      }
+    }
   }
 
   .grid-filter {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-bottom: $spacing-large;
     width: 100%;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
@@ -89,17 +96,22 @@
     }
 
     .filter {
-      flex-grow: 1;
-      padding: 0;
+      flex-grow: 0;
       text-align: center;
+      width: 100px;
 
-      .pillCircle {
-        &:hover {
-          background-color: $black;
-          color: $white;
-          cursor: pointer;
-          text-decoration: none;
-        }
+      &:hover {
+        background-color: $black;
+        color: $white;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      &--active {
+        background-color: $black;
+        color: $white;
+        cursor: pointer;
+        text-decoration: none;
       }
     }
   }

@@ -274,6 +274,10 @@ tr:nth-child(even) {
 * Global button elements, including reset on standard button element.
 */
 
+[type='button'] {
+  appearance: none;
+}
+
 button {
   appearance: none;
   background-color: transparent;
