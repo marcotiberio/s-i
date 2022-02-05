@@ -6,17 +6,16 @@ use Flynt\Components;
 add_action('Flynt/afterRegisterComponents', function () {
     ACFComposer::registerFieldGroup([
         'name' => 'pagehomeComponents',
-        'title' => 'Page Home Components',
+        'title' => 'Homepage Components',
         'style' => 'seamless',
         'fields' => [
             [
                 'name' => 'pagehomeComponents',
-                'label' => __('Page Home Components', 'flynt'),
+                'label' => __('Homepage Components', 'flynt'),
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
                     Components\GridAllPosts\getACFLayout(),
-                    Components\FormContactForm7\getACFLayout(),
                 ]
             ]
         ],

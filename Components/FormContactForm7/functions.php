@@ -2,7 +2,11 @@
 
 namespace Flynt\Components\FormContactForm7;
 
+use Flynt\Utils\Asset;
+use Flynt\Utils\Options;
+use Flynt\ComponentManager;
 use Flynt\FieldVariables;
+use Timber;
 
 add_filter('wpcf7_load_js', '__return_false');
 add_filter('wpcf7_load_css', '__return_false');

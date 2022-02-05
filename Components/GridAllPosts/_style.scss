@@ -96,9 +96,14 @@
     }
 
     .filter {
+      background-color: $white;
+      color: $black;
+      cursor: pointer;
       flex-grow: 0;
       text-align: center;
+      text-decoration: none;
       width: 100px;
+
 
       &:hover {
         background-color: $black;
