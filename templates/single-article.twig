@@ -5,19 +5,6 @@
     <header class="post-header">
       <h1 class="title">{{ post.title }}</h1>
       <p class="intro">{{ post.introArticle }}</p>
-      <div class="video">
-        {% if post.posterImage %}
-        <figure class="figure">
-          <img class="figure-image lazyload"
-            src="{{ Image(post.posterImage).src|resizeDynamic(1280, 720) }}" >
-        </figure>
-        {% endif %}
-        {% if post.videoEmbedLink %}
-        <div class="video-player">
-          {{ post.videoEmbedLink }}
-        </div>
-        {% endif %}
-      </div>
       <div class="credits">
         <div class="date">{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
         <div class="author">by {{ post.authorArticle }}</div>

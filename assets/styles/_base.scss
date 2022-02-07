@@ -68,7 +68,7 @@ body {
 h1,
 .h1 {
   font-size: 2.35rem;
-  line-height: 1.2;
+  line-height: 1;
   // margin-bottom: $spacing-small;
   // padding-top: $spacing-small;
   text-transform: uppercase;
@@ -586,7 +586,7 @@ select {
   flex: 1 0 auto;
   padding-top: $spacing-small;
 
-  @media (max-width: $breakpoint-mobile-horizontal) {
+  @media (max-width: $breakpoint-tablet) {
     padding-top: 70px;
   }
 }

@@ -33,12 +33,12 @@ add_action('Flynt/afterRegisterComponents', function () {
     ]);
     ACFComposer::registerFieldGroup([
         'name' => 'eventLeftComponents',
-        'title' => 'Event Left Components',
+        'title' => 'Event Carousel',
         'style' => 'seamless',
         'fields' => [
             [
                 'name' => 'eventLeftComponents',
-                'label' => __('Event Left Components', 'flynt'),
+                'label' => __('Event Carousel', 'flynt'),
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [

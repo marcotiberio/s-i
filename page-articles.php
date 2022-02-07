@@ -16,7 +16,7 @@ $context['latestArticles'] = Timber::get_posts([
     'order' => 'DESC',
     'meta_query' => array(
         array(
-            'key' => 'dateArticle'
+            'key' => 'datePost'
         ),
     )
 ]);

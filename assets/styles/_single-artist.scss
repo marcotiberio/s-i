@@ -13,6 +13,13 @@
     &-main {
       display: flex;
       flex-flow: column wrap;
+      height: auto;
+      min-height: calc(100vh - 240px);
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        height: auto;
+        min-height: calc(100vh - 120px);
+      }
       
       .artist-meta {
         align-items: flex-start;

@@ -109,6 +109,13 @@
     &-main {
       display: flex;
       flex-flow: column wrap;
+      height: auto;
+      min-height: calc(100vh - 170px);
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        height: auto;
+        min-height: calc(100vh - 145px);
+      }
 
       .flyntComponent {
         border-top: 1px solid $black;
@@ -116,6 +123,7 @@
 
         &:first-child {
           border-top: 0;
+          padding-bottom: 0;
         }
 
         &:last-child {
@@ -129,7 +137,7 @@
           margin-left: calc(50% + 7.5px);
           width: calc(50% - 7.5px);
 
-          @media (max-width: $breakpoint-tablet-horizontal) {
+          @media (max-width: $breakpoint-tablet) {
             margin-left: 0;
             width: 100%;
           }

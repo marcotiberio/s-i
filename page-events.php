@@ -22,7 +22,7 @@ $context['futureEvents'] = Timber::get_posts([
     'order' => 'ASC',
     'meta_query' => array(
         array(
-            'key' => 'dateEvent',
+            'key' => 'datePost',
             'value' => $today,
             'compare' => '>=',
             'type' => 'DATE'
@@ -36,7 +36,7 @@ $context['pastEvents'] = Timber::get_posts([
     'order' => 'ASC',
     'meta_query' => array(
         array(
-            'key' => 'dateEvent',
+            'key' => 'datePost',
             'value' => $today,
             'compare' => '<',
             'type' => 'DATE'

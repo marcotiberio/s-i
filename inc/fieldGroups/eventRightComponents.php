@@ -6,16 +6,16 @@ use Flynt\Components;
 add_action('Flynt/afterRegisterComponents', function () {
     ACFComposer::registerFieldGroup([
         'name' => 'eventRightComponents',
-        'title' => 'Event Right Components',
+        'title' => 'Right Column Components',
         'style' => 'seamless',
         'fields' => [
             [
                 'name' => 'eventRightComponents',
-                'label' => __('Event Right Components', 'flynt'),
+                'label' => __('Right Column', 'flynt'),
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
-                    Components\BlockEventInfo\getACFLayout(),
+                    Components\BlockImage\getACFLayout(),
                     Components\BlockSoundcloudOembed\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),

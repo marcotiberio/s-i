@@ -1,95 +1,95 @@
-/* Custom styling for page home */
+// /* Custom styling for page home */
 
-.page-home {
-  .mainContent {
-    .section-title {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-top: $spacing-small;
+// .page-home {
+//   .mainContent {
+//     .section-title {
+//       align-items: center;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       padding-top: $spacing-small;
 
-      @media (max-width: $breakpoint-mobile-horizontal) {
-        svg {
-          height: 35px;
-          width: 35px;
-        }
-      }
+//       @media (max-width: $breakpoint-mobile-horizontal) {
+//         svg {
+//           height: 35px;
+//           width: 35px;
+//         }
+//       }
 
-      h1 {
-        margin: 0;
-        padding: 0;
-        text-transform: uppercase;
-      }
-    }
+//       h1 {
+//         margin: 0;
+//         padding: 0;
+//         text-transform: uppercase;
+//       }
+//     }
 
-    .grid {
-      column-gap: $spacing-small;
-      columns: 4 200px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      width: 100%;
+//     .grid {
+//       column-gap: $spacing-small;
+//       columns: 4 200px;
+//       list-style: none;
+//       margin: 0;
+//       padding: 0;
+//       width: 100%;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
-        columns: 3 200px;
-      }
+//       @media (max-width: $breakpoint-tablet-horizontal) {
+//         columns: 3 200px;
+//       }
 
-      @media (max-width: $breakpoint-mobile-horizontal) {
-        display: block;
-      }
+//       @media (max-width: $breakpoint-mobile-horizontal) {
+//         display: block;
+//       }
 
-      &:last-child {
-        border-bottom: 0;
-      }
+//       &:last-child {
+//         border-bottom: 0;
+//       }
 
-      &-item {
-        border-bottom: 1px solid $black;
-        display: inline-block;
-        flex-flow: row wrap;
-        margin: 0 $spacing-small $spacing-small 0;
-        padding-bottom: $spacing-small;
-        width: 100%;
+//       &-item {
+//         border-bottom: 1px solid $black;
+//         display: inline-block;
+//         flex-flow: row wrap;
+//         margin: 0 $spacing-small $spacing-small 0;
+//         padding-bottom: $spacing-small;
+//         width: 100%;
 
-        &-link {
-          text-decoration: none;
+//         &-link {
+//           text-decoration: none;
 
-          .featuredInfo {
-            align-items: center;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-start;
+//           .featuredInfo {
+//             align-items: center;
+//             display: flex;
+//             flex-flow: row wrap;
+//             justify-content: flex-start;
 
-            .title {
-              text-transform: uppercase;
-            }
+//             .title {
+//               text-transform: uppercase;
+//             }
 
-            .date {
-              margin-right: $spacing-small;
-              text-transform: uppercase;
-            }
+//             .date {
+//               margin-right: $spacing-small;
+//               text-transform: uppercase;
+//             }
 
-            .post-type {
-              text-transform: uppercase;
+//             .post-type {
+//               text-transform: uppercase;
 
-              &::before {
-                content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="11.46" height="11.46" viewBox="0 0 11.46 11.46"%3E%3Cg id="Group_43" data-name="Group 43" transform="translate(-1410.69 -282.05)"%3E%3Cline id="Line_8" data-name="Line 8" x2="9" transform="translate(1412.65 282.55)" fill="none" stroke="%23000" stroke-linecap="square" stroke-width="1"/%3E%3Cline id="Line_9" data-name="Line 9" x2="9" transform="translate(1421.65 282.65) rotate(90)" fill="none" stroke="%23000" stroke-linecap="square" stroke-width="1"/%3E%3Cline id="Line_12" data-name="Line 12" x2="15" transform="translate(1411.043 293.157) rotate(-45)" fill="none" stroke="%23000" stroke-width="1"/%3E%3C/g%3E%3C/svg%3E%0A');
-                display: inline-block;
-                margin-right: $spacing-small / 2;
-                text-decoration: none;
-              }
-            }
-          }
+//               &::before {
+//                 content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="11.46" height="11.46" viewBox="0 0 11.46 11.46"%3E%3Cg id="Group_43" data-name="Group 43" transform="translate(-1410.69 -282.05)"%3E%3Cline id="Line_8" data-name="Line 8" x2="9" transform="translate(1412.65 282.55)" fill="none" stroke="%23000" stroke-linecap="square" stroke-width="1"/%3E%3Cline id="Line_9" data-name="Line 9" x2="9" transform="translate(1421.65 282.65) rotate(90)" fill="none" stroke="%23000" stroke-linecap="square" stroke-width="1"/%3E%3Cline id="Line_12" data-name="Line 12" x2="15" transform="translate(1411.043 293.157) rotate(-45)" fill="none" stroke="%23000" stroke-width="1"/%3E%3C/g%3E%3C/svg%3E%0A');
+//                 display: inline-block;
+//                 margin-right: $spacing-small / 2;
+//                 text-decoration: none;
+//               }
+//             }
+//           }
 
-          .featuredImage {
-            margin-bottom: $spacing-small;
+//           .featuredImage {
+//             margin-bottom: $spacing-small;
             
-            figcaption {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+//             figcaption {
+//               display: none;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

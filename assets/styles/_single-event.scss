@@ -26,11 +26,15 @@
       column-gap: $spacing-small;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      height: auto;
+      min-height: calc(100vh - 170px);
       padding: $spacing-small 0;
 
       @media (max-width: $breakpoint-mobile-horizontal) {
         grid-auto-rows: auto;
         grid-template-columns: 1fr;
+        height: auto;
+        min-height: calc(100vh - 145px);
         row-gap: $spacing-small;
       }
 

@@ -15,8 +15,6 @@ class GridAllPosts extends window.HTMLElement {
   }
 
   resolveElements () {
-    this.$filterArtists = $('.filter-artists', this)
-    this.$postArtist = $('.grid-item--Artist', this)
     this.$filterPodcasts = $('.filter-podcasts', this)
     this.$postPodcasts = $('.grid-item--Podcast', this)
     this.$filterEvents = $('.filter-events', this)
@@ -26,36 +24,32 @@ class GridAllPosts extends window.HTMLElement {
   }
 
   bindFunctions () {
-    this.toggleArtists = this.toggleArtists.bind(this)
     this.togglePodcasts = this.togglePodcasts.bind(this)
     this.toggleEvents = this.toggleEvents.bind(this)
     this.toggleArticles = this.toggleArticles.bind(this)
   }
 
   bindEvents () {
-    this.$filterArtists.on('click', this.toggleArtists)
     this.$filterPodcasts.on('click', this.togglePodcasts)
     this.$filterEvents.on('click', this.toggleEvents)
     this.$filterArticles.on('click', this.toggleArticles)
   }
 
-  toggleArtists (e) {
-    this.$postArtist.fadeToggle()
-    this.$filterArtists.toggleClass('filter--active')
-  }
-
   togglePodcasts (e) {
-    this.$postPodcasts.fadeToggle()
+    this.$postEvents.fadeToggle()
+    this.$postArticles.fadeToggle()
     this.$filterPodcasts.toggleClass('filter--active')
   }
 
   toggleEvents (e) {
-    this.$postEvents.fadeToggle()
+    this.$postPodcasts.fadeToggle()
+    this.$postArticles.fadeToggle()
     this.$filterEvents.toggleClass('filter--active')
   }
 
   toggleArticles (e) {
-    this.$postArticles.fadeToggle()
+    this.$postPodcasts.fadeToggle()
+    this.$postEvents.fadeToggle()
     this.$filterArticles.toggleClass('filter--active')
   }
 }
