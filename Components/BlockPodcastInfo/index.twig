@@ -9,7 +9,7 @@
               <img class="figure-image lazyload"
                 src="{{ panel.panelImage.src|resizeDynamic(0, 800) }}">
             </figure>
-            <figcaption class="figure-caption">{{ panel.panelImage.caption|e }}</figcaption>
+            {# <figcaption class="figure-caption">{{ panel.panelImage.caption|e }}</figcaption> #}
           </div>
         {% endfor %}
       </div>
@@ -17,7 +17,6 @@
         <button type="button" data-slider-button="prev" class="slider-button slider-button--prev">
           <i data-feather="arrow-left"></i>
         </button>
-        {# <div data-slider-pagination class="slider-pagination swiper-pagination-fraction"></div> #}
         <button type="button" data-slider-button="next" class="slider-button slider-button--next">
           <i data-feather="arrow-right"></i>
         </button>
