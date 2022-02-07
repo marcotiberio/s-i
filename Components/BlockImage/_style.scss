@@ -1,21 +1,21 @@
 [is='flynt-block-image'] {
-  &.flyntComponent--sizeSmall {
-    .figure {
-      max-width: 375px;
-    }
-  }
+  // &.flyntComponent--sizeSmall {
+  //   .figure {
+  //     max-width: 375px;
+  //   }
+  // }
 
-  &.flyntComponent--sizeMedium {
-    .figure {
-      max-width: $content-max-width;
-    }
-  }
+  // &.flyntComponent--sizeMedium {
+  //   .figure {
+  //     max-width: $content-max-width;
+  //   }
+  // }
 
-  &.flyntComponent--sizeLarge {
-    .figure {
-      max-width: 800px;
-    }
-  }
+  // &.flyntComponent--sizeLarge {
+  //   .figure {
+  //     max-width: 800px;
+  //   }
+  // }
 
   &.flyntComponent--sizeFull {
     .figure-caption {
