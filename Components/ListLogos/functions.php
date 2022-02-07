@@ -41,6 +41,13 @@ function getACFLayout()
             ],
             [
                 'label' => __('Logos', 'flynt'),
+                'name' => 'logosTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0,
+            ],
+            [
+                'label' => __('Logos', 'flynt'),
                 'name' => 'logosAccordion',
                 'type' => 'accordion',
                 'open' => 0,
@@ -75,7 +82,7 @@ function getACFLayout()
                         'library' => 'all',
                         'mime_types' => 'jpg,jpeg,png,svg',
                         'instructions' => __('Image-Format: JPG, PNG, SVG. Recommended Minimum Width: 384px.', 'flynt'),
-                        'required' => 1,
+                        'required' => 0,
                         'wrapper' =>  [
                             'width' => '40',
                         ]
@@ -89,29 +96,7 @@ function getACFLayout()
                 'open' => 0,
                 'multi_expand' => 0,
                 'endpoint' => 1,
-            ],
-            [
-                'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0,
-            ],
-            [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'sub_fields' => [
-                    FieldVariables\getTheme(),
-                    [
-                        'label' => __('Show as Card', 'flynt'),
-                        'name' => 'card',
-                        'type' => 'true_false',
-                        'default_value' => 0,
-                        'ui' => 1,
-                    ],
-                ]
-            ],
+            ]
         ]
     ];
 }

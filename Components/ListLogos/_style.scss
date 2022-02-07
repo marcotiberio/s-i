@@ -1,4 +1,6 @@
 [is='flynt-list-logos'] {
+  padding: $spacing-small 0;
+  
   .list {
     @include reset-list;
     @include grid(2, center, 12px, 12px);

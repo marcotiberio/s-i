@@ -26,7 +26,7 @@
           column-gap: $spacing-small;
           display: grid;
           grid-auto-rows: auto;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           text-decoration: none;
           width: 100%;
 
@@ -39,17 +39,47 @@
             grid-auto-rows: auto;
             grid-template-columns: 1fr;
           }
+
+          .date {
+            grid-column-end: 2;
+            grid-column-start: 1;
+    
+            @media (max-width: $breakpoint-mobile-horizontal) {
+              grid-column-end: 2;
+              grid-column-start: 1;
+              grid-row-end: 2;
+              grid-row-start: 1;
+            }
+          }
+    
+          .venue {
+            grid-column-end: 3;
+            grid-column-start: 2;
+    
+            @media (max-width: $breakpoint-mobile-horizontal) {
+              grid-column-end: 3;
+              grid-column-start: 2;
+              grid-row-end: 2;
+              grid-row-start: 1;
+            }
+          }
+    
+          .title {
+            grid-column-end: 5;
+            grid-column-start: 3;
+    
+            @media (max-width: $breakpoint-mobile-horizontal) {
+              grid-column-end: 2;
+              grid-column-start: 1;
+              grid-row-end: 3;
+              grid-row-start: 2;
+            }
+          }
         }
 
-        .title {
+        p {
           margin-bottom: 0;
           text-transform: uppercase;
-        }
-      }
-
-      &--past {
-        .list-events-item:last-child {
-          border-bottom: 0;
         }
       }
     }

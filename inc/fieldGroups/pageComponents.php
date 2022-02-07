@@ -20,7 +20,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\BlockWysiwygTwoCol\getACFLayout(),
                     Components\GridPostsArtistSelector\getACFLayout(),
-                    Components\FormContactForm7\getACFLayout(),
+                    Components\ListLogos\getACFLayout(),
                 ]
             ]
         ],

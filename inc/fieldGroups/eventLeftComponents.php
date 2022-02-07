@@ -17,7 +17,15 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'date_picker',
                 'first_day' => 1,
                 'wrapper' => [
-                    'width' => '100',
+                    'width' => '50',
+                ]
+                ],
+            [
+                'label' => __('Venue', 'flynt'),
+                'name' => 'venue',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => '50',
                 ]
             ]
         ],

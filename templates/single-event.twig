@@ -4,6 +4,7 @@
   <article class="post">
     <header class="post-header">
       <p class="date">{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</p>
+      <p class="venue">{{ post.venue }}</p>
       <p class="title">{{ post.title }}</p>
       {# {{ renderComponent('BlockArtistHeader', { post: post }) }} #}
     </header>
