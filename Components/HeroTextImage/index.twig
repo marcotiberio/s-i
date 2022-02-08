@@ -14,8 +14,8 @@
           data-srcset="
             {{ image.src|resizeDynamic(0, 400) }} {{ (image.aspect * 400)|round }}w,
             {{ image.src|resizeDynamic(0, 600) }} {{ (image.aspect * 600)|round }}w,
-            {{ image.src|resizeDynamic(0, 800) }} {{ (image.aspect * 800)|round }}w,
-            {{ image.src|resizeDynamic(0, 1000) }} {{ (image.aspect * 1000)|round }}w,
+            {{ image.src|resizeDynamic(0, 1200) }} {{ (image.aspect * 800)|round }}w,
+            {{ image.src|resizeDynamic(0, 1200) }} {{ (image.aspect * 1000)|round }}w,
             {{ image.src|resizeDynamic(0, 1200) }} {{ (image.aspect * 1200)|round }}w"
           data-aspectratio="{{ image.aspect }}"
           alt="{{ image.alt|e }}"
