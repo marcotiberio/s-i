@@ -15,7 +15,7 @@ add_filter('Flynt/addComponentData?name=GridAllPosts', function ($data) {
             'podcast',
             'article',
         ),
-        'posts_per_page' => -1,
+        'posts_per_page' => 30,
         'orderby' => 'date',
         'order' => 'DESC',
     ]);

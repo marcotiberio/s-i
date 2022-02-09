@@ -2,6 +2,8 @@
 
 .page-podcasts {
   .mainContent {
+    height: auto;
+    min-height: calc(100vh - 140px);
     padding: $spacing-small 0;
 
     .list-podcasts {

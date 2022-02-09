@@ -584,6 +584,8 @@ select {
 
 .mainContent {
   flex: 1 0 auto;
+  margin: 0;
+  min-height: calc(100vh - 140px);
   padding-top: $spacing-small;
 
   @media (max-width: $breakpoint-tablet) {

@@ -11,8 +11,8 @@
     <li class="list-events-item">
       <a href="{{ post.link }}" class="list-events-item-link">
         <div>{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
-        <p class="venue" >{{ post.venue|e }}</p>
-        <p class="title" >{{ post.title|e }}</p>
+        <p class="venue" >{{ post.venue }}</p>
+        <p class="title" >{{ post.title }}</p>
       </a>
     </li>
     {% endfor %}
@@ -24,7 +24,8 @@
     <li class="list-events-item">
       <a href="{{ post.link }}" class="list-events-item-link">
         <div>{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
-        <p class="title" href="{{ post.link }}">{{ post.title|e }}</p>
+        <p class="venue" >{{ post.venue }}</p>
+        <p class="title" href="{{ post.link }}">{{ post.title }}</p>
       </a>
     </li>
     {% endfor %}

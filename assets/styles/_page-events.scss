@@ -2,6 +2,9 @@
 
 .page-events {
   .mainContent {
+    height: auto;
+    min-height: calc(100vh - 140px);
+
     .section-title {
       border-bottom: 1px solid $black;
       margin: 0;
