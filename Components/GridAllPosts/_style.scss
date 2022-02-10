@@ -8,7 +8,7 @@
   
   .grid {
     column-gap: $spacing-small;
-    columns: 3 400px;
+    columns: 4 300px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -103,6 +103,10 @@
       text-align: center;
       text-decoration: none;
       width: 100px;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        margin-bottom: $spacing-small;
+      }
 
 
       &:hover {

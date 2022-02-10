@@ -588,7 +588,7 @@ select {
   min-height: calc(100vh - 140px);
   padding-top: $spacing-small;
 
-  @media (max-width: $breakpoint-tablet) {
+  @media (max-width: $breakpoint-tablet-horizontal) {
     padding-top: 70px;
   }
 }
@@ -602,7 +602,7 @@ select {
   }
 
   &:last-child {
-    padding-bottom: $spacing-small;
+    margin-bottom: $spacing-small;
   }
 }
 

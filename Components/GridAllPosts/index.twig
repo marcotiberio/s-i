@@ -16,7 +16,7 @@
               </div>
               {% endif %}
               <div class="featuredImage">
-                <img src="{{ item.thumbnail.src }}" />
+                <img class="figure-image lazyload" src="{{ item.thumbnail.src }}" />
               </div>
               <div class="featuredInfo">
                 <div class="date">{{ item.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>

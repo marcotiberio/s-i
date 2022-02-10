@@ -11,8 +11,8 @@
           <div class="content">
             <p class="title">{{ post.title|e }}</p>
             {# <p>{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</p> #}
-            <div class="featuredImage">
-              {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeFull' }, noComponentSpacing: true }) }}
+            <div class="featuredImage" style="background-image: url('{{ Image(post.hoverImage).src }}');">
+              {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'medium' }, noComponentSpacing: true }) }}
             </div>
           </div>
         </a>

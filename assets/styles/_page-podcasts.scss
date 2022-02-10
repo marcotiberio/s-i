@@ -24,7 +24,7 @@
       &-item {
         &:hover {
           img {
-            filter: invert(1);
+            opacity: 0;
           }
         }
 
@@ -39,6 +39,16 @@
 
       figcaption {
         display: none;
+      }
+    }
+
+    .featuredImage {
+      background-position: center;
+      background-repeat: repeat;
+      background-size: cover;
+
+      img {
+        transition: all 0.1s linear;
       }
     }
   }

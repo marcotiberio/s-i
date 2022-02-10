@@ -19,7 +19,18 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'wrapper' => [
                     'width' => '100',
                 ]
-            ]
+            ],
+            [
+                'label' => __('Hover Image', 'flynt'),
+                'name' => 'hoverImage',
+                'type' => 'image',
+                'return_format' => 'url',
+                'preview_size' => 'medium',
+                'library' => 'all',
+                'wrapper' => [
+                    'width' => '50',
+                ],
+            ],
         ],
         'location' => [
             [

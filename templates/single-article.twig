@@ -4,11 +4,15 @@
   <article class="post">
     <header class="post-header">
       <h1 class="title">{{ post.title }}</h1>
+      {% if post.introArticle %}
       <p class="intro">{{ post.introArticle }}</p>
+      {% endif %}
+      {% if post.datePost or post.authorArticle %}
       <div class="credits">
         <div class="date">{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
         <div class="author">by {{ post.authorArticle }}</div>
       </div>
+      {% endif %}
     </header>
     <section class="post-main">
       {% for component in post.meta('articleComponents') %}

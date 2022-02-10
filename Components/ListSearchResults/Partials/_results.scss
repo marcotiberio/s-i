@@ -1,26 +1,14 @@
-.searchList {
-  @include reset-list;
-  border-radius: 4px;
-
-  &-item {
-    border-bottom: 1px solid #ececec;
-    position: relative;
-
-    &:last-child {
-      border: 0;
-    }
-  }
-}
-
 .post {
   @include reset-content-margins;
   align-items: center;
-  border-bottom: 1px solid $black;
-  border-top: 1px solid $black;
   column-gap: $spacing-small;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: $spacing-small 0;
+
+  &:last-child {
+    border-bottom: 1px solid $black;
+  }
 
   &-title {
     a {
@@ -36,6 +24,32 @@
 
     a {
       text-decoration: none;
+    }
+  }
+}
+
+.searchList {
+  @include reset-list;
+  border-radius: 4px;
+
+  &-item {
+    border-bottom: 0;
+    position: relative;
+
+    &:first-child {
+      .post {
+        border-top: 1px solid $black;
+      }
+    }
+
+    &:last-child {
+      .post {
+        border-bottom: 1px solid $black;
+      }
+    }
+
+    &:last-child {
+      border: 0;
     }
   }
 }
