@@ -11,16 +11,16 @@
           <li class="grid-item grid-item--{{ item.type.labels.singular_name }}">
             <a class="grid-item-link" href="{{ item.link }}">
               {% if item.thumbnail %}
-              <div class="featuredInfo">
-                <p class="title">{{ item.title }}</p>
+              <div class="featuredInfo featuredInfo-top">
+                <div class="date">{{ item.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
+                <div class="post-type">{{ item.type.labels.singular_name }}</div>
               </div>
               {% endif %}
               <div class="featuredImage">
                 <img class="figure-image lazyload" src="{{ item.thumbnail.src }}" />
               </div>
-              <div class="featuredInfo">
-                <div class="date">{{ item.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
-                <div class="post-type">{{ item.type.labels.singular_name }}</div>
+              <div class="featuredInfo featuredInfo-bottom">
+                <p class="title">{{ item.title }}</p> 
               </div>
             </a>
           </li>
