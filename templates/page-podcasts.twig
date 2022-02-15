@@ -9,7 +9,7 @@
       <li class="list-podcasts-item">
         <a href="{{ post.link }}">
           <div class="content">
-            <p class="title">{{ post.title|e }}</p>
+            <p class="title">{{ post.title }}</p>
             {# <p>{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</p> #}
             <div class="featuredImage" style="background-image: url('{{ Image(post.hoverImage).src }}');">
               {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'medium' }, noComponentSpacing: true }) }}

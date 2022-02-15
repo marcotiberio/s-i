@@ -11,8 +11,8 @@
     <li class="list-events-item">
       <a href="{{ post.link }}" class="list-events-item-link">
         <div>{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
-        <p class="venue" >{{ post.venue }}</p>
         <p class="title" >{{ post.title }}</p>
+        <p class="venue" >{{ post.venue }}</p>
       </a>
     </li>
     {% endfor %}

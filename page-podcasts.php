@@ -14,6 +14,7 @@ $context['posts'] = new PostQuery();
 $context['podcastlist'] = Timber::get_posts([
     'post_type' => 'podcast',
     'order' => 'DESC',
+    'posts_per_page' => -1,
     'meta_query' => array(
         array(
             'key' => 'datePost'

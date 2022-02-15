@@ -83,7 +83,12 @@
 
     .featuredImage {
       display: block;
+
+      .flyntComponent {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
-    
 }

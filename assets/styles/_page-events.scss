@@ -54,28 +54,29 @@
               grid-row-start: 1;
             }
           }
-    
-          .venue {
-            grid-column-end: 3;
-            grid-column-start: 2;
-    
-            @media (max-width: $breakpoint-mobile-horizontal) {
-              grid-column-end: 3;
-              grid-column-start: 2;
-              grid-row-end: 2;
-              grid-row-start: 1;
-            }
-          }
-    
+
           .title {
-            grid-column-end: 5;
-            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-column-start: 2;
     
             @media (max-width: $breakpoint-mobile-horizontal) {
               grid-column-end: 2;
               grid-column-start: 1;
               grid-row-end: 3;
               grid-row-start: 2;
+            }
+          }
+    
+          .venue {
+            grid-column-end: 6;
+            grid-column-start: 4;
+            padding-left: $spacing-small;
+    
+            @media (max-width: $breakpoint-mobile-horizontal) {
+              grid-column-end: 3;
+              grid-column-start: 2;
+              grid-row-end: 2;
+              grid-row-start: 1;
             }
           }
         }
