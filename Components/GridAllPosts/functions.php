@@ -16,8 +16,12 @@ add_filter('Flynt/addComponentData?name=GridAllPosts', function ($data) {
             'article',
         ),
         'posts_per_page' => 30,
-        'orderby' => 'date',
-        'order' => 'DESC',
+        'meta_query' => array(
+            array(
+                'key' => 'datePost'
+            ),
+        ),
+        'order' => 'ASC',
     ]);
 
     return $data;
