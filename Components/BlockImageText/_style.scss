@@ -1,6 +1,9 @@
 [is='flynt-block-image-text'] {
+  height: auto;
+  
   .box-inner {
     @include reset-content-margins('top');
+    height: 100%;
   }
 
   @media (min-width: $breakpoint-tablet-horizontal) {
@@ -30,5 +33,11 @@
     .figure-caption {
       position: absolute;
     }
+  }
+
+  img {
+    height: 100%;
+    height: 70vh;
+    object-fit: cover;
   }
 }
