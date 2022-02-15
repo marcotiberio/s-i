@@ -29,6 +29,11 @@
           padding-top: 0;
         }
 
+        &:last-child {
+          border-bottom: 1px solid $black;
+        }
+  
+
         &-link {
           text-decoration: none;
           width: 100%;
@@ -36,8 +41,6 @@
           &:hover {
             text-decoration: underline;
           }
-
-          
         }
 
         .featured {

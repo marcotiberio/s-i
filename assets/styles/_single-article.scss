@@ -11,6 +11,10 @@
         padding-bottom: $spacing-small;
       }
 
+      .intro {
+        padding-top: $spacing-small;
+      }
+
       .credits {
         border-bottom: 1px solid $black;
         column-gap: $spacing-small;
@@ -124,22 +128,22 @@
 
         &:first-child {
           border-top: 0;
-          padding-bottom: 0;
         }
 
         &:last-child {
+          border-bottom: 1px solid $black;
+
           .container {
             padding: 0;
           }
         }
 
         &--wysiwyg {
-          border-top: 0;
-          margin-left: calc(50% + 7.5px);
-          width: calc(50% - 7.5px);
+          padding-left: calc(50% + 7.5px);
+          width: 100%;
 
           @media (max-width: $breakpoint-tablet) {
-            margin-left: 0;
+            padding-left: 0;
             width: 100%;
           }
         }
