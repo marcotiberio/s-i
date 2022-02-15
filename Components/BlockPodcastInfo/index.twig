@@ -7,7 +7,9 @@
           <div class="slider-item swiper-slide">
             <figure class="figure">
               <img class="figure-image lazyload"
-                src="{{ panel.panelImage.src|resizeDynamic(1200, 1200) }}">
+                src="{{ panel.panelImage.src|resizeDynamic(800, 800) }}"
+                data-srcset="{{function('wp_get_attachment_image_srcset', panel.panelImage.id)}}"
+                data-sizes="auto">
             </figure>
             {# <figcaption class="figure-caption">{{ panel.panelImage.caption|e }}</figcaption> #}
           </div>
