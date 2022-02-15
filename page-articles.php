@@ -14,6 +14,7 @@ $context['posts'] = new PostQuery();
 $context['latestArticles'] = Timber::get_posts([
     'post_type' => 'article',
     'order' => 'DESC',
+    'posts_per_page' => -1,
     'meta_query' => array(
         array(
             'key' => 'datePost'
