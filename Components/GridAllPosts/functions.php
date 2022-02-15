@@ -21,7 +21,7 @@ add_filter('Flynt/addComponentData?name=GridAllPosts', function ($data) {
                 'key' => 'datePost'
             ),
         ),
-        'order' => 'ASC',
+        'order' => 'DESC',
     ]);
 
     return $data;
