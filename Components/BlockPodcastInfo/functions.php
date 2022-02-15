@@ -26,14 +26,6 @@ function getACFLayout()
                 'placement' => 'top',
                 'endpoint' => 0
             ],
-            // [
-            //     'label' => 'Hide Slider?',
-            //     'name' => 'sliderTrueFalse',
-            //     'type' => 'true_false',
-            //     'default_value' => 0,
-            //     'ui' => 1,
-            //     'instructions' => __('Remember to add a Featured Image if you want to hide the Slider', 'flynt')
-            // ],
             [
                 'label' => __('Slider', 'flynt'),
                 'name' => 'repeaterSlider',

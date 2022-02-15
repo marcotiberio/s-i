@@ -18,6 +18,16 @@ function getACFLayout()
                 'endpoint' => 0,
             ],
             [
+                'label' => __('Image Position', 'flynt'),
+                'name' => 'imagePosition',
+                'type' => 'button_group',
+                'choices' => [
+                    'imageLeft' => '<i class=\'dashicons dashicons-align-left\' title=\'Image on the left\'></i>',
+                    'imageFull' => '<i class=\'dashicons dashicons-editor-justify\' title=\'Image on the right\'></i>',
+                    'imageRight' => '<i class=\'dashicons dashicons-align-right\' title=\'Image on the right\'></i>'
+                ]
+            ],
+            [
                 'label' => __('Image', 'flynt'),
                 'name' => 'image',
                 'type' => 'image',
@@ -40,23 +50,14 @@ function getACFLayout()
             //     'layout' => 'row',
             //     'sub_fields' => [
             //         [
-            //             'label' => __('Size', 'flynt'),
-            //             'name' => 'size',
-            //             'type' => 'radio',
-            //             'other_choice' => 0,
-            //             'save_other_choice' => 0,
-            //             'layout' => 'horizontal',
+            //             'label' => __('Image Position', 'flynt'),
+            //             'name' => 'imagePosition',
+            //             'type' => 'button_group',
             //             'choices' => [
-            //                 'sizeSmall' => __('Small', 'flynt'),
-            //                 'sizeMedium' => __('Medium', 'flynt'),
-            //                 'sizeLarge' => __('Large (Default)', 'flynt)'),
-            //                 'sizeHuge' => __('Huge', 'flynt'),
-            //                 'sizeFull' => __('Full', 'flynt'),
-            //             ],
-            //             'default_value' => 'sizeLarge',
-            //             'wrapper' =>  [
-            //                 'width' => '100',
-            //             ],
+            //                 'imageLeft' => '<i class=\'dashicons dashicons-align-left\' title=\'Image on the left\'></i>',
+            //                 'imageRight' => '<i class=\'dashicons dashicons-align-right\' title=\'Image on the right\'></i>',
+            //                 'imageFull' => '<i class=\'dashicons dashicons-align-right\' title=\'Image on the right\'></i>'
+            //             ]
             //         ],
             //     ]
             // ]
