@@ -19,6 +19,9 @@
               {% endif %}
               <div class="featuredImage">
                 <img class="figure-image lazyload" src="{{ item.thumbnail.src }}" />
+                {# src="{{ slide.images.imageDesktop | resize(2048, 1024) }}"
+                data-srcset="{{function('wp_get_attachment_image_srcset', slide.images.imageDesktop.id)}}"
+                alt="{{ slide.images.imageDesktop.alt|e }}"> #}
               </div>
               <div class="featuredInfo featuredInfo-bottom">
                 <p class="title">{{ item.title }}</p> 
