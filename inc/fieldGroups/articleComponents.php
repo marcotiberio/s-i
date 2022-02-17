@@ -116,6 +116,8 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\BlockArtistInfo\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
+                    Components\BlockImageMedium\getACFLayout(),
+                    Components\BlockImageSmall\getACFLayout(),
                     Components\BlockPostObject\getACFLayout(),
                     Components\BlockSoundcloudOembed\getACFLayout(),
                     Components\SliderImages\getACFLayout(),

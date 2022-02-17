@@ -14,7 +14,7 @@
               alt="{{ image.alt|e }}">
           {% else %}
             <img class="figure-image lazyload"
-              src="{{ image.src|resizeDynamic(500) }}"
+              src="{{ image.src|resize(500) }}"
               srcset="{{ placeholderImage(500, 500 / image.aspect) }}"
               data-srcset="
                 {{ image.src|resizeDynamic(1920) }} 1920w,
