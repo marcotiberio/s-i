@@ -7,6 +7,8 @@ import feather from 'feather-icons'
 import 'core-js/es/number'
 import Swiper, { Navigation, A11y, Autoplay } from 'swiper/swiper.esm'
 import 'swiper/swiper-bundle.css'
+import smoothscroll from 'smoothscroll-polyfill'
+import './scripts/scroll.js'
 
 import installCE from 'document-register-element/pony'
 
@@ -33,4 +35,7 @@ function importAll (r) {
   r.keys().forEach(r)
 }
 
+smoothscroll.polyfill()
+
 importAll(require.context('../Components/', true, /\/script\.js$/))
+require.resolve('./scripts/scroll.js')
