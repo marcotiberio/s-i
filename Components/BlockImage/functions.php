@@ -8,7 +8,7 @@ function getACFLayout()
 {
     return [
         'name' => 'blockImage',
-        'label' => 'Block: Image',
+        'label' => 'Block: Large Image',
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),
@@ -17,16 +17,16 @@ function getACFLayout()
                 'placement' => 'top',
                 'endpoint' => 0,
             ],
-            [
-                'label' => __('Image Position', 'flynt'),
-                'name' => 'imagePosition',
-                'type' => 'button_group',
-                'choices' => [
-                    'imageLeft' => '<i class=\'dashicons dashicons-align-left\' title=\'Image on the left\'></i>',
-                    'imageFull' => '<i class=\'dashicons dashicons-editor-justify\' title=\'Image on the right\'></i>',
-                    'imageRight' => '<i class=\'dashicons dashicons-align-right\' title=\'Image on the right\'></i>'
-                ]
-            ],
+            // [
+            //     'label' => __('Image Position', 'flynt'),
+            //     'name' => 'imagePosition',
+            //     'type' => 'button_group',
+            //     'choices' => [
+            //         'imageLeft' => '<i class=\'dashicons dashicons-align-left\' title=\'Image on the left\'></i>',
+            //         'imageFull' => '<i class=\'dashicons dashicons-editor-justify\' title=\'Image on the right\'></i>',
+            //         'imageRight' => '<i class=\'dashicons dashicons-align-right\' title=\'Image on the right\'></i>'
+            //     ]
+            // ],
             [
                 'label' => __('Image', 'flynt'),
                 'name' => 'image',
