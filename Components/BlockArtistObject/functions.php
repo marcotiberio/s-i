@@ -12,6 +12,7 @@ add_filter('Flynt/addComponentData?name=BlockArtistObject', function ($data) {
 
     $postType = POST_TYPE;
 
+    // $data['item'] = new \Timber\Post($data['item']);
     $data['items'] = Timber::get_posts($data[$postType]);
 
     return $data;

@@ -10,6 +10,7 @@ add_filter('Flynt/addComponentData?name=BlockArtistInfo', function ($data) {
     $data['jsonData'] = [
         'options' => array_merge($translatableOptions, $data['options']),
     ];
+    $data['item'] = new \Timber\Post($data['item']);
     return $data;
 });
 

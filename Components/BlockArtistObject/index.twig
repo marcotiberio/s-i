@@ -4,18 +4,7 @@
     {% for item in items %}
     <figure>
     <img class="figure-image lazyload"
-      src="{{ item.thumbnail.src|resizeDynamic(500) }}"
-      srcset="{{ placeholderImage(500, 500 / item.thumbnail.aspect) }}"
-      data-srcset="
-        {{ item.thumbnail.src|resizeDynamic(1920) }} 1920w,
-        {{ item.thumbnail.src|resizeDynamic(1320) }} 1320w,
-        {{ item.thumbnail.src|resizeDynamic(1280) }} 1280w,
-        {{ item.thumbnail.src|resizeDynamic(1035) }} 1035w,
-        {{ item.thumbnail.src|resizeDynamic(860) }} 860w,
-        {{ item.thumbnail.src|resizeDynamic(750) }} 750w,
-        {{ item.thumbnail.src|resizeDynamic(500) }} 500w,
-        {{ item.thumbnail.src|resizeDynamic(375) }} 375w"
-      data-sizes="auto"
+      src="{{ item.thumbnail.src|resize(500) }}"
       alt="{{ item.thumbnail.alt|e }}">
       <figcaption class="figure-caption">{{ item.thumbnail.caption|e }}</figcaption>
     </figure>
@@ -28,9 +17,14 @@
     </div>
     <div class="bio">
       <p class="title pillCircle">{{ item.title }}</p>
-      <p class="">{{ item.bio|e('wp_kses_post') }}</p>
-      {# <p class="">{{ item.post_content|e('wp_kses_post') }}</p> #}
-      {# {{ renderComponent('BlockArtistInfo', { post_content: item.bioHtml, options: { size: 'sizeLarge' } }) }} #}
+      {% for BlockArtistInfo in artistComponents %}
+          {% if content_block.acf_fc_layout == 'BlockArtistInfo' %} 
+              {{content_block.bioHtml}}
+          {% endif %}
+      {% endfor %}
+      {# <p>{{ item.meta('bioHtml') }}</p> #}
+      {# <p class="">{{ item.post_content }}</p> #}
+      {# {{ renderComponent('BlockArtistInfo', { bioHtml: item.bioHtml }) }} #}
     </div>
   </div>
   {% endfor %}

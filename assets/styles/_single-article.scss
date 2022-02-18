@@ -3,24 +3,24 @@
 .single-article {
   .post {
     &-header {
+      border-bottom: 1px solid $black;
       text-transform: uppercase;
 
       .title {
         border-bottom: 1px solid $black;
-        margin-bottom: 0;
+        margin-bottom: $spacing-small;
         padding-bottom: $spacing-small;
       }
 
       .intro {
-        padding-top: $spacing-small;
+        padding-bottom: $spacing-small;
       }
 
       .credits {
-        border-bottom: 1px solid $black;
         column-gap: $spacing-small;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: $spacing-small 0;
+        padding-bottom: $spacing-small;
       }
 
       .video {
