@@ -128,6 +128,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockQuote\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\BlockWysiwygTwoCol\getACFLayout(),
+                    Components\SliderMediumImage\getACFLayout(),
                 ],
             ],
         ],

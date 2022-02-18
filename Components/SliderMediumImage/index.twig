@@ -1,6 +1,6 @@
-<div class="flyntComponent" is="flynt-block-event-slider">
+<div class="flyntComponent" is="flynt-slider-medium-image">
   <script type="application/json">{{ jsonData|json_encode }}</script>
-  <div class="container">
+  <div class="container container-{{ sliderPosition }}">
     <div data-slider class="slider swiper-container">
       <div class="swiper-wrapper">
         {% for panel in repeaterSlider %}
