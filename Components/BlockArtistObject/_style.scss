@@ -1,5 +1,6 @@
 [is='flynt-block-artist-object'] {
   $image-aspect-ratio: 3/2;
+  border-bottom: 1px solid $black;
   
   @media (max-width: $breakpoint-tablet) {
     padding-bottom: $spacing-small;
@@ -69,8 +70,12 @@
       }
     }
 
+    figure {
+      margin: 0;
+    }
+
     figcaption {
-      text-align: center;
+      display: none;
     }
   }
 }

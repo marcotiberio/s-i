@@ -36,7 +36,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 ]
             ],
             [
-                'label' => __('Author', 'flynt'),
+                'label' => __('Credits', 'flynt'),
                 'name' => 'authorArticle',
                 'type' => 'text',
                 'wrapper' => [

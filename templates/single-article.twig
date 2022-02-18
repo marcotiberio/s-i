@@ -10,7 +10,7 @@
       {% if post.datePost or post.authorArticle %}
       <div class="credits">
         <div class="date">{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
-        <div class="author">by {{ post.authorArticle }}</div>
+        <div class="author">{{ post.authorArticle }}</div>
       </div>
       {% endif %}
     </header>
