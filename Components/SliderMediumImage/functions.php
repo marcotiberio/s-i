@@ -27,6 +27,17 @@ function getACFLayout()
                 'endpoint' => 0
             ],
             [
+                'label' => __('Slider Position', 'flynt'),
+                'name' => 'sliderPosition',
+                'type' => 'button_group',
+                'choices' => [
+                    'sliderLeft' => '<i class=\'dashicons dashicons-align-left\' title=\'Slider left-align\'></i>',
+                    'sliderCenter' => '<i class=\'dashicons dashicons-align-center\' title=\'Slider center-align\'></i>',
+                    'sliderRight' => '<i class=\'dashicons dashicons-align-right\' title=\'Slider right-align\'></i>'
+                ],
+                'default_value' => 'sliderRight'
+            ],
+            [
                 'label' => __('Slider', 'flynt'),
                 'name' => 'repeaterSlider',
                 'type' => 'repeater',
@@ -52,17 +63,6 @@ function getACFLayout()
                 'type' => 'tab',
                 'placement' => 'top',
                 'endpoint' => 0
-            ],
-            [
-                'label' => __('Slider Position', 'flynt'),
-                'name' => 'sliderPosition',
-                'type' => 'button_group',
-                'choices' => [
-                    'sliderLeft' => '<i class=\'dashicons dashicons-align-left\' title=\'Slider left-align\'></i>',
-                    'sliderCenter' => '<i class=\'dashicons dashicons-align-center\' title=\'Slider center-align\'></i>',
-                    'sliderRight' => '<i class=\'dashicons dashicons-align-right\' title=\'Slider right-align\'></i>'
-                ],
-                'default_value' => 'sliderRight'
             ],
             [
                 'label' => '',
