@@ -13,7 +13,10 @@
         </div>
         {% if post.thumbnail %}
         <div class="featuredImage">
-          {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'sizeFull' }, noComponentSpacing: true }) }}
+          <img class="figure-image lazyload"
+            src="{{ post.thumbnail.src|resize(32) }}"
+            data-srcset="{{function('wp_get_attachment_image_srcset', post.thumbnail.id)}}"
+            data-sizes="auto">
         </div>
         {% endif %}
       </a>
