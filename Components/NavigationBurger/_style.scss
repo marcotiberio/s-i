@@ -22,20 +22,27 @@
   }
 
   .container {
-    align-items: center;
-    background-color: $color-background;
-    border-bottom: 1px solid $black;
-    display: flex;
-    height: $navigation-height;
-    justify-content: space-between;
-    left: 0;
-    margin: 0 auto;
-    padding: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: calc(100vw - 30px);
+    margin: 0;
+    padding: 0 $spacing-small;
+    width: 100vw;
     z-index: 99;
+
+    &-inner {
+      align-items: center;
+      background-color: $color-background;
+      border-bottom: 1px solid $black;
+      display: flex;
+      height: $navigation-height;
+      justify-content: space-between;
+      left: 0;
+      margin: 0 auto;
+      padding: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: calc(100% - 30px);
+      z-index: 100;
+    }
 
     .admin-bar & {
       top: 46px;
