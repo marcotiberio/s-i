@@ -18,7 +18,11 @@
               </div>
               {% endif %}
               <div class="featuredImage">
-                <img class="figure-image lazyload" src="{{ item.thumbnail.src }}" />
+                <img class="figure-image lazyload"
+                src="{{ item.thumbnail.src|resize(32) }}"
+                data-srcset="{{function('wp_get_attachment_image_srcset', item.thumbnail.id)}}"
+                data-sizes="auto">
+                {# <img class="figure-image lazyload" src="{{ item.thumbnail.src }}" /> #}
                 {# src="{{ slide.images.imageDesktop | resize(2048, 1024) }}"
                 data-srcset="{{function('wp_get_attachment_image_srcset', slide.images.imageDesktop.id)}}"
                 alt="{{ slide.images.imageDesktop.alt|e }}"> #}

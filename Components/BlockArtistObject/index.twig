@@ -17,14 +17,19 @@
     </div>
     <div class="bio">
       <p class="title pillCircle">{{ item.title }}</p>
-      {% for BlockArtistInfo in artistComponents %}
-          {% if content_block.acf_fc_layout == 'BlockArtistInfo' %} 
-              {{content_block.bioHtml}}
-          {% endif %}
+      {# {% for post in post.meta('artistComponents') %}
+        {% for content_block in artistComponents %}
+            {% if content_block.acf_fc_layout == 'BlockArtistInfo' %}
+                {{content_block.bioHtml}}
+            {% endif %}
+        {% endfor %}
       {% endfor %}
-      {# <p>{{ item.meta('bioHtml') }}</p> #}
-      {# <p class="">{{ item.post_content }}</p> #}
-      {# {{ renderComponent('BlockArtistInfo', { bioHtml: item.bioHtml }) }} #}
+      {% for item in post.meta('artistComponents') %}
+        {% if item.acf_fc_layout == 'BlockArtistInfo' %}
+          <aside class="notes">{{ item.bioHtml }}</aside>
+        {% endif %}
+      {% endfor %} #}
+      {# {{ renderComponent('BlockArtistInfo', { bioHtml: item.bioHtml, options: { size: 'sizeLarge' } }) }} #}
     </div>
   </div>
   {% endfor %}

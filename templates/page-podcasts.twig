@@ -12,7 +12,11 @@
             <p class="title">{{ post.title }}</p>
             {# <p>{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</p> #}
             <div class="featuredImage" style="background-image: url('{{ Image(post.hoverImage).src }}');">
-              {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'medium' }, noComponentSpacing: true }) }}
+              <img class="figure-image lazyload"
+                src="{{ post.thumbnail.src|resize(32) }}"
+                data-srcset="{{function('wp_get_attachment_image_srcset', post.thumbnail.id)}}"
+                data-sizes="auto">
+              {# {{ renderComponent('BlockImage', { image: post.thumbnail, options: { size: 'medium' }, noComponentSpacing: true }) }} #}
             </div>
           </div>
         </a>
