@@ -6,14 +6,15 @@
   }
   
   .grid {
-    display: flex;
+    column-gap: $spacing-small;
+    columns: 4 300px;
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
-      // columns: 3 200px;
+      columns: 3 200px;
     }
 
     @media (max-width: $breakpoint-mobile-horizontal) {
@@ -26,10 +27,12 @@
 
     &-item {
       border-bottom: 1px solid $black;
-      display: block;
+      display: inline-block;
+      flex-flow: row wrap;
       margin: 0 $spacing-small $spacing-small 0;
       padding-bottom: 0;
       text-decoration: none;
+      width: 100%;
 
       .featuredInfo {
         align-items: center;
@@ -124,10 +127,5 @@
         text-decoration: none;
       }
     }
-  }
-
-  .pagination-loadMore {
-    display: flex;
-    justify-content: center;
   }
 }
