@@ -15,7 +15,7 @@ add_filter('Flynt/addComponentData?name=GridAllPosts', function ($data) {
             'podcast',
             'article',
         ),
-        'posts_per_page' => 30,
+        'posts_per_page' => 20,
         'meta_query' => array(
             array(
                 'key' => 'datePost'
@@ -43,6 +43,16 @@ function getACFLayout()
     ];
 }
 
+Options::addGlobal('GridAllPosts', [
+    [
+        'label' => __('Load More Button?', 'flynt'),
+        'name' => 'loadMore',
+        'type' => 'true_false',
+        'default_value' => 1,
+        'ui' => 1
+    ],
+]);
+
 Options::addTranslatable('GridAllPosts', [
     [
         'label' => __('Labels', 'flynt'),
@@ -58,33 +68,9 @@ Options::addTranslatable('GridAllPosts', [
         'sub_fields' => [
             [
                 'label' => __('Reading Time', 'flynt'),
-                'name' => 'readingTime',
+                'name' => 'loadMore',
                 'type' => 'text',
-                'default_value' => 'min',
-                'required' => 1,
-                'wrapper' => [
-                    'width' => 50
-                ],
-            ],
-            [
-                'label' => __('All Posts', 'flynt'),
-                'name' => 'allPosts',
-                'type' => 'text',
-                'default_value' => 'See More Posts',
-                'required' => 1,
-                'wrapper' => [
-                    'width' => 50
-                ],
-            ],
-            [
-                'label' => __('Read More', 'flynt'),
-                'name' => 'readMore',
-                'type' => 'text',
-                'default_value' => 'Read More',
-                'required' => 1,
-                'wrapper' => [
-                    'width' => 50
-                ],
+                'default_value' => 'Load More'
             ]
         ],
     ]

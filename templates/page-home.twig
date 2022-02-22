@@ -22,7 +22,7 @@
   </li>
   {% endfor %}
 </ul> #}
-
+{# {{ function('do_shortcode', '[ajax_load_more id="Test" container_type="div" post_type="podcast, event, article" posts_per_page="20" images_loaded="true"]') }} #}
 {% for component in post.meta('pagehomeComponents') %}
   {{ renderComponent(component) }}
 {% endfor %}

@@ -8,6 +8,7 @@ import 'core-js/es/number'
 import Swiper, { Navigation, A11y, Autoplay } from 'swiper/swiper.esm'
 import 'swiper/swiper-bundle.css'
 import smoothscroll from 'smoothscroll-polyfill'
+import Macy from 'macy'
 import './scripts/scroll.js'
 
 import installCE from 'document-register-element/pony'
@@ -36,6 +37,22 @@ function importAll (r) {
 }
 
 smoothscroll.polyfill()
+
+var macy = Macy({
+  container: '.posts',
+  trueOrder: false,
+  waitForImages: false,
+  mobileFirst: true,
+  margin: 15,
+  columns: 4,
+  breakAt: {
+    1024: 4,
+    780: 4,
+    400: 1
+  }
+})
+
+macy.listen()
 
 importAll(require.context('../Components/', true, /\/script\.js$/))
 require.resolve('./scripts/scroll.js')

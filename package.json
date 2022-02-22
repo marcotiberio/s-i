@@ -165,6 +165,7 @@
     ]
   },
   "dependencies": {
+    "macy": "^2.5.1",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "browserslist": [

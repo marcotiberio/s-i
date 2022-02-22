@@ -7,10 +7,9 @@
         <a class="filter filter-podcasts pillCircle">PODCASTS</a>
         
       </div>
-      <ul class="grid grid-home">
+      <div class="posts grid grid-home">
         {% for item in items %}
-          <li class="grid-item grid-item--{{ item.type.labels.singular_name }}">
-            <a class="grid-item-link" href="{{ item.link }}">
+            <a class="post grid-item grid-item--{{ item.type.labels.singular_name }}" href="{{ item.link }}">
               {% if item.thumbnail %}
               <div class="featuredInfo featuredInfo-top">
                 <div class="date">{{ item.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
@@ -19,7 +18,7 @@
               {% endif %}
               <div class="featuredImage">
                 <img class="figure-image lazyload"
-                src="{{ item.thumbnail.src|resize(32) }}"
+                src="{{ item.thumbnail.src|resize(600) }}"
                 data-srcset="{{function('wp_get_attachment_image_srcset', item.thumbnail.id)}}"
                 data-sizes="auto">
                 {# <img class="figure-image lazyload" src="{{ item.thumbnail.src }}" /> #}
@@ -31,9 +30,16 @@
                 <p class="title">{{ item.title }}</p> 
               </div>
             </a>
-          </li>
         {% endfor %}
-      </ul>
+      </div>
+      {# {% set pagination = items.pagination %}
+        {% if loadMore %}
+          <div class="pagination pagination--center">
+            <div class="pagination-loadMore">
+            <a data-action="loadMore" href="{{ pagination.next.link }}" class="button button--small">Load More</a>
+            </div>
+          </div>
+      {% endif %} #}
       {# <div class="allPostsLink">
         <a href="{{ postTypeArchiveLink }}" class="button button--link">{{ labels.allPosts }}</a>
       </div> #}
