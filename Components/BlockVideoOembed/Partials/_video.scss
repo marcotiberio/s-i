@@ -23,6 +23,16 @@
     top: 0;
     width: 100%;
   }
+
+  &Half {
+    grid-column-end: 5;
+    grid-column-start: 3;
+  }
+
+  &Full {
+    grid-column-end: 5;
+    grid-column-start: 1;
+  }
 }
 
 .video-player--isLoading {

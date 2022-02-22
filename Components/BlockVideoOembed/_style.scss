@@ -1,5 +1,17 @@
 [is='flynt-block-video-oembed'] {
   @import 'Partials/video';
+
+  .container {
+    align-items: center;
+    column-gap: $spacing-small;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      display: block;
+    }
+  }
   
   .figure-caption {
     margin-left: 0.625rem;

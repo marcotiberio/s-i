@@ -30,6 +30,16 @@ function getACFLayout()
                 'endpoint' => 0
             ],
             [
+                'label' => __('Video Size', 'flynt'),
+                'name' => 'videoSize',
+                'type' => 'button_group',
+                'choices' => [
+                    'videoHalf' => '<i class=\'dashicons dashicons-menu-alt2\' title=\'Half-Width Video\'></i>',
+                    'videoFull' => '<i class=\'dashicons dashicons-menu-alt3\' title=\'Full-Width Video\'></i>',
+                ],
+                'default_value' => 'videoHalf'
+            ],
+            [
                 'label' => __('Poster Image', 'flynt'),
                 'name' => 'posterImage',
                 'type' => 'image',
