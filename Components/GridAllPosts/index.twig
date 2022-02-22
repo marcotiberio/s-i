@@ -18,7 +18,7 @@
               {% endif %}
               <div class="featuredImage">
                 <img class="figure-image lazyload"
-                src="{{ item.thumbnail.src|resize(600) }}"
+                src="{{ item.thumbnail.src|resize(32) }}"
                 data-srcset="{{function('wp_get_attachment_image_srcset', item.thumbnail.id)}}"
                 data-sizes="auto">
                 {# <img class="figure-image lazyload" src="{{ item.thumbnail.src }}" /> #}
