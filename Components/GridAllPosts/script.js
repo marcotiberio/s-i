@@ -42,19 +42,39 @@ class GridAllPosts extends window.HTMLElement {
   togglePodcasts (e) {
     this.$postEvents.fadeToggle()
     this.$postArticles.fadeToggle()
-    this.$filterPodcasts.toggleClass('filter--active')
+    // this.$filterPodcasts.toggleClass('filter--active')
+    // if (this.$filterPodcasts.is('.filter--active')) {
+    //   this.$postPodcasts.css({ position: 'initial' })
+    // } else if (this.$filterPodcasts.not('.filter--active')) {
+    //   this.$postPodcasts.css({ position: 'absolute' })
+    // }
   }
 
   toggleEvents (e) {
     this.$postPodcasts.fadeToggle()
     this.$postArticles.fadeToggle()
-    this.$filterEvents.toggleClass('filter--active')
+    // this.$filterEvents.toggleClass('filter--active')
+    // if (this.$filterEvents.is('.filter--active')) {
+    //   this.$postEvents.css({ position: 'initial' })
+    // } else if (this.$filterEvents.not('.filter--active')) {
+    //   this.$postEvents.css({ position: 'absolute' })
+    // }
   }
 
   toggleArticles (e) {
     this.$postPodcasts.fadeToggle()
     this.$postEvents.fadeToggle()
-    this.$filterArticles.toggleClass('filter--active')
+    // this.$filterArticles.toggleClass('filter--active')
+    // if (this.$filterArticles.is('.filter--active')) {
+    //   this.$postArticles.css({ position: 'initial' })
+    // } else if (this.$filterArticles.not('.filter--active')) {
+    //   this.$postArticles.css({ position: 'absolute' })
+    // }
+    // if (this.$filterEvents.is('.filter--active')) {
+    //   this.$postEvents.css({ position: 'initial' })
+    // } else if (this.$filterEvents.not('.filter--active')) {
+    //   this.$postEvents.css({ position: 'absolute' })
+    // }
   }
 
   onLoadMore (e) {
@@ -63,7 +83,7 @@ class GridAllPosts extends window.HTMLElement {
     const $target = $(e.currentTarget).addClass('button--disabled')
 
     const url = new URL(e.currentTarget.href)
-    // url.searchParams.append('contentOnly', 1)
+    url.searchParams.append('contentOnly', 1)
 
     $.ajax({
       url: url

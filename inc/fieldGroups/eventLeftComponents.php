@@ -18,8 +18,10 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'first_day' => 1,
                 'wrapper' => [
                     'width' => '50',
-                ]
                 ],
+                'display_format' => 'd.m.Y',
+                'return_format' => 'd.m.Y'
+            ],
             [
                 'label' => __('Venue', 'flynt'),
                 'name' => 'venue',

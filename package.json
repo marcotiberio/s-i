@@ -92,7 +92,8 @@
   "eslintConfig": {
     "extends": "eslint-config-standard",
     "rules": {
-      "import/no-webpack-loader-syntax": 0
+      "import/no-webpack-loader-syntax": 0,
+      "no-unused-vars": "off"
     }
   },
   "eslintIgnore": [
@@ -166,6 +167,7 @@
   },
   "dependencies": {
     "macy": "^2.5.1",
+    "masonry-layout": "^4.2.2",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "browserslist": [

@@ -7,41 +7,60 @@
   
   .grid {
     column-gap: $spacing-small;
-    columns: 4 300px;
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
 
-    @media (max-width: $breakpoint-tablet-horizontal) {
-      columns: 3 200px;
-    }
+    // @media (max-width: $breakpoint-tablet-horizontal) {
+    //   columns: 3 200px;
+    // }
 
-    @media (max-width: $breakpoint-mobile-horizontal) {
-      display: block;
-    }
+    // @media (max-width: $breakpoint-mobile-horizontal) {
+    //   display: block;
+    // }
 
     &:last-child {
       border-bottom: 0;
     }
 
     &-item {
+      align-content: flex-start;
+      align-items: stretch;
       border-bottom: 1px solid $black;
-      display: inline-block;
+      display: flex;
       flex-flow: row wrap;
       margin: 0 $spacing-small $spacing-small 0;
       padding-bottom: 0;
       text-decoration: none;
       width: 100%;
 
+      // width: calc(25% - 15px);
+      // float: left;
+      // display: inline;
+
+      // &--Podcast {
+      //   grid-row-end: span 450;
+      // }
+
+      // &--Article {
+      //   grid-row-end: span 390;
+      // }
+
+      // &--Event {
+      //   grid-row-end: span 615;
+      // }
+
       .featuredInfo {
         align-items: center;
         display: flex;
         flex-flow: row wrap;
+        flex-grow: 1;
         justify-content: flex-start;
 
         &-top {
           margin: $spacing-small 0;
+          width: 100%;
 
           .date {
             margin-right: $spacing-small;
@@ -61,7 +80,9 @@
         }
 
         &-bottom {
+          flex-grow: 1;
           margin-bottom: 0;
+          width: 100%;
           
           .title {
             text-transform: uppercase;
@@ -70,7 +91,14 @@
       }
 
       .featuredImage {
+        flex-grow: 1;
         margin-bottom: $spacing-small;
+        width: 100%;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
         
         figcaption {
           display: none;

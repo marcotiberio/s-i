@@ -9,6 +9,8 @@ import Swiper, { Navigation, A11y, Autoplay } from 'swiper/swiper.esm'
 import 'swiper/swiper-bundle.css'
 import smoothscroll from 'smoothscroll-polyfill'
 import './scripts/scroll.js'
+import './scripts/filters.js'
+// import Masonry from 'masonry-layout'
 
 import installCE from 'document-register-element/pony'
 
@@ -37,5 +39,12 @@ function importAll (r) {
 
 smoothscroll.polyfill()
 
+// main.js
+// var msnry = new Masonry('.grid', {
+//   itemSelector: '.grid-item',
+//   columnWidth: 200
+// })
+
 importAll(require.context('../Components/', true, /\/script\.js$/))
 require.resolve('./scripts/scroll.js')
+require.resolve('./scripts/filters.js')

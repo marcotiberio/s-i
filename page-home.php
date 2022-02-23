@@ -15,7 +15,7 @@ $context['latestPosts'] = Timber::get_posts([
     'post_type' => array('event', 'podcast', 'article', 'artist'),
     'orderby' => 'date',
     'order' => 'DESC',
-    'posts_per_page' => -1,
+    'posts_per_page' => 5,
     // 'meta_query' => array(
     //     array(
     //         'key' => 'dateEvent'
