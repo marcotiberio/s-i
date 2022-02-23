@@ -162,9 +162,9 @@ figcaption {
   font-size: 1rem;
   margin-top: $spacing-small;
 
-  @media (max-width: $breakpoint-tablet-horizontal) {
-    margin-bottom: $spacing-small;
-  }
+  // @media (max-width: $breakpoint-tablet-horizontal) {
+  //   margin-bottom: $spacing-small;
+  // }
 }
 
 code {
@@ -602,11 +602,12 @@ select {
 
 .mainContent {
   flex: 1 0 auto;
-  margin: 0;
+  margin-top: 120px;
   min-height: calc(100vh - 140px);
   padding-top: $spacing-small;
 
   @media (max-width: $breakpoint-tablet-horizontal) {
+    margin-top: 0;
     padding-top: 70px;
   }
 }

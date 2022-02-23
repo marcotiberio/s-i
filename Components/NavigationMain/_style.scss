@@ -5,11 +5,20 @@
 
   @media (min-width: $breakpoint-tablet-horizontal) {
     display: block;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
 
   .wrapper {
     background-color: $color-background;
     height: auto;
+    padding-bottom: 0;
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
+    padding-top: $spacing-small;
   }
 
   .container {
