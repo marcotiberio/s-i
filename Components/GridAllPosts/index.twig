@@ -1,11 +1,11 @@
 {# {% if items|length > 0 %} #}
   <div class="flyntComponent" is="flynt-grid-all-posts">
     <div class="container">
-      <div class="grid-filter">
+      {# <div class="grid-filter">
         <a class="filter filter-events pillCircle">EVENTS</a>
         <a class="filter filter-articles pillCircle">ARTICLES</a>
         <a class="filter filter-podcasts pillCircle">PODCASTS</a>
-      </div>
+      </div> #}
       {{ function('do_shortcode', '[ajax_load_more id="Home" loading_style="infinite fading-blocks" container_type="div" css_classes=".grid" post_type="podcast, event, article" posts_per_page="20" images_loaded="true" transition="masonry" masonry_selector=".grid-item" masonry_animation="slide-up"]') }}
       {# <div class="posts grid grid-home" data-masonry='{"selector":".grid-item","columnwidth":"","animation":"slide-up","horizontalorder":""}'>
         {% for item in items %}
