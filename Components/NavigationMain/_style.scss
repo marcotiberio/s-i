@@ -6,7 +6,7 @@
   @media (min-width: $breakpoint-tablet-horizontal) {
     display: block;
     left: 0;
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     z-index: 1000;
