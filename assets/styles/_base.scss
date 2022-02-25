@@ -19,6 +19,7 @@ html {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-wrap: break-word;
   scroll-behavior: smooth;
+  transition: all 1s linear;
   word-wrap: break-word;
 
 
@@ -28,6 +29,10 @@ html {
     box-sizing: inherit;
   }
 }
+
+// html.hidden {
+//   display: none;
+// }
 
 body {
   height: 100%;

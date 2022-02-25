@@ -1,5 +1,7 @@
 [is='flynt-block-image'] {
   .figure {
     margin: 0 auto;
+    min-height: 100%;
+    z-index: 900;
   }
 }

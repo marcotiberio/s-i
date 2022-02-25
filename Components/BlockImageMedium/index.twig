@@ -3,7 +3,7 @@
     <div class="imageWrapper imageWrapper-{{imagePosition}}">
       <figure class="figure">
         <img class="figure-image lazyload"
-          src="{{ image.src|resize(32) }}"
+          src="{{ image.src }}"
           data-srcset="{{function('wp_get_attachment_image_srcset', image.id)}}"
           data-sizes="auto">
         {# <img class="figure-image lazyload"

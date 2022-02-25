@@ -11,7 +11,6 @@ import smoothscroll from 'smoothscroll-polyfill'
 import './scripts/scroll.js'
 import './scripts/filters.js'
 import './scripts/navigation.js'
-// import Masonry from 'masonry-layout'
 
 import installCE from 'document-register-element/pony'
 
