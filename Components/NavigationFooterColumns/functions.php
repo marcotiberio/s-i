@@ -61,6 +61,24 @@ Options::addTranslatable('NavigationFooterColumns', [
         'library' => 'all',
     ],
     [
+        'label' => __('Supported by', 'flynt'),
+        'name' => 'repeaterSupporters',
+        'type' => 'repeater',
+        'layout' => 'table',
+        'button_label' => __('Add Support Logo', 'flynt'),
+        'sub_fields' => [
+            [
+                'label' => __('Supporter', 'flynt'),
+                'name' => 'image',
+                'type' => 'image',
+                'return_format' => 'array',
+                'preview_size' => 'small',
+                'library' => 'all',
+                'min' => 1
+            ]
+        ]
+    ],
+    [
         'label' => __('Credits', 'flynt'),
         'name' => 'socialContentHtml',
         'type' => 'wysiwyg',

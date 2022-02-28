@@ -5,7 +5,8 @@
   transition: all 0.25s linear;
 
   @media (max-width: $breakpoint-tablet-horizontal) {
-    bottom: $spacing-large;
+    bottom: 5px;
+    right: -15px;
 
     svg {
       height: 50px;
@@ -13,7 +14,7 @@
   }
 
   @media (max-width: $breakpoint-mobile-horizontal) {
-    bottom: 5px;
+    bottom: 0;
     left: 0;
     right: auto;
   }

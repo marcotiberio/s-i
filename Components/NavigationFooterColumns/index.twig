@@ -28,8 +28,22 @@
           </figure>
         </div>
         {% endif %}
-        <div class="credits">
-          {{ socialContentHtml|e('wp_kses_post') }}
+        <div class="credits-supporters">
+          <div class="supporters">
+            <p>Supported by</p>
+            <ul class="supportersList">
+              {% for item in repeaterSupporters %}
+                <li class="socialList-item">
+                  <figure class="figure">
+                    <img class="figure-image lazyload" src="{{ item.image.src }}">
+                  </figure>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="credits">
+            {{ socialContentHtml|e('wp_kses_post') }}
+          </div>
         </div>
       </div>
     </div>

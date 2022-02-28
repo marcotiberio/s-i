@@ -141,4 +141,8 @@
       }
     }
   }
+
+  .ajax-load-more-wrap.infinite.fading-blocks>.alm-btn-wrap .alm-load-more-btn {
+    background-image: url('http://localhost:10083/wp-content/plugins/ajax-load-more/core/img/eclipse.gif');
+  }
 }
