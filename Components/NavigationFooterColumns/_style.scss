@@ -109,6 +109,21 @@
       &List {
         margin: 0;
         padding: 0;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          display: flex;
+          flex-flow: column wrap;
+
+          li {
+            width: fit-content;
+          }
+        }
+
+        figure {
+          img {
+            height: 30px;
+          }
+        }
       }
     }
 

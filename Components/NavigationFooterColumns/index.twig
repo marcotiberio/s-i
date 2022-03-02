@@ -24,7 +24,7 @@
         {% if logotype %}
         <div class="logotype">
           <figure class="figure">
-            <img class="figure-image lazyload" src="{{ logotype.src|resizeDynamic(0, 540) }}">
+            <img class="figure-image lazyload" src="{{ logotype.src|resize(540) }}">
           </figure>
         </div>
         {% endif %}
@@ -35,7 +35,7 @@
               {% for item in repeaterSupporters %}
                 <li class="socialList-item">
                   <figure class="figure">
-                    <img class="figure-image lazyload" src="{{ item.image.src }}">
+                    <img class="figure-image lazyload" src="{{ item.image.src|resize(540) }}">
                   </figure>
                 </li>
               {% endfor %}
