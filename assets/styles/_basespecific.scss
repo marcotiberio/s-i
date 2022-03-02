@@ -1,0 +1,52 @@
+/**
+* 4.0 Specific
+*
+* Top level styles every element should inherit.
+*/
+
+#cookie-law-info-bar[data-cli-style='cli-style-v2'] {
+  border-top: 1px solid $black;
+  box-shadow: none;
+  padding: $spacing-small;
+}
+
+.cli-bar-message {
+  font-size: 13px;
+}
+
+.cli-plugin-button {
+  border: 1px solid $black;
+  border-radius: 1rem;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: all 0.2s linear;
+}
+
+#wt-cli-accept-all-btn {
+  &:hover,
+  &:focus {
+    background-color: $white !important;
+    border-color: $black !important;
+    color: $black !important;
+  }
+}
+
+.cli_settings_button,
+#cookie_action_close_header_reject {
+  &:hover,
+  &:focus {
+    background-color: $black !important;
+    border-color: $black !important;
+    color: $white !important;
+  }
+}
+
+/* Provacy Policy Page */
+
+.cookielawinfo-classic {
+  color: $black !important;
+  font-family: 'Theinhardt', Helvetica, Arial, sans-serif !important;
+  margin-left: 0 !important;
+  width: 100% !important;
+}
