@@ -107,6 +107,7 @@
       width: 100%;
   
       &List {
+        display: flex;
         margin: 0;
         padding: 0;
 
@@ -122,6 +123,7 @@
         figure {
           img {
             height: 30px;
+            width: auto;
           }
         }
       }
