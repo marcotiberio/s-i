@@ -6,7 +6,7 @@
         <div class="post-type"><?php echo get_post_type($post) ?></div>
     </div>
     <div class="featuredImage">
-        <?php the_post_thumbnail('large'); ?>
+        <?php the_post_thumbnail('medium'); ?>
     </div>
     <div class="featuredInfo featuredInfo-bottom">
         <p class="title"><?php the_title(); ?></p>
