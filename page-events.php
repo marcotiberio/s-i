@@ -19,6 +19,7 @@ $today = date('Ymd');
 $context['futureEvents'] = Timber::get_posts([
     'post_type' => 'event',
     'posts_per_page' => -1,
+    'post_status' => array( 'publish', 'public'),
     'order' => 'DESC',
     'meta_query' => array(
         array(

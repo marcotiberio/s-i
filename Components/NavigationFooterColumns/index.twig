@@ -34,9 +34,11 @@
             <ul class="supportersList">
               {% for item in repeaterSupporters %}
                 <li class="socialList-item">
-                  <figure class="figure">
-                    <img class="figure-image lazyload" src="{{ item.image.src|resize(540) }}">
-                  </figure>
+                  <a href="{{ item.supporterLink }}" rel="noreferrer noopener" target="_blank">
+                    <figure class="figure">
+                      <img class="figure-image lazyload" src="{{ item.image.src|resize(540) }}">
+                    </figure>
+                  </a>
                 </li>
               {% endfor %}
             </ul>
