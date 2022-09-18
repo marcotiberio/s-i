@@ -25,8 +25,13 @@
 
     &-right {
       @media (max-width: $breakpoint-mobile-horizontal) {
-        margin-top: $spacing-small;
-        padding-left: 45px;
+        margin-top: 25px;
+
+        p:first-child {
+          &::first-letter {
+            margin-left: $spacing-large;
+          }
+        }
       }
     }
 
